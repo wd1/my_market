@@ -13,8 +13,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    #if !require_captcha? || simple_captcha_valid?
-    if simple_captcha_valid?
+    if !require_captcha? || simple_captcha_valid?
+    # if simple_captcha_valid?
       @member = Member.from_auth(auth_hash)
     end
 

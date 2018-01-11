@@ -27,6 +27,7 @@ class TwoFactor::Sms < ::TwoFactor
   def send_otp
     refresh! if expired?
     update_phone_number_to_member if send_code_phase
+    puts sms_message
     AMQPQueue.enqueue(:sms_notification, phone: member.phone_number, message: sms_message)
   end
 
