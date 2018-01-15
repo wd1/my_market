@@ -11,7 +11,7 @@ module Worker
 
       channel = DepositChannel.find_by_key(channel_key)
       raw     = get_raw channel, txid
-
+      puts 'SSSVVV'
       raw[:details].each_with_index do |detail, i|
         detail.symbolize_keys!
         deposit!(channel, txid, i, raw, detail)
