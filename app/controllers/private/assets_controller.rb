@@ -25,7 +25,7 @@ module Private
         @rpt_account = current_user.accounts.with_currency(:rpt).first
         @trt_account = current_user.accounts.with_currency(:trt).first
         # @cny_account = current_user.accounts.with_currency(:cny).first
-        @cny_account = current_user.accounts.with_currency(:usd).first
+        @usd_account = current_user.accounts.with_currency(:usd).first
         @cny_account = current_user.accounts.with_currency(:cny).first
         @eur_account = current_user.accounts.with_currency(:eur).first
       end

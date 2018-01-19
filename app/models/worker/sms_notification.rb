@@ -1,4 +1,5 @@
 module Worker
+  require 'excon'
   class SmsNotification
 
     def process(payload, metadata, delivery_info)
@@ -6,7 +7,7 @@ module Worker
 
       raise "TWILIO_NUMBER not set" if ENV['TWILIO_NUMBER'].blank?
 
-      # puts "TWILIO Number TWilio"
+      puts "TWILIO Number TWilio"
       # twilio_client.account.sms.messages.create(
       #   from: ENV["TWILIO_NUMBER"],
       #   to:   Phonelib.parse(payload[:phone]).international,
@@ -16,7 +17,9 @@ module Worker
       sender  = ENV['SENDER']
       route   = ENV['ROUTE']
       country = ENV['COUNTRY']
-      mobiles = Phonelib.parse(payload[:phone]).national
+      mobiles = Phonelib.parse(payload[:phone]).international
+      puts Phonelib.parse(payload[:phone]).national
+      puts Phonelib.parse(payload[:phone]).international
       mobiles = mobiles.delete(' ')
       raise ArgumentError, 'Please set authkey, sender, route && country for MSG91 API' unless authkey && sender && route && country
 

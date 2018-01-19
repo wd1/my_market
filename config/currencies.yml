@@ -56,19 +56,19 @@
       -
         address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
 - id: 5
-  key: ltc
+  key: litecoin
   code: ltc
   symbol: "฿"
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
-  address_url: https://etherscan.io/address/#{address}
+  rpc: http://Ken:asdfghjkl890ASDFGHJKL*()@127.0.0.1:9332
+  blockchain: http://ltc.blockr.io/tx/info/#{txid}
+  address_url: http://ltc.blockr.io/address/info/#{address}
   assets:
     accounts:
       -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+        address: LUJFBiG8DEcjRJdgUgGzENKfwMMkxucyuZ
 - id: 6
   key: bcc
   code: bcc
