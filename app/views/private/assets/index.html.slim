@@ -9,11 +9,14 @@
         a = t('.cny-assets')
       li        data-scroll-nav='3'
         a = t('.ltc-assets')
+      li        data-scroll-nav='4'
+        a = t('.dsh-assets')
     - if current_user
       div data-scroll-index=0 = render 'liability_proof'
 
     div data-scroll-index=1 = render 'btc_assets'
     div data-scroll-index=1 = render 'ltc_assets'
+    div data-scroll-index=1 = render 'dsh_assets'
     div data-scroll-index=1 = render 'eth_assets'
     div data-scroll-index=1 = render 'blk_assets'
     div data-scroll-index=1 = render 'rpt_assets'

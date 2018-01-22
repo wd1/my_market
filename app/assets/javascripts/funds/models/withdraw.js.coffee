@@ -19,6 +19,7 @@ class Withdraw extends PeatioModel.Model
       when 'eur' then 'banks'
       when 'btc' then 'satoshis'
       when 'ltc' then 'litecoins'
+      when 'dsh' then 'dashcoins'
       when 'ppc' then 'peercoins'
       when 'blk' then 'blackcoins'
       when 'rpt' then 'realpointcoins'

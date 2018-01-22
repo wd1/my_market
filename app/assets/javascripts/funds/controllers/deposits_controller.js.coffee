@@ -6,7 +6,7 @@ app.controller 'DepositsController', ['$scope', '$stateParams', '$http', '$filte
   $scope.fund_sources = $gon.fund_sources
   $scope.account = Account.findBy('currency', $scope.currency)
   $scope.deposit_channel = DepositChannel.findBy('currency', $scope.currency)
-
+  console.log($scope.currency)
   @createDeposit = (currency) ->
     depositCtrl = @
     deposit_channel = DepositChannel.findBy('currency', currency)

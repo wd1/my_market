@@ -14,6 +14,18 @@
   quote_unit: eur
   bid: {fee: 0, currency: eur, fixed: 8}
   ask: {fee: 0, currency: ltc, fixed: 8}
+- id: ltcbtc
+  code: 4
+  base_unit: ltc
+  quote_unit: btc
+  bid: {fee: 0, currency: btc, fixed: 8}
+  ask: {fee: 0, currency: ltc, fixed: 8}
+- id: dsheur
+  code: 4
+  base_unit: dsh
+  quote_unit: eur
+  bid: {fee: 0, currency: eur, fixed: 8}
+  ask: {fee: 0, currency: dsh, fixed: 8}
 - id: bcceur
   code: 5
   base_unit: bcc

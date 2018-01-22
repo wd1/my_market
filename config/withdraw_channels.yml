@@ -32,3 +32,17 @@
   fee: 0.0005
   inuse: true
   type: WithdrawChannelLitecoin
+- id: 700
+  key: dashcoin 
+  currency: dsh
+  fixed: 8
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelDashcoin
+- id: 800
+  key: zcash 
+  currency: zec
+  fixed: 8
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelDashcoin

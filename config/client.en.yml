@@ -46,6 +46,8 @@ en:
         eur: EUR
         ppc: PPC
         ltc: LTC
+        dsh: DSH
+        zec: ZEC
         blk: BLK
         rpt: RPT
       deposit_cny:
@@ -114,6 +116,10 @@ en:
         title: BTC Deposit
       deposit_ltc:
         title: LTC Deposit
+      deposit_dsh:
+        title: DSH Deposit
+      deposit_zec:
+        title: ZEC Deposit
       deposit_ppc:
         title: PPC Deposit
       deposit_blk:
@@ -171,6 +177,10 @@ en:
         title: BTC Withdraw
       withdraw_ltc:
         title: LTC Withdraw
+      withdraw_dsh:
+        title: DSH Withdraw
+      withdraw_zec:
+        title: ZEC Withdraw
       withdraw_ppc:
         title: PPC Withdraw
       withdraw_blk:
@@ -235,6 +245,8 @@ en:
         btc: BTC Market
         eur: EUR Market
         ltc: LTC Market
+        dsh: DSH Market
+        zec: ZEC Market
         ppc: PPC Market
         blk: BLK Market
         rpt: RPT Market

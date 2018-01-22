@@ -28,6 +28,7 @@ ru-RU:
       withdraws/satoshi: Вывод Bitcoin
       withdraws/realpointcoin: Вывод RealPointCoin
       withdraws/litecoin: Вывод Litecoin
+      withdraws/zcash: Вывод Zcash
       withdraws/blackcoin: Вывод Blackcoin   
       withdraws/peercoin: Вывод Peercoin   
       withdraws/tritiumcoin: Вывод Tritium
@@ -2404,6 +2405,13 @@ ru-RU:
     litecoin:
       key: Litecoin_Chain
       title: Litecoin Blockchain
+      intro: Вывести Litecoin на свой Litecoin кошелек
+      latency: 30 минут
+      transfer: Ручной
+      go: Вывод
+    dashcoin:
+      key: Dashcoin_Chain
+      title: Dashcoin Blockchain
       intro: Вывести Litecoin на свой Litecoin кошелек
       latency: 30 минут
       transfer: Ручной

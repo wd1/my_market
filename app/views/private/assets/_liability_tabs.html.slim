@@ -1,8 +1,10 @@
 .tabbable
   ul.nav.nav-tabs
     li.active: a.btc-proof href="#btc-proof" data-toggle="tab" == t('.verify-btc')
-    li:        a.ltc-proof href="#ltc-proof" data-toggle="tab" == t('.verify-ltc')
     li:        a.ppc-proof href="#eth-proof" data-toggle="tab" == t('.verify-eth')
+    li:        a.ltc-proof href="#ltc-proof" data-toggle="tab" == t('.verify-ltc')
+    li:        a.dsh-proof href="#dsh-proof" data-toggle="tab" == t('.verify-dsh')
+    li:        a.zec-proof href="#zec-proof" data-toggle="tab" == t('.verify-zec')
     li:        a.blk-proof href="#blk-proof" data-toggle="tab" == t('.verify-blk')
     li:        a.rpt-proof href="#rpt-proof" data-toggle="tab" == t('.verify-rpt')
     li:        a.trt-proof href="#trt-proof" data-toggle="tab" == t('.verify-trt')
@@ -25,6 +27,22 @@
           == t("currency.icon.ltc")
           = @ltc_proof.sum
       = render 'liability_data', account: @ltc_account, proof: @ltc_proof
+    
+    #dsh-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.dsh-assets-total')
+        span.currency
+          == t("currency.icon.dsh")
+          = @dsh_proof.sum
+      = render 'liability_data', account: @dsh_account, proof: @dsh_proof
+
+    #zec-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.zec-assets-total')
+        span.currency
+          == t("currency.icon.zec")
+          = @zec_proof.sum
+      = render 'liability_data', account: @zec_account, proof: @zec_proof
 
     #eth-proof.tab-pane.active: .trade-wrapper
       .assets

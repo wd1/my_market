@@ -23,6 +23,8 @@ en:
       withdraws/satoshi: Withdraw Bitcoin
       withdraws/realpointcoin: Withdraw RealPointCoin
       withdraws/litecoin: Withdraw Litecoin
+      withdraws/dashcoin: Withdraw Dashcoin
+      withdraws/zcash: Withdraw Zcash
       withdraws/blackcoin: Withdraw Blackcoin
       withdraws/peercoin: Withdraw Peercoin
       withdraws/tritiumcoin: Withdraw Tritium
@@ -191,6 +193,18 @@ en:
         amount: Amount
         confirmations: Confirmation
         aasm_state_text: State
+      deposits/Dashcoin:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/Zcash:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
       deposits/peercoin:
         created_at: Created At
         txid: Transaction ID
@@ -238,6 +252,34 @@ en:
         remark: Remark
         fee: Fee
       withdraws/litecoin:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/Dashcoin:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/Zcash:
         id: ID
         member_name: Account
         currency_obj_key_text: Currency
@@ -365,6 +407,18 @@ en:
               blank: Please enter your withdrawal address
               invalid: Invalid withdrawals address, please review.
               ismine: Please use a new address.
+        withdraws/dashcoin:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/zcash:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
         withdraws/peercoin:
           attributes:
             fund_uid:
@@ -430,6 +484,8 @@ en:
       doge: DOGE
       pts: PTS
       ltc: LTC
+      dsh: DSH
+      zec: ZEC
       usd: USD
       eur: EUR
       ppc: PPC
@@ -510,6 +566,16 @@ en:
       key: LTC
       code: LTC
       name: Litecoin
+      format: '0,0.0000'
+    dashcoin:
+      key: DSH
+      code: DSH
+      name: Dashcoin
+      format: '0,0.0000'
+    zcash:
+      key: ZEC
+      code: ZEC
+      name: Dashcoin
       format: '0,0.0000'
     peercoin:
       key: PPC
@@ -693,6 +759,13 @@ en:
       latency: 1 confirmation
       transfer: Manual
       go: Deposit
+    dashcoin:
+      key: Dashcoin Chain
+      title: Dashcoin Deposits
+      intro: Deposit dashcoin from your own wallet address to Cryex24 account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
     peercoin:
       key: Peercoin Chain
       title: Peercoin Deposits
@@ -739,6 +812,9 @@ en:
         gen_address:
           require_transaction: it can't generate new address if it hasn't been used.
       litecoins:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      dashcoins:
         gen_address:
           require_transaction: it can't generate new address if it hasn't been used.
       blackcoins:
@@ -889,6 +965,19 @@ en:
           manage_fund_source: Manage Fund Source
         create:
           notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
+      dashcoins:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
       blackcoins:
         destroy:
           notice: Withdraw been canceled, frozen balance has returned to your account
@@ -996,6 +1085,8 @@ en:
         liability-proof: Proof of Liabilities
         btc-assets: BTC Assets
         ltc-assets: LTC Assets
+        dsh-assets: DSH Assets
+        zec-assets: ZEC Assets
         blk-assets: BLK Assets
         ppc-assets: PPC Assets
         rpt-assets: RPT Assets
@@ -1005,6 +1096,8 @@ en:
       liability_tabs:
         verify-btc: Verify My BTC Assets
         verify-ltc: Verify My LTC Assets
+        verify-dsh: Verify My DSH Assets
+        verify-zec: Verify My ZEC Assets
         verify-blk: Verify My BLK Assets
         verify-ppc: Verify My PPC Assets
         verify-rpt: Verify My RPT Assets
@@ -1013,6 +1106,8 @@ en:
         verify-eur: Verify My EUR Assets
         btc-assets-total: 'Total BTC assets of exchange: '
         ltc-assets-total: 'Total LTC assets of exchange: '
+        dsh-assets-total: 'Total DSH assets of exchange: '
+        zec-assets-total: 'Total ZEC assets of exchange: '
         ppc-assets-total: 'Total PPC assets of exchange: '
         blk-assets-total: 'Total BLK assets of exchange: '
         rpt-assets-total: 'Total RPT assets of exchange: '
@@ -1040,6 +1135,16 @@ en:
         title: LTC Assets
         intro: All of exchange's LTC assets are listed here.
         total: Total LTC Assets
+        address: Address
+      dsh_assets:
+        title: DSH Assets
+        intro: All of exchange's DSH assets are listed here.
+        total: Total DSH Assets
+        address: Address
+      zec_assets:
+        title: ZEC Assets
+        intro: All of exchange's ZEC assets are listed here.
+        total: Total ZEC Assets
         address: Address
       ppc_assets:
         title: PPC Assets
@@ -1080,6 +1185,8 @@ en:
         eur_format: '0.00'
         btc_format: '0.00000000'
         ltc_format: '0.00000000'
+        dsh_format: '0.00000000'
+        zec_format: '0.00000000'
         ppc_format: '0.00000000'
         blk_format: '0.00000000'
         rpt_format: '0.00000000'
@@ -1104,6 +1211,18 @@ en:
             withdraw: Withdraw
             fix: Fix
           ltc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          dsh:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          zec:
             strike_add: Plus
             strike_sub: Sub
             deposit: Deposit
@@ -1179,6 +1298,8 @@ en:
         usd_html: "<i class='fa fa-check'></i><span>USD Markets</span>"
         eur_html: "<i class='fa fa-check'></i><span>EUR Markets</span>"
         ltc_html: "<i class='fa fa-check'></i><span>LTC Markets</span>"
+        dsh_html: "<i class='fa fa-check'></i><span>DSH Markets</span>"
+        zec_html: "<i class='fa fa-check'></i><span>ZEC Markets</span>"
         ppc_html: "<i class='fa fa-check'></i><span>PPC Markets</span>"
         blk_html: "<i class='fa fa-check'></i><span>BLK Markets</span>"
         rpt_html: "<i class='fa fa-check'></i><span>RPT Markets</span>"
@@ -1367,6 +1488,8 @@ en:
         eur_format: '0.00'
         btc_format: '0.00000000'
         ltc_format: '0.00000000'
+        dsh_format: '0.00000000'
+        zec_format: '0.00000000'
         ppc_format: '0.00000000'
         blk_format: '0.00000000'
         rpt_format: '0.00000000'
@@ -1476,6 +1599,12 @@ en:
         litecoin:
           sum: Minimum amount 0.001
           fund_extra: Enter a label for this address (optional)
+        dashcoin:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+        zcash:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
         peercoin:
           sum: Minimum amount 0.001
           fund_extra: Enter a label for this address (optional)
@@ -1510,6 +1639,10 @@ en:
         realpointcoin:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
         litecoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        dashcoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        zcash:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
         peercoin:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
@@ -1580,6 +1713,20 @@ en:
           fund_extra: Label
           account_balance: Account Balance
           member_name: Account
+        dashcoin:
+          fee: Fee
+          sum: Amount
+          fund_uid: Dashcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        zcash:
+          fee: Fee
+          sum: Amount
+          fund_uid: Zcash Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
         peercoin:
           fee: Fee
           sum: Amount
@@ -1629,6 +1776,18 @@ en:
           accept: Accept
           accept_confirm: Confirm deposit?
       litecoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      dashcoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      zcashs:
         update:
           notice: The deposit was successful.
         index:
@@ -1767,6 +1926,34 @@ en:
           withdraw: Withdrawals
         update:
           notice: Withdraw was made
+      dashcoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      zcashs:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
       peercoins:
         index:
           one: Pending withdrawals
@@ -1822,6 +2009,18 @@ en:
       checked: Checked
       warning: Warning
   deposits/litecoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/dashcoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/zcash:
     aasm_state:
       submitted: Submitted
       accepted: Accepted
@@ -1913,6 +2112,22 @@ en:
       member_name: Member
       state_and_actions: State/Actions
       currency_obj_key_text: Currency
+    dashcoin:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    zcash:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
     blackcoin:
       amount: Amount
       txid: TxId
@@ -1972,6 +2187,8 @@ en:
       eur: EUR
       btc: BTC
       ltc: LTC
+      dsh: DSH
+      zec: ZEC
       ppc: PPC
       blk: BLK
       rpt: RPT
@@ -2005,6 +2222,8 @@ en:
         satoshi: Bitcoin
         realpointcoin: RealPointCoin
         litecoin: Litecoin
+        dashcoin: Dashcoin
+        zcash: Zcash
         blackcoin: Blackcoin
         peercoin: PeerCoin
         tritiumcoin: Tritiumcoin
@@ -2469,6 +2688,20 @@ en:
       latency: 30 minutes
       transfer: Manual
       go: Withdraw
+    dashcoin:
+      key: Dashcoin_Chain
+      title: Dashcoin Blockchain
+      intro: Withdraw Dashcoin to your own Dashcoin wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    zcash:
+      key: Zcash_Chain
+      title: Zcash Blockchain
+      intro: Withdraw Zcash to your own Zcash wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
     peercoin:
       key: Peercoin_Chain
       title: Peercoin Blockchain
@@ -2536,6 +2769,30 @@ en:
       canceled: Cancelled
       failed: Failed
   withdraws/litecoin:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/dashcoin:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/zcash:
     aasm_state:
       submitting: Submitting
       submitted: Submitted

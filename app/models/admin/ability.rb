@@ -20,6 +20,8 @@ module Admin
       can :manage, ::Deposits::Satoshi
       can :manage, ::Deposits::Blackcoin
       can :manage, ::Deposits::Litecoin
+      can :manage, ::Deposits::Dashcoin
+      can :manage, ::Deposits::Zcash
       can :manage, ::Deposits::Peercoin
       can :manage, ::Deposits::Realpointcoin
       can :manage, ::Deposits::Tritiumcoin
@@ -29,6 +31,8 @@ module Admin
       can :manage, ::Withdraws::Satoshi
       can :manage, ::Withdraws::Blackcoin
       can :manage, ::Withdraws::Litecoin
+      can :manage, ::Withdraws::Dashcoin
+      can :manage, ::Withdraws::Zcash
       can :manage, ::Withdraws::Peercoin
       can :manage, ::Withdraws::Realpointcoin
       can :manage, ::Withdraws::Tritiumcoin
