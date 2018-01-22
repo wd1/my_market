@@ -10,7 +10,6 @@ app.directive 'accounts', ->
         @state.transitionTo("deposits.currency", {currency: Account.first().currency})
 
       $scope.accounts = Account.all()
-
       # Might have a better way
       # #/deposits/eur
       @selectedCurrency = window.location.hash.split('/')[2] || Account.first().currency

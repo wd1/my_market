@@ -42,20 +42,6 @@
       -
         address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
 - id: 4
-  key: etc
-  code: etc
-  symbol: "E"
-  coin: true
-  precision: 4
-  quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
-  address_url: https://etherscan.io/address/#{address}
-  assets:
-    accounts:
-      -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
-- id: 5
   key: litecoin
   code: ltc
   symbol: "Ł"
@@ -69,7 +55,7 @@
     accounts:
       -
         address: LUJFBiG8DEcjRJdgUgGzENKfwMMkxucyuZ
-- id: 6
+- id: 5
   key: dashcoin
   code: dsh
   symbol: "D"
@@ -83,8 +69,8 @@
     accounts:
       -
         address:  0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
-- id: 7
-  key: zec
+- id: 6
+  key: zcash
   code: zec
   symbol: "Z"
   coin: true
@@ -96,11 +82,25 @@
   assets:
     accounts:
       -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+        address: 0x4bA2474e063Aec44e33F2Bf7Fb9e4e2878dBaB44
+- id: 7
+  key: ripple
+  code: xrp
+  symbol: "x"
+  coin: true
+  precision: 4
+  quick_withdraw_max: 0
+  rpc: http://localhost
+  blockchain: https://etherscan.io/tx/#{txid}
+  address_url: https://etherscan.io/address/#{address}
+  assets:
+    accounts:
+      -
+        address: 0x4bA2474e063Aec44e23F2Bf7Fa9e4e2878dBaB44
 - id: 8
-  key: bcc
-  code: bcc
-  symbol: "฿"
+  key: peercoin
+  code: ppc
+  symbol: "p"
   coin: true
   precision: 4
   quick_withdraw_max: 0
@@ -110,18 +110,74 @@
   assets:
     accounts:
       -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+        address: 0x4bA2474e063Aec54e23F2Bf7Fb9e4e2878dBaB44
 - id: 9
-  key: bts
-  code: bts
-  symbol: "฿"
+  key: namecoin
+  code: nmc
+  symbol: "N"
   coin: true
   precision: 4
   quick_withdraw_max: 0
   rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
-  address_url: https://etherscan.io/address/#{address}
+  blockchain: http://ltc.blockr.io/tx/info/#{txid}
+  address_url: http://ltc.blockr.io/address/info/#{address}
   assets:
     accounts:
       -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+        address: 0x4bA2474e063Aea44e23F2Bf7Fb9e4e2878dBaB44
+- id: 10
+  key: monero
+  code: xmr
+  symbol: ""
+  coin: true
+  precision: 4
+  quick_withdraw_max: 0
+  rpc: http://localhost
+  blockchain: http://ltc.blockr.io/tx/info/#{txid}
+  address_url: http://ltc.blockr.io/address/info/#{address}
+  assets:
+    accounts:
+      -
+        address: 0x4bA2474e063Aea44e23F2Bf7Fb9e4e2878dBaB44
+# - id: 10
+#   key: bcc
+#   code: bcc
+#   symbol: "฿"
+#   coin: true
+#   precision: 4
+#   quick_withdraw_max: 0
+#   rpc: http://localhost
+#   blockchain: https://etherscan.io/tx/#{txid}
+#   address_url: https://etherscan.io/address/#{address}
+#   assets:
+#     accounts:
+#       -
+#         address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+# - id: 11
+#   key: bts
+#   code: bts
+#   symbol: "฿"
+#   coin: true
+#   precision: 4
+#   quick_withdraw_max: 0
+#   rpc: http://localhost
+#   blockchain: https://etherscan.io/tx/#{txid}
+#   address_url: https://etherscan.io/address/#{address}
+#   assets:
+#     accounts:
+#       -
+#         address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+# - id: 12
+#   key: etc
+#   code: etc
+#   symbol: "E"
+#   coin: true
+#   precision: 4
+#   quick_withdraw_max: 0
+#   rpc: http://localhost
+#   blockchain: https://etherscan.io/tx/#{txid}
+#   address_url: https://etherscan.io/address/#{address}
+#   assets:
+#     accounts:
+#       -
+#         address: 0x4bA2474e063Aec44e2F2Bf7Fb9e4e2878dBaB44

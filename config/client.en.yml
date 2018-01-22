@@ -47,7 +47,10 @@ en:
         ppc: PPC
         ltc: LTC
         dsh: DSH
+        nmc: NMC
+        xmr: XMR
         zec: ZEC
+        xrp: XRP
         blk: BLK
         rpt: RPT
       deposit_cny:
@@ -118,8 +121,14 @@ en:
         title: LTC Deposit
       deposit_dsh:
         title: DSH Deposit
+      deposit_nmc:
+        title: NMC Deposit
+      deposit_xmr:
+        title: XMR Deposit
       deposit_zec:
         title: ZEC Deposit
+      deposit_xrp:
+        title: XRP Deposit
       deposit_ppc:
         title: PPC Deposit
       deposit_blk:
@@ -179,8 +188,14 @@ en:
         title: LTC Withdraw
       withdraw_dsh:
         title: DSH Withdraw
+      withdraw_nmc:
+        title: NMC Withdraw
+      withdraw_xmr:
+        title: XMR Withdraw
       withdraw_zec:
         title: ZEC Withdraw
+      withdraw_xrp:
+        title: XRP Withdraw
       withdraw_ppc:
         title: PPC Withdraw
       withdraw_blk:
@@ -246,7 +261,10 @@ en:
         eur: EUR Market
         ltc: LTC Market
         dsh: DSH Market
+        nmc: NMC Market
+        xmr: XMR Market
         zec: ZEC Market
+        xrp: XRP Market
         ppc: PPC Market
         blk: BLK Market
         rpt: RPT Market

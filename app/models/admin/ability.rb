@@ -22,7 +22,10 @@ module Admin
       can :manage, ::Deposits::Litecoin
       can :manage, ::Deposits::Dashcoin
       can :manage, ::Deposits::Zcash
+      can :manage, ::Deposits::Ripple
       can :manage, ::Deposits::Peercoin
+      can :manage, ::Deposits::Namecoin
+      can :manage, ::Deposits::Monero
       can :manage, ::Deposits::Realpointcoin
       can :manage, ::Deposits::Tritiumcoin
 
@@ -33,7 +36,10 @@ module Admin
       can :manage, ::Withdraws::Litecoin
       can :manage, ::Withdraws::Dashcoin
       can :manage, ::Withdraws::Zcash
+      can :manage, ::Withdraws::Ripple
       can :manage, ::Withdraws::Peercoin
+      can :manage, ::Withdraws::Namecoin
+      can :manage, ::Withdraws::Monero
       can :manage, ::Withdraws::Realpointcoin
       can :manage, ::Withdraws::Tritiumcoin
     end

@@ -24,7 +24,10 @@ en:
       withdraws/realpointcoin: Withdraw RealPointCoin
       withdraws/litecoin: Withdraw Litecoin
       withdraws/dashcoin: Withdraw Dashcoin
+      withdraws/namecoin: Withdraw Namecoin
+      withdraws/monero: Withdraw Monero
       withdraws/zcash: Withdraw Zcash
+      withdraws/ripple: Withdraw Ripple
       withdraws/blackcoin: Withdraw Blackcoin
       withdraws/peercoin: Withdraw Peercoin
       withdraws/tritiumcoin: Withdraw Tritium
@@ -199,7 +202,19 @@ en:
         amount: Amount
         confirmations: Confirmation
         aasm_state_text: State
-      deposits/Zcash:
+      deposits/Namecoin:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/Monero:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/Ripple:
         created_at: Created At
         txid: Transaction ID
         amount: Amount
@@ -279,7 +294,35 @@ en:
         amount: Amount
         remark: Remark
         fee: Fee
-      withdraws/Zcash:
+      withdraws/Namecoin:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/Monero:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/Ripple:
         id: ID
         member_name: Account
         currency_obj_key_text: Currency
@@ -413,7 +456,25 @@ en:
               blank: Please enter your withdrawal address
               invalid: Invalid withdrawals address, please review.
               ismine: Please use a new address.
+        withdraws/namecoin:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/monero:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
         withdraws/zcash:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/ripple:
           attributes:
             fund_uid:
               blank: Please enter your withdrawal address
@@ -485,6 +546,8 @@ en:
       pts: PTS
       ltc: LTC
       dsh: DSH
+      nmc: NMC
+      xmr: XMR
       zec: ZEC
       usd: USD
       eur: EUR
@@ -494,7 +557,7 @@ en:
       trt: TRT
       bcc: BCC
       eth: ETH
-      zec: ZEC
+      xrp: XRP
       bts: BTS
       etc: ETC
   currency:
@@ -537,6 +600,11 @@ en:
       code: ZEC
       name: ZEC
       format: '0,0.0000'
+    xrp:
+      key: XRP
+      code: XRP
+      name: XRP
+      format: '0,0.0000'
     bts:
       key: BTS
       code: BTS
@@ -572,10 +640,25 @@ en:
       code: DSH
       name: Dashcoin
       format: '0,0.0000'
+    namecoin:
+      key: NMC
+      code: NMC
+      name: Namecoin
+      format: '0,0.0000'
+    monero:
+      key: XMR
+      code: XMR
+      name: Monero
+      format: '0,0.0000'
     zcash:
       key: ZEC
       code: ZEC
-      name: Dashcoin
+      name: Zcash
+      format: '0,0.0000'
+    ripple:
+      key: XRP
+      code: XRP
+      name: Ripple
       format: '0,0.0000'
     peercoin:
       key: PPC
@@ -766,6 +849,20 @@ en:
       latency: 1 confirmation
       transfer: Manual
       go: Deposit
+    namecoin:
+      key: Namecoin Chain
+      title: Namecoin Deposits
+      intro: Deposit namecoin from your own wallet address to Cryex24 account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    monero:
+      key: Monero Chain
+      title: Monero Deposits
+      intro: Deposit monero from your own wallet address to Cryex24 account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
     peercoin:
       key: Peercoin Chain
       title: Peercoin Deposits
@@ -815,6 +912,12 @@ en:
         gen_address:
           require_transaction: it can't generate new address if it hasn't been used.
       dashcoins:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      namecoins:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      moneros:
         gen_address:
           require_transaction: it can't generate new address if it hasn't been used.
       blackcoins:
@@ -978,6 +1081,32 @@ en:
           manage_fund_source: Manage Fund Source
         create:
           notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
+      namecoins:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
+      moneros:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
       blackcoins:
         destroy:
           notice: Withdraw been canceled, frozen balance has returned to your account
@@ -1086,7 +1215,10 @@ en:
         btc-assets: BTC Assets
         ltc-assets: LTC Assets
         dsh-assets: DSH Assets
+        nmc-assets: NMC Assets
+        xmr-assets: XMR Assets
         zec-assets: ZEC Assets
+        xrp-assets: XRP Assets
         blk-assets: BLK Assets
         ppc-assets: PPC Assets
         rpt-assets: RPT Assets
@@ -1097,7 +1229,10 @@ en:
         verify-btc: Verify My BTC Assets
         verify-ltc: Verify My LTC Assets
         verify-dsh: Verify My DSH Assets
+        verify-nmc: Verify My NMC Assets
+        verify-xmr: Verify My XMR Assets
         verify-zec: Verify My ZEC Assets
+        verify-xrp: Verify My XRP Assets
         verify-blk: Verify My BLK Assets
         verify-ppc: Verify My PPC Assets
         verify-rpt: Verify My RPT Assets
@@ -1107,7 +1242,10 @@ en:
         btc-assets-total: 'Total BTC assets of exchange: '
         ltc-assets-total: 'Total LTC assets of exchange: '
         dsh-assets-total: 'Total DSH assets of exchange: '
+        nmc-assets-total: 'Total NMC assets of exchange: '
+        xmr-assets-total: 'Total XMR assets of exchange: '
         zec-assets-total: 'Total ZEC assets of exchange: '
+        xrp-assets-total: 'Total XRP assets of exchange: '
         ppc-assets-total: 'Total PPC assets of exchange: '
         blk-assets-total: 'Total BLK assets of exchange: '
         rpt-assets-total: 'Total RPT assets of exchange: '
@@ -1141,10 +1279,25 @@ en:
         intro: All of exchange's DSH assets are listed here.
         total: Total DSH Assets
         address: Address
+      nmc_assets:
+        title: NMC Assets
+        intro: All of exchange's NMC assets are listed here.
+        total: Total NMC Assets
+        address: Address
+      xmr_assets:
+        title: XMR Assets
+        intro: All of exchange's XMR assets are listed here.
+        total: Total XMR Assets
+        address: Address
       zec_assets:
         title: ZEC Assets
         intro: All of exchange's ZEC assets are listed here.
         total: Total ZEC Assets
+        address: Address
+      xrp_assets:
+        title: XRP Assets
+        intro: All of exchange's XRP assets are listed here.
+        total: Total XRP Assets
         address: Address
       ppc_assets:
         title: PPC Assets
@@ -1186,7 +1339,10 @@ en:
         btc_format: '0.00000000'
         ltc_format: '0.00000000'
         dsh_format: '0.00000000'
+        nmc_format: '0.00000000'
+        xmr_format: '0.00000000'
         zec_format: '0.00000000'
+        xrp_format: '0.00000000'
         ppc_format: '0.00000000'
         blk_format: '0.00000000'
         rpt_format: '0.00000000'
@@ -1222,7 +1378,25 @@ en:
             deposit: Deposit
             withdraw: Withdraw
             fix: Fix
+          nmc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          xmr:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
           zec:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          xrp:
             strike_add: Plus
             strike_sub: Sub
             deposit: Deposit
@@ -1299,7 +1473,10 @@ en:
         eur_html: "<i class='fa fa-check'></i><span>EUR Markets</span>"
         ltc_html: "<i class='fa fa-check'></i><span>LTC Markets</span>"
         dsh_html: "<i class='fa fa-check'></i><span>DSH Markets</span>"
+        nmc_html: "<i class='fa fa-check'></i><span>NMC Markets</span>"
+        xmr_html: "<i class='fa fa-check'></i><span>XMR Markets</span>"
         zec_html: "<i class='fa fa-check'></i><span>ZEC Markets</span>"
+        xrp_html: "<i class='fa fa-check'></i><span>XRP Markets</span>"
         ppc_html: "<i class='fa fa-check'></i><span>PPC Markets</span>"
         blk_html: "<i class='fa fa-check'></i><span>BLK Markets</span>"
         rpt_html: "<i class='fa fa-check'></i><span>RPT Markets</span>"
@@ -1489,7 +1666,10 @@ en:
         btc_format: '0.00000000'
         ltc_format: '0.00000000'
         dsh_format: '0.00000000'
+        nmc_format: '0.00000000'
+        xmr_format: '0.00000000'
         zec_format: '0.00000000'
+        xrp_format: '0.00000000'
         ppc_format: '0.00000000'
         blk_format: '0.00000000'
         rpt_format: '0.00000000'
@@ -1602,7 +1782,16 @@ en:
         dashcoin:
           sum: Minimum amount 0.001
           fund_extra: Enter a label for this address (optional)
+        namecoin:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+        monero:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
         zcash:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+        ripple:
           sum: Minimum amount 0.001
           fund_extra: Enter a label for this address (optional)
         peercoin:
@@ -1642,7 +1831,13 @@ en:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
         dashcoin:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
+        namecoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        monero:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
         zcash:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        ripple:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
         peercoin:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
@@ -1720,10 +1915,31 @@ en:
           fund_extra: Label
           account_balance: Account Balance
           member_name: Account
+        namecoin:
+          fee: Fee
+          sum: Amount
+          fund_uid: Namecoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        monero:
+          fee: Fee
+          sum: Amount
+          fund_uid: Monero Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
         zcash:
           fee: Fee
           sum: Amount
           fund_uid: Zcash Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        ripple:
+          fee: Fee
+          sum: Amount
+          fund_uid: Ripple Address
           fund_extra: Label
           account_balance: Account Balance
           member_name: Account
@@ -1787,7 +2003,25 @@ en:
         index:
           accept: Accept
           accept_confirm: Confirm deposit?
+      namecoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      moneros:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
       zcashs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      ripples:
         update:
           notice: The deposit was successful.
         index:
@@ -1940,7 +2174,49 @@ en:
           withdraw: Withdrawals
         update:
           notice: Withdraw was made
+      namecoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      moneros:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
       zcashs:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      ripples:
         index:
           one: Pending withdrawals
           all: Last 24 hours
@@ -2020,7 +2296,25 @@ en:
       accepted: Accepted
       checked: Checked
       warning: Warning
+  deposits/namecoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/monero:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
   deposits/zcash:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/ripple:
     aasm_state:
       submitted: Submitted
       accepted: Accepted
@@ -2120,7 +2414,31 @@ en:
       member_name: Member
       state_and_actions: State/Actions
       currency_obj_key_text: Currency
+    namecoin:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    monero:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
     zcash:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    ripple:
       amount: Amount
       txid: TxId
       created_at: Created At
@@ -2188,7 +2506,10 @@ en:
       btc: BTC
       ltc: LTC
       dsh: DSH
+      nmc: NMC
+      xmr: XMR
       zec: ZEC
+      xrp: XRP
       ppc: PPC
       blk: BLK
       rpt: RPT
@@ -2223,7 +2544,10 @@ en:
         realpointcoin: RealPointCoin
         litecoin: Litecoin
         dashcoin: Dashcoin
+        namecoin: Namecoin
+        monero: Monero
         zcash: Zcash
+        ripple: Ripple
         blackcoin: Blackcoin
         peercoin: PeerCoin
         tritiumcoin: Tritiumcoin
@@ -2695,10 +3019,31 @@ en:
       latency: 30 minutes
       transfer: Manual
       go: Withdraw
+    namecoin:
+      key: Namecoin_Chain
+      title: Namecoin Blockchain
+      intro: Withdraw Namecoin to your own Namecoin wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    monero:
+      key: Monero_Chain
+      title: Monero Blockchain
+      intro: Withdraw Monero to your own Monero wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
     zcash:
       key: Zcash_Chain
       title: Zcash Blockchain
       intro: Withdraw Zcash to your own Zcash wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    ripple:
+      key: Ripple_Chain
+      title: Ripple Blockchain
+      intro: Withdraw Ripple to your own Ripple wallet
       latency: 30 minutes
       transfer: Manual
       go: Withdraw
@@ -2792,7 +3137,43 @@ en:
       almost_done: Almost Done
       canceled: Cancelled
       failed: Failed
+  withdraws/namecoin:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/monero:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
   withdraws/zcash:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/ripple:
     aasm_state:
       submitting: Submitting
       submitted: Submitted

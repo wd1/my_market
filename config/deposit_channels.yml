@@ -1,10 +1,4 @@
-- id: 200
-  key: satoshi
-  currency: btc
-  sort_order: 1
-  min_confirm: 1
-  max_confirm: 3
-- id: 400
+- id: 100
   key: bank
   currency: eur
   sort_order: 2
@@ -14,7 +8,13 @@
       branch: 'Your Bank Branch'
       holder: 'Your Account Holder'
       account: 'Your Account Number'
-- id: 500
+- id: 200
+  key: satoshi
+  currency: btc
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3
+- id: 400
   key: ether
   currency: eth
   min_confirm: 1
@@ -24,13 +24,33 @@
   currency: ltc
   min_confirm: 1
   max_confirm: 6
-- id: 700
+- id: 800
   key: dashcoin
   currency: dsh
   min_confirm: 1
   max_confirm: 6
-- id: 800
+- id: 1000
   key: zcash
   currency: zec
+  min_confirm: 1
+  max_confirm: 6
+- id: 1200
+  key: ripple
+  currency: xrp
+  min_confirm: 1
+  max_confirm: 6
+- id: 1400
+  key: peercoin
+  currency: ppc
+  min_confirm: 1
+  max_confirm: 6
+- id: 1600
+  key: namecoin
+  currency: nmc
+  min_confirm: 1
+  max_confirm: 6
+- id: 1800
+  key: monero
+  currency: xmr
   min_confirm: 1
   max_confirm: 6

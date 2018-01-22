@@ -34,18 +34,25 @@
   inuse: true
   type: WithdrawChannelPeercoin
 - id: 1000
+  key: namecoin
+  currency: ppc
+  fixed: 8
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelNamecoin
+- id: 1100
   key: realpointcoin
   currency: rpt
   fixed: 8
   fee: 0.001
   inuse: true
   type: WithdrawChannelRealpointcoin
-- id: 1100
+- id: 1200
   key: tritiumcoin
   currency: trt
   fixed: 8
   fee: 0.001
-- id: 400
+- id: 1300
   key: bank
   currency: cny
   fixed: 2
@@ -54,7 +61,7 @@
   max: 50000
   fee: 0.003
   proportion: true
-- id: 400
+- id: 1400
   key: bank
   currency: eur
   fixed: 2

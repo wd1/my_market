@@ -1,11 +1,4 @@
-- id: 200
-  key: satoshi
-  currency: btc
-  fixed: 8
-  fee: 0.0005
-  inuse: true
-  type: WithdrawChannelSatoshi
-- id: 400
+- id: 100
   key: bank
   currency: eur
   fixed: 2
@@ -16,33 +9,68 @@
   proportion: true
   inuse: true
   type: WithdrawChannelBank
-- id: 500
+- id: 200
+  key: satoshi
+  currency: btc
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelSatoshi
+- id: 400
   key: ether
   currency: eth
   min_confirm: 1
   max_confirm: 6
   inuse: true
-  fixed: 8
+  fixed: 12
   fee: 0.0005
   type: WithdrawChannelEthereum
 - id: 600
   key: litecoin 
   currency: ltc
-  fixed: 8
+  fixed: 12
   fee: 0.0005
   inuse: true
   type: WithdrawChannelLitecoin
-- id: 700
+- id: 800
   key: dashcoin 
   currency: dsh
-  fixed: 8
+  fixed: 12
   fee: 0.0005
   inuse: true
   type: WithdrawChannelDashcoin
-- id: 800
+- id: 1000
   key: zcash 
   currency: zec
-  fixed: 8
+  fixed: 12
   fee: 0.0005
   inuse: true
-  type: WithdrawChannelDashcoin
+  type: WithdrawChannelZcash
+- id: 1200
+  key: ripple 
+  currency: xrp
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelRipple
+- id: 1400
+  key: peercoin 
+  currency: ppc
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelPeercoin
+- id: 1600
+  key: namecoin 
+  currency: nmc
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelNamecoin
+- id: 1600
+  key: monero 
+  currency: xmr
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelMonero

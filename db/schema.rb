@@ -260,7 +260,7 @@ ActiveRecord::Schema.define(version: 20170923121241) do
     t.decimal  "origin_volume",             precision: 32, scale: 16
     t.integer  "state"
     t.datetime "done_at"
-    t.string   "type",           limit: 8
+    t.string   "type",           limit: 9
     t.integer  "member_id"
     t.datetime "created_at"
     t.datetime "updated_at"
