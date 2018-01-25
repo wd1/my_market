@@ -54,3 +54,13 @@
   currency: xmr
   min_confirm: 1
   max_confirm: 6
+- id: 2000
+  key: bitcoincash
+  currency: bch
+  min_confirm: 1
+  max_confirm: 6
+- id: 2200
+  key: augur
+  currency: rep
+  min_confirm: 1
+  max_confirm: 6

@@ -1,6 +1,6 @@
 - id: 1
-  key: euro
-  code: eur
+  key: rupee
+  code: rup
   coin: false
   assets:
     balance: 92343242.56

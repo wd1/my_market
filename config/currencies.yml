@@ -1,13 +1,13 @@
 - id: 1
-  key: euro
-  code: eur
-  symbol: "€"
+  key: rupee
+  code: inr
+  symbol: "₹₹"
   coin: false
   precision: 2
   assets:
     accounts:
       -
-        bank: 'Chase Bank'
+        bank: 'Indian Central Bank'
         address: '6225 0885 6022 3501'
         password: '111111'
         tel: '95555'
@@ -139,6 +139,34 @@
     accounts:
       -
         address: 0x4bA2474e063Aea44e23F2Bf7Fb9e4e2878dBaB44
+- id: 11
+  key: bch
+  code: bch
+  symbol: "฿"
+  coin: true
+  precision: 4
+  quick_withdraw_max: 0
+  rpc: http://localhost
+  blockchain: https://etherscan.io/tx/#{txid}
+  address_url: https://etherscan.io/address/#{address}
+  assets:
+    accounts:
+      -
+        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+- id: 12
+  key: rep
+  code: rep
+  symbol: "฿"
+  coin: true
+  precision: 4
+  quick_withdraw_max: 0
+  rpc: http://localhost
+  blockchain: https://etherscan.io/tx/#{txid}
+  address_url: https://etherscan.io/address/#{address}
+  assets:
+    accounts:
+      -
+        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
 # - id: 10
 #   key: bcc
 #   code: bcc

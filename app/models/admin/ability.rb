@@ -26,6 +26,9 @@ module Admin
       can :manage, ::Deposits::Peercoin
       can :manage, ::Deposits::Namecoin
       can :manage, ::Deposits::Monero
+      can :manage, ::Deposits::Bitcoincash
+      can :manage, ::Deposits::Argue
+      can :manage, ::Deposits::Ether
       can :manage, ::Deposits::Realpointcoin
       can :manage, ::Deposits::Tritiumcoin
 
@@ -40,6 +43,9 @@ module Admin
       can :manage, ::Withdraws::Peercoin
       can :manage, ::Withdraws::Namecoin
       can :manage, ::Withdraws::Monero
+      can :manage, ::Withdraws::Bitcoincash
+      can :manage, ::Withdraws::Argue
+      can :manage, ::Withdraws::Ether
       can :manage, ::Withdraws::Realpointcoin
       can :manage, ::Withdraws::Tritiumcoin
     end

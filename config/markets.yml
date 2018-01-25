@@ -1,18 +1,18 @@
-- id: btceur
+- id: btcinr
   code: 3
   #name: BTC/EUR      # default name
   base_unit: btc
-  quote_unit: eur
+  quote_unit: inr
   #price_group_fixed: 1 # aggregate price levels in orderbook
-  bid: {fee: 0, currency: eur, fixed: 2}
+  bid: {fee: 0, currency: inr, fixed: 2}
   ask: {fee: 0, currency: btc, fixed: 4}
   sort_order: 1
   #visible: false     # default to true
-- id: ltceur
+- id: ltcinr
   code: 4
   base_unit: ltc
-  quote_unit: eur
-  bid: {fee: 0, currency: eur, fixed: 8}
+  quote_unit: inr
+  bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: ltc, fixed: 8}
 - id: ltcbtc
   code: 4
@@ -20,39 +20,39 @@
   quote_unit: btc
   bid: {fee: 0, currency: btc, fixed: 8}
   ask: {fee: 0, currency: ltc, fixed: 8}
-- id: dsheur
+- id: dshinr
   code: 4
   base_unit: dsh
-  quote_unit: eur
-  bid: {fee: 0, currency: eur, fixed: 8}
+  quote_unit: inr
+  bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: dsh, fixed: 8}
-- id: bcceur
+- id: bccinr
   code: 5
   base_unit: bcc
-  quote_unit: eur
-  bid: {fee: 0, currency: eur, fixed: 8}
+  quote_unit: inr
+  bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: bcc, fixed: 8}
-- id: etheur
+- id: ethinr
   code: 6
   base_unit: eth
-  quote_unit: eur
-  bid: {fee: 0, currency: eur, fixed: 8}
+  quote_unit: inr
+  bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: eth, fixed: 8}
-- id: zeceur
+- id: zecinr
   code: 7
   base_unit: zec
-  quote_unit: eur
-  bid: {fee: 0, currency: eur, fixed: 8}
+  quote_unit: inr
+  bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: zec, fixed: 8}
-- id: btseur
+- id: btsinr
   code: 8
   base_unit: bts
-  quote_unit: eur
-  bid: {fee: 0, currency: eur, fixed: 8}
+  quote_unit: inr
+  bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: bts, fixed: 8}
-- id: etceur
+- id: etcinr
   code: 9
   base_unit: etc
-  quote_unit: eur
-  bid: {fee: 0, currency: eur, fixed: 8}
+  quote_unit: inr
+  bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: etc, fixed: 8}

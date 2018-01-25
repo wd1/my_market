@@ -1,6 +1,6 @@
 - id: 100
   key: bank
-  currency: eur
+  currency: inr
   fixed: 2
   fee_max: 0
   min: 100
@@ -67,10 +67,24 @@
   fee: 0.0005
   inuse: true
   type: WithdrawChannelNamecoin
-- id: 1600
+- id: 1800
   key: monero 
   currency: xmr
   fixed: 12
   fee: 0.0005
   inuse: true
   type: WithdrawChannelMonero
+- id: 2000
+  key: bitcoincash 
+  currency: bch
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelBitcoincash
+- id: 2200
+  key: augur 
+  currency: rep
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelAugur

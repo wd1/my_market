@@ -23,6 +23,9 @@ en:
       withdraws/satoshi: Withdraw Bitcoin
       withdraws/realpointcoin: Withdraw RealPointCoin
       withdraws/litecoin: Withdraw Litecoin
+      withdraws/ether: Withdraw Ether
+      withdraws/bitcoincash: Withdraw Bitcoincash
+      withdraws/argue: Withdraw Argue
       withdraws/dashcoin: Withdraw Dashcoin
       withdraws/namecoin: Withdraw Namecoin
       withdraws/monero: Withdraw Monero
@@ -196,6 +199,24 @@ en:
         amount: Amount
         confirmations: Confirmation
         aasm_state_text: State
+      deposits/ether:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/bitcoincash:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/argue:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
       deposits/Dashcoin:
         created_at: Created At
         txid: Transaction ID
@@ -267,6 +288,48 @@ en:
         remark: Remark
         fee: Fee
       withdraws/litecoin:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/ether:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/bitcoincash:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/argue:
         id: ID
         member_name: Account
         currency_obj_key_text: Currency
@@ -450,6 +513,24 @@ en:
               blank: Please enter your withdrawal address
               invalid: Invalid withdrawals address, please review.
               ismine: Please use a new address.
+        withdraws/ether:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/bitcoincash:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/argue:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
         withdraws/dashcoin:
           attributes:
             fund_uid:
@@ -540,23 +621,24 @@ en:
   market:
     currency:
       eur: EUR
+      inr: INR
       btc: BTC
-      eur: EUR
       doge: DOGE
       pts: PTS
       ltc: LTC
+      eth: ETH
+      bch: BCH
+      rep: REP
       dsh: DSH
       nmc: NMC
       xmr: XMR
       zec: ZEC
       usd: USD
-      eur: EUR
       ppc: PPC
       blk: BLK
       rpt: RPT
       trt: TRT
       bcc: BCC
-      eth: ETH
       xrp: XRP
       bts: BTS
       etc: ETC
@@ -584,6 +666,11 @@ en:
       key: EUR
       code: EUR
       name: European Euro
+      format: '0,0.00'
+    rupee:
+      key: INR
+      code: INR
+      name: Indian Rupee
       format: '0,0.00'
     dogecoin:
       key: DOG
@@ -630,10 +717,30 @@ en:
       code: EUR
       name: Euro
       format: '0,0.0000'
+    rupees:
+      key: INR
+      code: INR
+      name: Rupee
+      format: '0,0.0000'
     litecoin:
       key: LTC
       code: LTC
       name: Litecoin
+      format: '0,0.0000'
+    ether:
+      key: eth
+      code: eth
+      name: Ether
+      format: '0,0.0000'
+    bitcoincash:
+      key: BCH
+      code: BCH
+      name: Bitcoincash
+      format: '0,0.0000'
+    argue:
+      key: REP
+      code: REP
+      name: Argue
       format: '0,0.0000'
     dashcoin:
       key: DSH
@@ -842,6 +949,20 @@ en:
       latency: 1 confirmation
       transfer: Manual
       go: Deposit
+    bitcoincash:
+      key: Bitcoincash Chain
+      title: Bitcoincash Deposits
+      intro: Deposit bitcoincash from your own wallet address to Cryex24 account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    argue:
+      key: Argue Chain
+      title: Argue Deposits
+      intro: Deposit argue from your own wallet address to Cryex24 account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
     dashcoin:
       key: Dashcoin Chain
       title: Dashcoin Deposits
@@ -909,6 +1030,15 @@ en:
         gen_address:
           require_transaction: it can't generate new address if it hasn't been used.
       litecoins:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      ethers:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      bitcoincashs:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      argues:
         gen_address:
           require_transaction: it can't generate new address if it hasn't been used.
       dashcoins:
@@ -1068,6 +1198,45 @@ en:
           manage_fund_source: Manage Fund Source
         create:
           notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
+      ethers:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
+      bitcoincashs:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
+      argues:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon as possible
+          alert_two_factor: Two-Factor Authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to complete the bank transfer.
       dashcoins:
         destroy:
           notice: Withdraw been canceled, frozen balance has returned to your account
@@ -1214,6 +1383,9 @@ en:
         liability-proof: Proof of Liabilities
         btc-assets: BTC Assets
         ltc-assets: LTC Assets
+        eth-assets: ETH Assets
+        bch-assets: BCH Assets
+        rep-assets: REP Assets
         dsh-assets: DSH Assets
         nmc-assets: NMC Assets
         xmr-assets: XMR Assets
@@ -1225,9 +1397,13 @@ en:
         trt-assets: TRT Assets
         cny-assets: CNY Assets
         eur-assets: EUR Assets
+        inr-assets: INR Assets
       liability_tabs:
         verify-btc: Verify My BTC Assets
         verify-ltc: Verify My LTC Assets
+        verify-eth: Verify My ETH Assets
+        verify-bch: Verify My BCH Assets
+        verify-rep: Verify My REP Assets
         verify-dsh: Verify My DSH Assets
         verify-nmc: Verify My NMC Assets
         verify-xmr: Verify My XMR Assets
@@ -1239,8 +1415,12 @@ en:
         verify-trt: Verify My TRT Assets
         verify-cny: Verify My CNY Assets
         verify-eur: Verify My EUR Assets
+        verify-inr: Verify My INR Assets
         btc-assets-total: 'Total BTC assets of exchange: '
         ltc-assets-total: 'Total LTC assets of exchange: '
+        eth-assets-total: 'Total ETH assets of exchange: '
+        bch-assets-total: 'Total BCH assets of exchange: '
+        rep-assets-total: 'Total REP assets of exchange: '
         dsh-assets-total: 'Total DSH assets of exchange: '
         nmc-assets-total: 'Total NMC assets of exchange: '
         xmr-assets-total: 'Total XMR assets of exchange: '
@@ -1252,6 +1432,7 @@ en:
         trt-assets-total: 'Total TRT assets of exchange: '
         cny-assets-total: 'Total CNY assets of exchange: '
         eur-assets-total: 'Total EUR assets of exchange: '
+        inr-assets-total: 'Total INR assets of exchange: '
       liability_proof:
         title: Proof of Liabilities
         intro: As an exchange, our liabilities refer to the sum of money (in both crypto currencies and fiat currencies) that our users trust us with. On this page, we present you our liabilities. We also provide you a way to verify that your account balance is indeed part of our liabilities.
@@ -1273,6 +1454,21 @@ en:
         title: LTC Assets
         intro: All of exchange's LTC assets are listed here.
         total: Total LTC Assets
+        address: Address
+      eth_assets:
+        title: ETH Assets
+        intro: All of exchange's ETH assets are listed here.
+        total: Total ETH Assets
+        address: Address
+      bch_assets:
+        title: BCH Assets
+        intro: All of exchange's BCH assets are listed here.
+        total: Total BCH Assets
+        address: Address
+      rep_assets:
+        title: REP Assets
+        intro: All of exchange's REP assets are listed here.
+        total: Total REP Assets
         address: Address
       dsh_assets:
         title: DSH Assets
@@ -1328,6 +1524,11 @@ en:
         intro: All of exchange's EUR assets are listed here.
         total: Total EUR Assets
         description: " <p>For supervision, you can inquiry the balance of our deposit account:</p> <p>Bank: %{bank}</p> <p>Account： %{address}</p> <p>Inquiry Password： %{password}</p> <p>Inquiry Tel.： %{tel}</p>"
+      inr_assets:
+        title: INR Assets
+        intro: All of exchange's INR assets are listed here.
+        total: Total INR Assets
+        description: " <p>For supervision, you can inquiry the balance of our deposit account:</p> <p>Bank: %{bank}</p> <p>Account： %{address}</p> <p>Inquiry Password： %{password}</p> <p>Inquiry Tel.： %{tel}</p>"
       partial_tree:
         success: 'Success! Verification data generated at: %{timestamp}'
     funds:
@@ -1335,9 +1536,12 @@ en:
         account_history: Account History
         eur_format: '0.00'
         cny_format: '0.00'
-        eur_format: '0.00'
+        inr_format: '0.00'
         btc_format: '0.00000000'
         ltc_format: '0.00000000'
+        eth_format: '0.00000000'
+        bch_format: '0.00000000'
+        rep_format: '0.00000000'
         dsh_format: '0.00000000'
         nmc_format: '0.00000000'
         xmr_format: '0.00000000'
@@ -1354,7 +1558,7 @@ en:
             deposit: Deposit
             withdraw: Withdraw
             fix: Fix
-          eur:
+          inr:
             strike_add: Plus
             strike_sub: Sub
             deposit: Deposit
@@ -1367,6 +1571,24 @@ en:
             withdraw: Withdraw
             fix: Fix
           ltc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          eth:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          bch:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          rep:
             strike_add: Plus
             strike_sub: Sub
             deposit: Deposit
@@ -1470,8 +1692,11 @@ en:
         eur_html: "<i class='fa fa-check'></i><span>EUR Markets</span>"
         btc_html: "<i class='fa fa-check'></i><span>BTC Markets</span>"
         usd_html: "<i class='fa fa-check'></i><span>USD Markets</span>"
-        eur_html: "<i class='fa fa-check'></i><span>EUR Markets</span>"
+        inr_html: "<i class='fa fa-check'></i><span>INR Markets</span>"
         ltc_html: "<i class='fa fa-check'></i><span>LTC Markets</span>"
+        eth_html: "<i class='fa fa-check'></i><span>ETH Markets</span>"
+        bch_html: "<i class='fa fa-check'></i><span>BCH Markets</span>"
+        rep_html: "<i class='fa fa-check'></i><span>REP Markets</span>"
         dsh_html: "<i class='fa fa-check'></i><span>DSH Markets</span>"
         nmc_html: "<i class='fa fa-check'></i><span>NMC Markets</span>"
         xmr_html: "<i class='fa fa-check'></i><span>XMR Markets</span>"
@@ -1662,9 +1887,12 @@ en:
         title: "%{icon} %{c} Account"
         cny_format: '0.00'
         eur_format: '0.00'
-        eur_format: '0.00'
+        inr_format: '0.00'
         btc_format: '0.00000000'
         ltc_format: '0.00000000'
+        eth_format: '0.00000000'
+        bch_format: '0.00000000'
+        rep_format: '0.00000000'
         dsh_format: '0.00000000'
         nmc_format: '0.00000000'
         xmr_format: '0.00000000'
@@ -1779,6 +2007,15 @@ en:
         litecoin:
           sum: Minimum amount 0.001
           fund_extra: Enter a label for this address (optional)
+        ether:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+        argue:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+        bitcoincash:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
         dashcoin:
           sum: Minimum amount 0.001
           fund_extra: Enter a label for this address (optional)
@@ -1828,6 +2065,12 @@ en:
         realpointcoin:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
         litecoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        ether:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        bitcoincash:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        argue:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
         dashcoin:
           sum: "<a target='_balance' href='#'>Fee structure</a>"
@@ -1905,6 +2148,27 @@ en:
           fee: Fee
           sum: Amount
           fund_uid: Litecoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        ether:
+          fee: Fee
+          sum: Amount
+          fund_uid: Ether Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        bitcoincash:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoincash Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        argue:
+          fee: Fee
+          sum: Amount
+          fund_uid: Argue Address
           fund_extra: Label
           account_balance: Account Balance
           member_name: Account
@@ -1992,6 +2256,24 @@ en:
           accept: Accept
           accept_confirm: Confirm deposit?
       litecoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      ethers:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      bitcoincashs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      argues:
         update:
           notice: The deposit was successful.
         index:
@@ -2160,6 +2442,48 @@ en:
           withdraw: Withdrawals
         update:
           notice: Withdraw was made
+      ethers:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      bitcoincashs:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      argues:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
       dashcoins:
         index:
           one: Pending withdrawals
@@ -2290,6 +2614,24 @@ en:
       accepted: Accepted
       checked: Checked
       warning: Warning
+  deposits/ether:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/bitcoincash:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/argue:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
   deposits/dashcoin:
     aasm_state:
       submitted: Submitted
@@ -2406,6 +2748,30 @@ en:
       member_name: Member
       state_and_actions: State/Actions
       currency_obj_key_text: Currency
+    ether:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    bitcoincash:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    argue:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
     dashcoin:
       amount: Amount
       txid: TxId
@@ -2502,9 +2868,12 @@ en:
       usd: USD
       eur: EUR
       cny: CNY
-      eur: EUR
+      inr: INR
       btc: BTC
       ltc: LTC
+      eth: ETH
+      bch: BCH
+      rep: REP
       dsh: DSH
       nmc: NMC
       xmr: XMR
@@ -2543,6 +2912,9 @@ en:
         satoshi: Bitcoin
         realpointcoin: RealPointCoin
         litecoin: Litecoin
+        ether: Ether
+        bitcoincash: Bitcoincash
+        argue: Argue
         dashcoin: Dashcoin
         namecoin: Namecoin
         monero: Monero
@@ -3012,6 +3384,27 @@ en:
       latency: 30 minutes
       transfer: Manual
       go: Withdraw
+    ether:
+      key: Ether_Chain
+      title: Ether Blockchain
+      intro: Withdraw Ether to your own Ether wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    bitcoincash:
+      key: Bitcoincash_Chain
+      title: Bitcoincash Blockchain
+      intro: Withdraw Bitcoincash to your own Bitcoincash wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    argue:
+      key: Argue_Chain
+      title: Argue Blockchain
+      intro: Withdraw Argue to your own Argue wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
     dashcoin:
       key: Dashcoin_Chain
       title: Dashcoin Blockchain
@@ -3114,6 +3507,42 @@ en:
       canceled: Cancelled
       failed: Failed
   withdraws/litecoin:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/ether:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/bitcoincash:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/argue:
     aasm_state:
       submitting: Submitting
       submitted: Submitted
