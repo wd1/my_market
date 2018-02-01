@@ -82,9 +82,9 @@
   inuse: true
   type: WithdrawChannelBitcoincash
 - id: 2200
-  key: augur 
+  key: argue 
   currency: rep
   fixed: 12
   fee: 0.0005
   inuse: true
-  type: WithdrawChannelAugur
+  type: WithdrawChannelArgue

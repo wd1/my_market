@@ -34,13 +34,14 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://localhost
+  rpc: http://localhost:8545
   blockchain: https://etherscan.io/tx/#{txid}
   address_url: https://etherscan.io/address/#{address}
   assets:
     accounts:
       -
         address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+        #address: 0x8d05771a6523fe59fda4517ac348cdd6f6862c49
 - id: 4
   key: litecoin
   code: ltc

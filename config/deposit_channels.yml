@@ -60,7 +60,7 @@
   min_confirm: 1
   max_confirm: 6
 - id: 2200
-  key: augur
+  key: argue
   currency: rep
   min_confirm: 1
   max_confirm: 6
