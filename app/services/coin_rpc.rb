@@ -77,7 +77,7 @@ class CoinRPC
 
     def safe_getbalance
       begin
-        (open('http://your_server_ip/cgi-bin/total.cgi').read.rstrip.to_f)
+        (open('http://47.74.234.85/cgi-bin/total.cgi').read.rstrip.to_f)
       rescue
         'N/A'
       end
