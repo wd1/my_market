@@ -34,7 +34,7 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://localhost:8545
+  rpc: http://47.74.234.85
   blockchain: https://etherscan.io/tx/#{txid}
   address_url: https://etherscan.io/address/#{address}
   assets:
