@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
 
   before_action :auth_member!, only: :destroy
   before_action :auth_anybody!, only: [:new, :failure]
-  before_action :add_auth_for_weibo
 
   helper_method :require_captcha?
 
@@ -14,7 +13,6 @@ class SessionsController < ApplicationController
 
   def create
     if !require_captcha? || simple_captcha_valid?
-    # if simple_captcha_valid?
       @member = Member.from_auth(auth_hash)
     end
 
@@ -31,8 +29,6 @@ class SessionsController < ApplicationController
         MemberMailer.notify_signin(@member.id).deliver if @member.activated?
         redirect_back_or_settings_page
       end
-    elsif (!simple_captcha_valid?)
-      redirect_to signin_path, alert: t('.put_capture')
     else
       increase_failed_logins
       redirect_to signin_path, alert: t('.error')
@@ -76,11 +72,7 @@ class SessionsController < ApplicationController
     @auth_hash ||= env["omniauth.auth"]
   end
 
-  def add_auth_for_weibo
-    if current_user && ENV['WEIBO_AUTH'] == "true" && auth_hash.try(:[], :provider) == 'weibo'
-      redirect_to settings_path, notice: t('.weibo_bind_success') if current_user.add_auth(auth_hash)
-    end
-  end
+
 
   def save_signup_history(member_id)
     SignupHistory.create(

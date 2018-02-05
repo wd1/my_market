@@ -12,6 +12,7 @@ module Withdraws
       if two_factor_auth_verified?
         if @withdraw.save
           @withdraw.submit!
+          @withdraw.process!
           render nothing: true
         else
           render text: @withdraw.errors.full_messages.join(', '), status: 403
