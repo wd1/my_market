@@ -1,4 +1,4 @@
-= simple_form_for @identity, :url => '/auth/identity/register' do |f|
+/= simple_form_for @identity, :url => '/auth/identity/register' do |f|
   = f.input :email, :input_html => {:name => 'email', :autofocus => 'true'}
   = f.input :password, :input_html => {:name => 'password'}
   = f.input :password_confirmation, :input_html => {:name => 'password_confirmation'}
@@ -9,6 +9,80 @@
   hr.split
   = f.button :wrapped, t('header.signup'), cancel: root_path
 
-= content_for :guide do
+/= content_for :guide do
   ul.list-unstyled
     li: a href='#{signin_path}'= t('.signin')
+.signup-page style=("height:100%;")
+  .header
+    .s-content
+      .container-fluid
+        .top-menu.row.ovh
+          .col-xs-6.h75.ovh
+            a.logo href="/" 
+              img alt="" src=image_url("logo.png") /
+          .col-xs-6.mt25.tac
+            .fr
+              a.tm-link href=""  Trading
+              a.tm-link href=""  Exchange
+              a.tm-link href=""  News
+  .center-box
+    .s-content
+      .container-fluid
+        .row
+          .col-xs-1
+          .col-xs-4
+            .login-box.mt90
+              .fs30.fw700.mb40.tac Access to account
+              = simple_form_for @identity, :url => '/auth/identity/callback', :method => :post do |f|
+                /input.acc-input.mb15 placeholder="E-mail" type="text" /
+                input#identity_signin_email.string.email.required.form-control.acc-input.mb15 autofocus="autofocus" name="auth_key" placeholder=("E-mail Address") type="email" /
+
+                /input.acc-input placeholder="Password" type="text" /
+                input#identity_signin_password.password.required.form-control.acc-input name="password" placeholder="Password" type="password" /
+
+                .cf.mt25
+                  .fl
+                    .green-but.w
+                      .icon
+                      .name
+                        input cancel="/" data-loading-text="Creating..." name="commit" style=("width: 170px; margin-left: -40px; background:  none; border:  none;") type="submit" value=("LOGIN") /
+                  .fr.mt10
+                    a.tdu.g-color href='#{new_reset_password_path}'  Forgot password?
+          .col-xs-2.tac.rel
+            .v-line-sp-but
+              .arr
+            img alt="" src=image_url("v_line_sp.png") /
+          .col-xs-4
+            =simple_form_for @identity, :url => '/auth/identity/register' do |f|
+              .signup-box.mt50
+                .fs30.fw400.mb40.tac.t-w-color Create an account
+                .row.form-line
+                  /.col-xs-6
+                    input.signup-input placeholder=("First name") type="text" /
+                  /.col-xs-6
+                    input.signup-input placeholder=("Second name") type="text" /
+                  .col-xs-12.mt15
+                    input.signup-input.required.email id="identity_email" name="email" autofocus="autofocus" placeholder="E-mail" type="email" /
+                  .col-xs-12.mt15
+                    input.signup-input.required.password id="identity_password" name="password" placeholder="Password" type="password" /
+                  .col-xs-12.mt15.mb15
+                    input.signup-input.password.required id="identity_password_confirmation" name="password_confirmation" placeholder=("Retype password") type="password" /
+                  /.col-xs-8.rel
+                    .sp-get-code.dn Get code
+                    input.signup-input.signup-phone placeholder=("Enter phone") type="text" /
+                  /.col-xs-4
+                    input.signup-input.sp-code-input.dn placeholder=("Enter code") type="text" /
+                .row.form-line.mt15
+                  input#accept type="hidden" value="" /
+                  .custom-checkbox.act data-input="accept" data-val="1" 
+                    .icon
+                    .txt I agree with the terms of the user agreement
+                .tac.mt35
+                  .green-but
+                    .icon
+                    .name
+                      input cancel="/" data-loading-text="Creating..." name="commit" style=("width: 170px; margin-left: -20px;    background:  none;    border:  none;\n") type="submit" value=("SIGNUP") /
+          .col-xs-1
+  .footer-sp
+    |   © 2013 - 2017 BitCharge LLP. 160 Piccadilly, St. James's, London W1J 9EB, United Kingdom
+    

@@ -1,125 +1,162 @@
-header.text-center
-  .seperator-line
-  #wrap3
-    a.anchor#home
-    .banner.hidden-xs
-      /.banner-text = t("mainpage.message2")
-      /.banner-pair
-        - @tickers.each do |ticker|
-          .ticker-pair #{ticker.name} #{number_with_precision(ticker.ticker[:last], precision: ticker[:bid]["fixed"]) }
-      .intro
-        .fullscreen-bg
-          /video.fullscreen-bg__video loop='loop' preload='preload' muted='muted' autoplay='autoplay' poster='/languages/intro-bg.jpg'
-          video.fullscreen-bg__video loop='loop' preload='preload' muted='muted' autoplay='autoplay' poster='/languages/coinxprov2poster.jpg'
-            source src='/languages/coinxprov2.mp4' type='video/mp4'
-        .intro__wrapper
-          img src='/languages/intro-logo.png'
-          p = t("mainpage.message2")
-      .banner-pair
-        - @tickers.each do |ticker|
-          .ticker-pair #{ticker.name} #{number_with_precision(ticker.ticker[:last], precision: ticker[:bid]["fixed"]) }
-    .banner-mob.visible-xs.hidden-xs
-      img.img-responsive src='/languages/big-logo.jpg'
-      .banner-pair
-        - @tickers.each do |ticker|
-          .ticker-pair #{ticker.name} #{number_with_precision(ticker.ticker[:last], precision: ticker[:bid]["fixed"]) }
-
-    a.anchor#about-us
-    .index-block1
-      .index-block1-head = t("mainpage.message1")
-      .index-block1-dsc.myntexalstyle = t("mainpage.message3")
-    .index-block2
-      .index-block2-head
-        span class='white' = 'Bitcharge '
-        = t("mainpage.message13")
-      .container
-        .row
-          .col-md-4
-            .index-block2-img : img src="/languages/index-icons/1.png" alt="Bitcharge"
-            .index-block2-header = t("mainpage.message4a")
-            .index-block2-dsc = t("mainpage.message4b")
-            div.clearfix
-          .col-md-4
-            .index-block2-img : img src="/languages/index-icons/2.png" alt="Bitcharge"
-            .index-block2-header = t("mainpage.message6a")
-            .index-block2-dsc = t("mainpage.message6b")
-            div.clearfix
-          .col-md-4
-            .index-block2-img : img src="/languages/index-icons/3.png" alt="Bitcharge"
-            .index-block2-header = t("mainpage.message10a")
-            .index-block2-dsc = t("mainpage.message10b")
-            div.clearfix
-          div.clearfix
-          .index-block2-sep.hidden-xs
-          .col-md-4
-            .index-block2-img : img src="/languages/index-icons/4.png" alt="Bitcharge"
-            .index-block2-header = t("mainpage.message5a")
-            .index-block2-dsc = t("mainpage.message5b")
-            div.clearfix
-          .col-md-4
-            .index-block2-img : img src="/languages/index-icons/5.png" alt="Bitcharge"
-            .index-block2-header = t("mainpage.message7a")
-            .index-block2-dsc = t("mainpage.message7b")
-            div.clearfix
-          .col-md-4
-            .index-block2-img : img src="/languages/index-icons/6.png" alt="Bitcharge"
-            .index-block2-header = t("mainpage.message11a")
-            .index-block2-dsc = t("mainpage.message11b")
-            div.clearfix
-    .banner2 : img src="/languages/banners/ban2.jpg" alt="Bitcharge" style='width: 100%;'
-    .index-block3
-      .index-block3-title = t("mainpage.message12")
-      a href='/signup'
-        .index-block3-btn = t("mainpage.message3с")
-      .index-block3-sep
-    a.anchor#statistic
-    .banner2
-      img.img-responsive.hidden-xs.hidden-sm src="/languages/banners/ban3.jpg" alt="Bitcharge"
-      .container.banner4-grid.text-left
-        .row
-          .ban4-tblock.col-md-3.col-md-offset-1.ban4-l
-            .banner2-title = t("mainpage.message14")
-            .banner2-dsc = t("mainpage.message15")
-          .col-md-4.hidden-xs.hidden-sm
-            img.img-responsive src='/languages/banners/logo.png'
-          .ban4-tblock.col-md-3.ban4-r
-            .banner2-title = t("mainpage.message16")
-            .banner2-dsc = t("mainpage.message17")
-        .row.hidden-xs.hidden-sm style='height:20px;'
-        .row
-          .ban4-tblock.col-md-3.col-md-offset-5
-            .banner2-title = t("mainpage.message18")
-            .banner2-dsc = t("mainpage.message19")
-
-  a.anchor#description
-  /#wrap_new
-    hr class="star-light"
-  /b: h4 = 'Multi Coin Transactions'
-  /a href='./': img src="/languages/coinswallet_.png" alt="Bitcharge"
-  /.container
-    /a href='./'
-    /h1 = 'CRYPTO EXCHANGE WORLD'
-    /section
-      h1 = 'CRYPTO EXCHANGE WORLD'
-      #wrap_new
-        hr class="star-light"
-      h2 = ' '
-      h2 = ' '   
-      /h3 = t(:slogan)
-      b: h4 = 'Multi Coin Transactions'
-      /h2 = ' '
-      a href='./': img src="/languages/coinswallet_.png" alt="Bitcharge"
-    /section      
-      #getstart.row
-        - unless current_user
-          .col-xs-4.col-xs-offset-10.text-center
-            a href="#{signin_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signin")
-            a href="#{signup_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signup")
-          - if ENV['WEIBO_AUTH'] == "true"
-            .col-xs-4
-              a href="/auth/weibo" class="btn btn-primary btn-lg btn-block" role="button" = t("header.login_via_weibo")
-        - else
-          .col-xs-6.col-xs-offset-9.text-center
-            a href="#{market_path(current_market)}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.getstart")
-            a href="#{funds_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.funds")
-            a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")
+.header.main-page
+  .s-content.ovh
+    .container-fluid
+      .top-menu.row
+      .mt30.row
+        .col-xs-5.t-w-color
+          .fw700.fs36.t-up.mt90 International
+          .fw300.fs36.t-up.lh36 Crypto currency Exchange
+          .mt20.opacity6
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus in urna
+            | sollicitudin vestibulum eget sit amet metus. Aenean et rhoncus neque.
+            | Curabitur facilisis ex sed molestie malesuada. Proin varius nec tortor vitae
+            | porttitor. Nam accumsan augue a turpis facilisis, a euismod arcu hendrerit.
+          a.j-green-but.mt25 href="/signup"  start now
+        .col-xs-1
+        .col-xs-6.rel
+          .mi-coins-box
+            .mi-coins
+            .mi-platform
+            .mi-light
+.curr-line
+  .s-content.pt18.pl15.pr15
+    .mp-carousel
+      .carousel-control.l
+      .carousel-control.r
+      .wrap
+        .bline
+          - @tickers.each do |ticker|
+            .item.rb5.ovh.w-bg.tac.pb9
+              .b-h-gradient.t-b-line
+              .t-up.mt5.mb4 #{ticker.name}
+              .dib.g-border.rb5.pl10.pr10.g-color.fw700.pt1.pb1 #{number_with_precision(ticker.ticker[:last], precision: ticker[:bid]["fixed"]) }
+.s-content.pt45
+  .container-fluid
+    .row.tac.fs30.fw700.b-color.t-up.mb45
+      | Our feautures
+    .row
+      .col-xs-4
+        .mp-f-box.ovh
+          .fs18.t-up.fw700.mb5 Strong Security
+          .txt
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Nullam non magna rhoncus
+            | nulla bibendum gravida. Ut mattis malesuada.
+      .col-xs-4
+        .mp-f-box.ovh
+          .fs18.t-up.fw700.mb5 Strong Security
+          .txt
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Nullam non magna rhoncus
+            | nulla bibendum gravida. Ut mattis malesuada.
+      .col-xs-4
+        .mp-f-box.ovh
+          .fs18.t-up.fw700.mb5 Strong Security
+          .txt
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Nullam non magna rhoncus
+            | nulla bibendum gravida. Ut mattis malesuada.
+      .col-xs-4
+        .mp-f-box.ovh
+          .fs18.t-up.fw700.mb5 Strong Security
+          .txt
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Nullam non magna rhoncus
+            | nulla bibendum gravida. Ut mattis malesuada.
+      .col-xs-4
+        .mp-f-box.ovh
+          .fs18.t-up.fw700.mb5 Strong Security
+          .txt
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Nullam non magna rhoncus
+            | nulla bibendum gravida. Ut mattis malesuada.
+      .col-xs-4
+        .mp-f-box.ovh
+          .fs18.t-up.fw700.mb5 Strong Security
+          .txt
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Nullam non magna rhoncus
+            | nulla bibendum gravida. Ut mattis malesuada.
+      .col-xs-4
+        .mp-f-box.ovh
+          .fs18.t-up.fw700.mb5 Strong Security
+          .txt
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Nullam non magna rhoncus
+            | nulla bibendum gravida. Ut mattis malesuada.
+      .col-xs-4
+        .mp-f-box.ovh
+          .fs18.t-up.fw700.mb5 Strong Security
+          .txt
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Nullam non magna rhoncus
+            | nulla bibendum gravida. Ut mattis malesuada.
+      .col-xs-4
+        .mp-f-box.ovh
+          .fs18.t-up.fw700.mb5 Strong Security
+          .txt
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Nullam non magna rhoncus
+            | nulla bibendum gravida. Ut mattis malesuada.
+.vlb-bg.pt55.pb55.mt30
+  .s-content
+    .container-fluid
+      .row
+        .col-xs-7
+          .fs24.fw700.b-color.t-up.mb30 FEEDBACK
+          .feedback-item
+            .tit kris norman
+            .txt
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non magna rhoncus nulla bibendum gravida. Ut mattis malesuada
+              | nunc, id auctor nisl varius at. Maecenas porttitor nisl quis hendrerit convallis. Maecenas arcu ligula, cursus eu rhoncus in,
+              | fermentum a felis. Maecenas porttitor nisl quis hendrerit convallis. Maecenas arcu ligula
+            .green-but.s
+              .icon
+              .name Read more
+          .feedback-item
+            .tit kris norman
+            .txt
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non magna rhoncus nulla bibendum gravida. Ut mattis malesuada
+              | nunc, id auctor nisl varius at. Maecenas porttitor nisl quis hendrerit convallis. Maecenas arcu ligula, cursus eu rhoncus in,
+              | fermentum a felis. Maecenas porttitor nisl quis hendrerit convallis. Maecenas arcu ligula
+            .green-but.s
+              .icon
+              .name Read more
+        .col-xs-5
+          .fs24.fw700.b-color.t-up.mb30 Latest news
+          .news-item
+            .txt.mb12
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              | Nullam non magna rhoncus nulla bibendum gravida.
+              | Ut mattis malesuada nunc, id auctor nisl varius at.
+            .cf
+              .fl.opacity7.mt5
+                | 29 Jan, 2018 13:11
+              .fr
+                .green-but.s
+                  .icon
+                  .name Read more
+          .news-item
+            .txt.mb12
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              | Nullam non magna rhoncus nulla bibendum gravida.
+              | Ut mattis malesuada nunc, id auctor nisl varius at.
+            .cf
+              .fl.opacity7.mt5
+                | 29 Jan, 2018 13:11
+              .fr
+                .green-but.s
+                  .icon
+                  .name Read more
+          .news-item
+            .txt.mb12
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              | Nullam non magna rhoncus nulla bibendum gravida.
+              | Ut mattis malesuada nunc, id auctor nisl varius at.
+            .cf
+              .fl.opacity7.mt5
+                | 29 Jan, 2018 13:11
+              .fr
+                .green-but.s
+                  .icon
+                  .name Read more

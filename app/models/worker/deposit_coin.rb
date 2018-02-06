@@ -103,6 +103,7 @@ module Worker
     end
 
     def get_raw_eth(txid)
+      puts 'eth_get_raw'
       CoinRPC["eth"].eth_getTransactionByHash(txid)
     end
   end
