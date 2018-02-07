@@ -1,4 +1,4 @@
-- content_for :frame do
+/- content_for :frame do
   .container.history-pages
     = render 'tabs', active: :account
 
@@ -17,4 +17,70 @@
               = render partial: 'transaction', collection: @transactions
           .pull-right
             = paginate @transactions
-
+div style=("background:white;height:930px;")
+  .page-title style=("margin:0px;")
+    .s-content
+      .container-fluid
+        span.fs24.fw700.b-color.t-up Account history
+  .vlb-bg.pt25.pb25
+    .s-content
+      .container-fluid
+        .row
+          .col-xs-7
+            .history-filter
+              .fl.mr15
+                .mb4.opacity5 Operation:
+                .filter-select
+                  .placeholder.opacity4 Choose opertion
+              .fl.mr15
+                .mb4.opacity5 Currency:
+                .filter-select
+                  .placeholder.opacity4 Choose currency
+              .fl.mr15
+                .mb4.opacity5 Status:
+                .filter-select
+                  .placeholder.opacity4 Choose status
+          .col-xs-5
+            .fr
+              .fl.mr45
+                .mb4.opacity5 Date range:
+                .filter-date
+                  .date-choosen
+                    span.placeholder.opacity4 From date
+                  .date-choosen.to
+                    span.placeholder.opacity4 To date
+              .fl
+                .green-but.w.md.filter-g-but
+                  .icon
+                  .name Apply filter
+  .pt10.pb45
+    .s-content
+      .container-fluid
+        table.table.table-condensed.table-striped.tb-data
+          thead: tr.title
+            td Operation
+            td Date
+            td CURRENCY
+            td STATUS
+            td PAYMENT SYSTEM
+            td Memo
+          tbody.list
+            = render partial: 'transaction', collection: @transactions
+        .pull-right
+          = paginate @transactions
+        .pagination.mt30.cf
+          .item 1
+          .dotted ...
+          .item 8
+          .item 9
+          .item 10
+          .item 11
+          .item.act 12
+          .item 13
+          .item 14
+          .item 15
+          .item 16
+          .item 17
+          .dotted ...
+          .item 45
+  

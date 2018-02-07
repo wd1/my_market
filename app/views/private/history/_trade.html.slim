@@ -1,5 +1,6 @@
 tr
-  td = t(".#{trade_side trade}")
+  td
+    div class=(["dib","fs12","rb5","g-border","t-up","pl10","pr10","mr10",  ( "#{trade_side trade}") == "ask"? "g-color":"r-color"]) = t ".#{trade_side trade}"
   td = trade.created_at
   td = trade.market.base_unit.upcase
   td = trade.volume

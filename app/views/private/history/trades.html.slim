@@ -1,4 +1,4 @@
-- content_for :frame do
+/- content_for :frame do
   .container.history-pages
     = render 'tabs', active: :trade
 
@@ -18,3 +18,95 @@
               = render partial: 'trade', collection: @trades
           .pull-right
             = paginate @trades
+div style=("background:white;height:930px;")
+  .page-title style=("margin:0px;")
+    .s-content
+      .container-fluid
+        span.fs24.fw700.b-color.t-up trading history
+  .vlb-bg.pt25.pb25
+    .s-content
+      .container-fluid
+        .row
+          .col-xs-7
+            .history-filter
+              .fl.mr15
+                .mb4.opacity5 Operation:
+                .filter-select
+                  .placeholder.opacity4 Choose opertion
+              .fl.mr15
+                .mb4.opacity5 Currency:
+                .filter-select
+                  .placeholder.opacity4 Choose currency
+          .col-xs-5
+            .fr
+              .fl.mr45
+                .mb4.opacity5 Date range:
+                .filter-date
+                  .date-choosen
+                    span.placeholder.opacity4 From date
+                  .date-choosen.to
+                    span.placeholder.opacity4 To date
+              .fl
+                .green-but.w.md.filter-g-but
+                  .icon
+                  .name Apply filter
+  .pt10.pb145
+    .s-content
+      .container-fluid
+        table.table.table-condensed.table-striped.tb-data
+          thead: tr.title
+            td style=("padding:5px 0px 0px 9px;") = t('.side')
+            td = t('.created_at')
+            td = t('.base_currency')
+            td = t('.base_amount')
+            td = t('.quote_currency')
+            td = t('.quote_amount')
+            td = t('.price')
+          tbody.list
+            = render partial: 'trade', collection: @trades
+        .pull-right
+          = paginate @trades
+        .row.mt30
+          .col-xs-6
+            .pagination.cf
+              .item 1
+              .dotted ...
+              .item 8
+              .item 9
+              .item 10
+              .item 11
+              .item.act 12
+              .item 13
+              .item 14
+              .item 15
+              .item 16
+              .item 17
+              .dotted ...
+              .item 45
+          .col-xs-6
+            .fr.rel
+              span.green-but.statement-but.mr20 Get monthly statement
+              .green-but.statement-but.custom
+                .icon
+                .name Custom e-mail statement
+              .statement-box
+                .fl.mr15
+                  .mb4.opacity5 Date range:
+                  .filter-date
+                    .date-choosen
+                      span.placeholder.opacity4 From date
+                    .date-choosen.to
+                      span.placeholder.opacity4 To date
+                .fl.mr15
+                  .mb4.opacity5 Operation:
+                  .filter-select
+                    .placeholder.opacity4 Choose opertion
+                .fl.mr15
+                  .mb4.opacity5 Currency:
+                  .filter-select
+                    .placeholder.opacity4 Choose currency
+                .fr
+                  .green-but.w.md.filter-g-but
+                    .icon
+                    .name Apply filter
+  

@@ -1,5 +1,6 @@
 tr
-  td = transaction_type transaction
+  td 
+    div class=(["dib","fs12","rb5","g-border","t-up","pl10","pr10","mr10",  ( transaction_type transaction) == "Withdraw"? "g-color":"r-color"]) = transaction_type transaction
   td = transaction.created_at
   td = transaction.currency_obj.code_text
   td = transaction.amount

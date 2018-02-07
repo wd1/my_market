@@ -1,4 +1,4 @@
-- content_for :frame do
+/- content_for :frame do
   .container.history-pages
     = render 'tabs', active: :order
 
@@ -20,3 +20,55 @@
               = render partial: 'order', collection: @orders
           .pull-right
             = paginate @orders
+div style=("background:white;height:930px;")
+  .page-title style=("margin:0px;")
+    .s-content
+      .container-fluid
+        span.fs24.fw700.b-color.t-up active orders
+  .vlb-bg.pt25.pb25
+    .s-content
+      .container-fluid
+        .row
+          .col-xs-10
+            .filter-curr-list-box
+              .item.act All orders
+              .item BTC/USD
+              .item XRP/USD
+              .item ETH/USD
+              .item REP/USD
+              .item BTC/XRP
+          .col-xs-2
+            span.red-but.fr.mt5 Remove all orders
+  .pt10.pb45
+    .s-content
+      .container-fluid
+        table.table.table-condensed.table-striped.tb-data
+          thead: tr.title
+            td style="padding:5px 0px 0px 9px;" id
+            td type
+            td state
+            td market
+            td price
+            td volume
+            td average price
+            td fullfilled volume
+            td timestamp
+          tbody.list
+            = render partial: 'order', collection: @orders
+        .pull-right
+          = paginate @orders
+        .pagination.mt30.cf
+          .item 1
+          .dotted ...
+          .item 8
+          .item 9
+          .item 10
+          .item 11
+          .item.act 12
+          .item 13
+          .item 14
+          .item 15
+          .item 16
+          .item 17
+          .dotted ...
+          .item 45

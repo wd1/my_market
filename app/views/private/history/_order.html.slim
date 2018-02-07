@@ -1,6 +1,7 @@
 tr
   td = order.id
-  td = t ".#{order.kind}"
+  td
+    div class=(["dib","fs12","rb5","g-border","t-up","pl10","pr10","mr10",  ( "#{order.kind}") == "ask"? "g-color":"r-color"]) = t ".#{order.kind}"
   td = t ".#{order.state}"
   td = order.currency.upcase
   td = order.price
