@@ -1,6 +1,34 @@
-= simple_form_for @identity do |f|
+/= simple_form_for @identity do |f|
   = f.input :old_password
   = f.input :password
   = f.input :password_confirmation
   hr.split
   = f.button :wrapped, cancel: settings_path
+.rb7.w-bg.mt20
+  .settings-title.rel
+    | change password
+  .pl20.pr20.pt15.pb25
+    .row
+      = simple_form_for @identity do |f|
+        .col-xs-8.mb12
+          .fs13.t-up.mb12 current password:
+          .row.form-line
+            .col-xs-6
+              input#identity_old_password.password.optional.acc-input name="identity[old_password]" placeholder=("Current password") type="password" /
+          .fs13.t-up.mb12.mt20 new password:
+          .row.form-line
+            .col-xs-4
+              input#identity_password.password.required.acc-input placeholder=("New password") name="identity[password]" type="password" /
+            .col-xs-4
+              input#identity_password_confirmation.password.required.acc-input placeholder=("Re-type new password") name="identity[password_confirmation]" type="password" /
+          .green-but.w.mt25.w230
+            .icon
+            input.name style=("border:none;background:none;margin-left: 50px;")  cancel="/settings" data-loading-text="Updating..." name="commit" type="submit" value="SAVE PASSWORD" /
+      .col-xs-4
+        .info-box.v.fs12.lh20.mt5
+          | Lorem ipsum dolor sit amet, consectetur adipiscing
+          | elit. Donec ut porttitor lorem, eget fringilla enim.
+          | Aenean iaculis ullamcorper euismod. Vestibulum
+          | quis facilisis lectus. Ut vitae sagittis eros, ut sagittis
+          | libero. Integer vestibulum neque nibh, nec
+          | ullamcorper purus sollicitudin non.

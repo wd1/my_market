@@ -23,8 +23,8 @@ tmp
 /config/application.yml
 /config/database.yml
 /config/slack.yml
-#/config/currencies.yml
-#/config/markets.yml
+/config/currencies.yml
+/config/markets.yml
 /config/amqp.yml
 /config/banks.yml
 

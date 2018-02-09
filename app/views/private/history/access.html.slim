@@ -1,0 +1,110 @@
+
+/- content_for :frame do
+  .container.history-pages
+    = render 'tabs', active: :trade
+
+    .panel.panel-default#trades
+      .panel-body
+        .col-xs-24
+          table.table.table-condensed.table-striped
+            thead: tr
+              th = t('.side')
+              th = t('.created_at')
+              th = t('.base_currency')
+              th = t('.base_amount')
+              th = t('.quote_currency')
+              th = t('.quote_amount')
+              th = t('.price')
+            tbody.list
+              = render partial: 'trade', collection: @trades
+          .pull-right
+            = paginate @trades
+div style=("background:white;height:930px;")
+  .page-title style=("margin:0px;")
+    .s-content
+      .container-fluid
+        span.fs24.fw700.b-color.t-up Access history
+  .pt10.pb45
+    .s-content
+      .container-fluid
+        table.tb-data
+          tr.title
+            td Date
+            td Ip address
+            td browser
+            td action
+          tr.data
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data.even
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data.even
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data.even
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data.even
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data.even
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+          tr.data.even
+            td 22 Jan, 2017 15:12
+            td 145.172.11.56
+            td browser
+            td action
+        .pagination.mt30.cf
+          .item 1
+          .dotted ...
+          .item 8
+          .item 9
+          .item 10
+          .item 11
+          .item.act 12
+          .item 13
+          .item 14
+          .item 15
+          .item 16
+          .item 17
+          .dotted ...
+          .item 45

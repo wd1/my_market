@@ -1,5 +1,65 @@
-= simple_form_for @two_factor, url: two_factor_path(@two_factor.class.to_s.demodulize.downcase) do |f|
+.vlb-bg style=("height: 930px;")
 
-  = two_factor_tag(current_user)
+  .page-title.w
+    .s-content
+      .container-fluid
+        .fl
+          span.fs24.fw700.b-color.t-up User profile
+        .fr
+          span.un-red-but UNVERIFIED
+  .vlb-bg.pt25.pb25
+    .s-content
+      .container-fluid
+        .settings-switcher.cf
+          .item Edit profile/Settings
+          .item.act Verification
+          .item Security
+        .rb7.w-bg
+          .settings-title
+            | 2-Step Authorization
+          .pl20.pr20.pt15.pb50
+            .row.form-line
+              .col-xs-5.mb12
+                .you-email-box style=("height: 75px;")
+                    = simple_form_for @two_factor, url: two_factor_path(@two_factor.class.to_s.demodulize.downcase) do |f|
 
-  = f.button :wrapped, t('.verify'), cancel: settings_path
+                      = two_factor_tag(current_user)
+                      .green-but.w.mt25.w230
+                        .icon
+                        input.name cancel="/settings" style=("border:none;background:none;margin-left: 70px;") data-loading-text="Updating..." name="commit" type="submit" value="Verfication"/
+              .col-xs-3
+              .col-xs-4
+                .info-box.v.fs12.lh20.mt5
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing
+                  | elit. Donec ut porttitor lorem, eget fringilla enim.
+                  | Aenean iaculis ullamcorper euismod. Vestibulum
+                  | quis facilisis lectus. Ut vitae sagittis eros, ut sagittis
+                  | libero. Integer vestibulum neque nibh, nec
+                  | ullamcorper purus sollicitudin non.
+        /.rb7.w-bg.mt20
+          .settings-title.rel
+            | change password
+          .pl20.pr20.pt15.pb25
+            .row
+              .col-xs-8.mb12
+                .fs13.t-up.mb12 current password:
+                .row.form-line
+                  .col-xs-6
+                    input.acc-input placeholder=("Current password") type="text" /
+                .fs13.t-up.mb12.mt20 new password:
+                .row.form-line
+                  .col-xs-4
+                    input.acc-input placeholder=("New password") type="text" /
+                  .col-xs-4
+                    input.acc-input placeholder=("Re-type new password") type="text" /
+                .green-but.w.mt25.w230
+                  .icon
+                  .name save password
+              .col-xs-4
+                .info-box.v.fs12.lh20.mt5
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing
+                  | elit. Donec ut porttitor lorem, eget fringilla enim.
+                  | Aenean iaculis ullamcorper euismod. Vestibulum
+                  | quis facilisis lectus. Ut vitae sagittis eros, ut sagittis
+                  | libero. Integer vestibulum neque nibh, nec
+                  | ullamcorper purus sollicitudin non.
