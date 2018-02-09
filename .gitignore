@@ -8,6 +8,7 @@
 /.bundle
 
 /public/assets
+/doc
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -27,7 +28,7 @@ tmp
 /config/markets.yml
 /config/amqp.yml
 /config/banks.yml
-
+/
 # Ignore translations.js
 /public/javascripts/translations.js
 /public/results.txt
