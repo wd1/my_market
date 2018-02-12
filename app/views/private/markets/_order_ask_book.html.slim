@@ -1,0 +1,23 @@
+/sell
+#order_book.panel.panel-default  style=("width: 100%;margin:0px;border: none;")
+  .rb7.w-bg
+    .pt25.pr20.pb15.pl20.cf
+      .fl.b-color.fw700.t-up.fs16 BUY ORDERS
+      .fr
+        span.dib.b-h-gradient.t-w-color.rb5.pl15.pr15.pt2.pb3 Volume: 64738 ETH
+  .panel-body.panel-body-head  style=("border:none;padding-left:30px;")
+    #order_book_header.row
+      /.col-xs-12.col-left: table.table.tb-data.w33
+        thead: tr.title.nb
+          td style=("text-align:left;") Price
+          td style=("text-align:left;") = t('.volume')
+          td style=("text-align:left;") Amount
+      .pl20.pr20: table.table.table-head.tb-data.w33
+        thead: tr.title.nb
+          td style=("text-align:left;") Price
+          td style=("text-align:left;") = t('.volume')
+          td style=("text-align:left;") Amount
+  .panel-body.panel-body-content.tl  style=("padding-top:5px;padding-left:30px;")
+    #order_book_body.t1
+      /.col-xs-12.col-left: table.table.table-hover.bids.tb-data
+      .col-xs-12: table.table.table-hover.asks.tb-data

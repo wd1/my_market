@@ -1,19 +1,22 @@
 <% trade_state = if @origin_volume == @volume then 'new' else 'partial' %>
 
-<tr data-id="<%= @id %>" data-kind="<%= @kind %>" class="order <%= @kind %>">
-  <td class='time text-left col-xs-6'>
+<tr class="data" data-id="<%= @id %>" data-kind="<%= @kind %>" class="order <%= @kind %>">
+  <td class='time'>
     <span><%- formatter.fulltime @at %></span>
   </td>
-  <td class='kind text-left col-xs-6'>
+  <td class='kind'>
     <span class='label label-<%= @kind %>'><%= formatter.short_trade @kind %></span><span class='label label-<%= trade_state %>'><%= gon.i18n.trade_state[trade_state] %></span>
   </td>
-  <td class='price text-right col-xs-4 <%= formatter.trend @kind %>'>
+  <td class='price <%= formatter.trend @kind %>'>
     <span><%- formatter.mask_fixed_price @price %></span>
   </td>
-  <td class='volume text-right col-xs-4'>
+  <td class='volume'>
     <span><%- formatter.mask_fixed_volume @volume %></span>
   </td>
-  <td class='amount text-right col-xs-5'>
+  <td class='amount'>
     <span><%- formatter.amount @volume, @price %></span>
+  </td>
+  <td>
+    <span id="delete_order" class='delete-order'></span>
   </td>
 </tr>

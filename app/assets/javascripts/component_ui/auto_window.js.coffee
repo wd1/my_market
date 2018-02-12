@@ -32,18 +32,18 @@ BORDER_WIDTH = 1
       $('#candlestick').height(window_h - navbar_h - gutter_3x)
 
       order_h = window_h - navbar_h - entry_h - depths_h - my_orders_h - ticker_h - gutter_6x - 2*BORDER_WIDTH
-      $('#order_book').height(order_h)
-      $('#order_book .panel-body-content').height(order_h - panel_table_header_high - 2*PANEL_PADDING)
+      # $('#order_book').height(order_h)
+      # $('#order_book .panel-body-content').height(order_h - panel_table_header_high - 2*PANEL_PADDING)
 
       trades_h = window_h - navbar_h - markets_h - gutter_3x - BORDER_WIDTH
-      $('#market_trades').height(trades_h)
-      $('#market_trades .panel').height(trades_h - 2*BORDER_WIDTH)
-      $('#market_trades .panel-body-content').height(trades_h - 2*BORDER_WIDTH - panel_table_header_high - 2*PANEL_PADDING)
+      # $('#market_trades').height(trades_h)
+      # $('#market_trades .panel').height(trades_h - 2*BORDER_WIDTH)
+      # $('#market_trades .panel-body-content').height(trades_h - 2*BORDER_WIDTH - panel_table_header_high - 2*PANEL_PADDING)
 
       # Adjust widths.
       window_w     = window.innerWidth
       markets_w    = $('#market_list').width()
       order_book_w = $('#order_book').width()
-      $('#candlestick').width(window_w - order_book_w - markets_w - gutter_4x - 20)
+      $('#candlestick').width('100%')
 
     @$node.resize()

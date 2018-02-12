@@ -1,11 +1,25 @@
-#market_trades_wrapper.has-right-dropdown
-  .dropdown-wrapper
+#market_trades_wrapper.has-right-dropdown style=("width:100%;")
+  /.dropdown-wrapper
     ul.dropdown-menu
       li: a.all.active href='#' = t('.all_html')
       li: a.my href='#' = t('.my_html')
-  #market_trades
-    .panel.panel-default
-      .panel-body.panel-body-head
+  #market_trades style=("width:100%;position:relative;")
+    .panel.panel-default style=("width:100%;margin-top:0px;border:none;padding:15px;")
+      .pl12
+        .pt5.pb10.fl.b-color.fw700.t-up.fs16
+          | trading history
+          /.fr
+            a.all.active style=("color:grey;border: 1px solid grey;") href='#' = t('.all_html')
+            a.my href='#' = t('.my_html')
+
+        .pr20
+          table.tb-data
+            tr.title.nb
+              td.w25 Time
+              td.w15 
+              td.w20 Price
+              td.w20 Volume
+      /.panel-body.panel-body-head
         table.table
           thead: tr
             th.at.col-xs-5.text-left #{t('.time')}
@@ -13,7 +27,96 @@
             th.price.col-xs-5.text-right #{t('.price')}
             th.volume.col-xs-5.text-right #{t('.volume')}
       .panel-body.panel-body-content
-        table.table.table-hover.all-trades
-          tbody
-        table.table.table-hover.my-trades
-          tbody
+        .rel.pr20.tl
+          table.table.table-hover.all-trades.tb-data
+            tbody
+          table.table.table-hover.my-trades.tb-data
+            tbody
+/.pl12
+  .pt5.pb10.fl.b-color.fw700.t-up.fs16
+    | trading history
+    /.fr
+      a.all.active style=("color:grey;border: 1px solid grey;") href='#' = t('.all_html')
+      a.my href='#' = t('.my_html')
+
+  .pr20
+    table.tb-data
+      tr.title.nb
+        td.w25 date/time
+        td.w15 Opertaion
+        td.w20 Price
+        td.w20 Quantity
+        td.w20 amount
+  .rel.pr20.tl
+    table.tb-data
+      tr.data
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+      tr.data.even
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+      tr.data
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+      tr.data.even
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+      tr.data
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+      tr.data.even
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+      tr.data
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+      tr.data.even
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+      tr.data
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+      tr.data.even
+        td.w25 22 Jan, 2017 12:45
+        td.w15
+          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+        td.w20 0.00011743
+        td.w20 1.40607488
+        td.w20 0.00016512
+    .scroll-bar

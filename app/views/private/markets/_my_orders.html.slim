@@ -1,12 +1,59 @@
 #my_orders_wrapper.has-left-dropdown
-  .dropdown-wrapper
+  /.dropdown-wrapper
     ul.dropdown-menu
       li = link_to t('.clear_bids_html'), clear_market_order_bids_path(market_id: current_market.id), remote: true, method: :post, data: {confirm: t('.confirm_clear_bids')}
       li = link_to t('.clear_asks_html'), clear_market_order_asks_path(market_id: current_market.id), remote: true, method: :post, data: {confirm: t('.confirm_clear_asks')}
       li = link_to t('.clear_all_html'),  clear_market_orders_path(market_id: current_market.id), remote: true, method: :post, data: {confirm: t('.confirm_clear_all')}
-  #my_orders.panel.panel-default
-    .panel-body.panel-body-content
-      .empty-row = t('.no_open_orders')
-      table.table.table-hover
-        tbody
-    = render partial: 'mask'
+  .rb7.ovh.w-bg.grey-box.active-orders
+    .b-h-gradient.t-b-line
+    .b-t-bg.pt11.pb12.pl20.pr20.cf
+      .fl.b-color.fw700.t-up.fs16 My active orders
+      .fr
+        span.red-but Remove all orders
+    #my_orders.panel.panel-default style=("position: relative;margin:0px;background: none !important;border: none;box-shadow: none;")
+      .panel-body.panel-body-content style=("width:100%;background: none !important;")
+        .empty-row = t('.no_open_orders')
+        table.tb-data
+          tbody
+      = render partial: 'mask'
+/.rb7.ovh.w-bg.grey-box.active-orders
+  .b-h-gradient.t-b-line
+  .b-t-bg.pt11.pb12.pl20.pr20.cf
+    .fl.b-color.fw700.t-up.fs16 My active orders
+    .fr
+      span.red-but Remove all orders
+  table.tb-data
+    tr.title
+      td Date
+      td operation
+      td price
+      td amount
+      td total
+      td
+    tr.data
+      td 22 Jan, 2017 15:12
+      td
+        .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+      td 0.0917821
+      td 15
+      td 12.09349839
+      td
+        .delete-order
+    tr.data
+      td 22 Jan, 2017 15:12
+      td
+        .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+      td 0.0917821
+      td 15
+      td 12.09349839
+      td
+        .delete-order
+    tr.data
+      td 22 Jan, 2017 15:12
+      td
+        .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+      td 0.0917821
+      td 15
+      td 12.09349839
+      td
+        .delete-order

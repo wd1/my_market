@@ -102,15 +102,15 @@ header {
 
   li.dropdown {
     a:hover {
-      color: white;
-      text-decoration: none;
-      background: none;
-      text-shadow: white 0 0 2px;
-      text-decoration: none;
+      // color: white;
+      // text-decoration: none;
+      // background: none;
+      // text-shadow: white 0 0 2px;
+      // text-decoration: none;
     }
     a:focus {
-      text-shadow: none;
-      text-decoration: none;
+      // text-shadow: none;
+      // text-decoration: none;
     }
 
     table {
@@ -308,7 +308,7 @@ header {
 /* panel
 ------------------------------------------------ */
 .panel {
-  position: absolute;
+  // position: absolute;
   margin-bottom: 0px;
 
   &.panel-wide {
@@ -357,7 +357,7 @@ header {
       z-index: 0;
       position: relative;
       top: 0;
-      left: 100%;
+      // left: 100%;
       -webkit-transition: left .1s linear;
       transition: left .1s linear;
       min-width: 0;
@@ -368,6 +368,9 @@ header {
       border-right: 0;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+      background: none;
+      border: none;
+      box-shadow: none;
 
       a {
         display: none;
@@ -376,10 +379,10 @@ header {
       }
 
       a:hover {
-        color: white;
-        background-color: $panel-bg;
-        text-shadow: white 0 0 2px;
-        text-decoration: none;
+        // color: white;
+        // background-color: $panel-bg;
+        // text-shadow: white 0 0 2px;
+        // text-decoration: none;
       }
 
       a:focus {
@@ -413,13 +416,16 @@ header {
       transition: margin-left .1s linear;
       min-width: 0;
       padding-left: 6px;
-      margin: 0 0 0 -100%;
+      margin: 0 0 0 0;
       font-size: 11px;
       background-color: $panel-bg;
       border: 1px solid $panel-default-border;
       border-left: 0;
       border-left-right-radius: 0;
       border-left-right-radius: 0;
+      background: none;
+      border: none;
+      box-shadow: none;
 
       a {
         padding: 3px 8px;
@@ -427,20 +433,20 @@ header {
         i { color: $panel-bg; }
       }
 
-      a.active {
-        i {
-          color: white;
-          text-shadow: white 0 0 2px;
-        }
-      }
+      // a.active {
+      //   i {
+      //     color: white;
+      //     text-shadow: white 0 0 2px;
+      //   }
+      // }
 
-      a:hover {
-        color: white;
-        background-color: $panel-bg;
-        text-shadow: white 0 0 2px;
-        text-decoration: none;
-        i { text-shadow: none; }
-      }
+      // a:hover {
+      //   color: white;
+      //   background-color: $panel-bg;
+      //   text-shadow: white 0 0 2px;
+      //   text-decoration: none;
+      //   i { text-shadow: none; }
+      // }
 
       a:focus {
         color: $text-color;
@@ -463,7 +469,9 @@ header {
 
 /* layout position
 ----------------------------------------------- */
-#ask_entry, #bid_entry { width: $entry-width; height: $entry-height; }
+#ask_entry, #bid_entry { 
+  // width: $entry-width; height: $entry-height; 
+}
 .entry-right { bottom: $gutter; right: $gutter + $entry-width + $gutter; }
 .entry-left { bottom: $gutter; right: $gutter; }
 
@@ -485,7 +493,7 @@ header {
 }
 
 #order_book {
-  width: $order-book-width; height: $order-book-height;
+  // width: $order-book-width; height: $order-book-height;
   min-height: $order-book-height;
   top: $gutter; right: $gutter;
 
@@ -507,10 +515,10 @@ header {
 }
 
 #candlestick {
-  position: absolute;
+  position: relative;
   min-width: $candlestick-width; width: $candlestick-width;
   min-height: $candlestick-height; height: $candlestick-height;
-  top: $gutter; left: $market-list-width + $gutter-2x;
+  //top: $gutter; left: $market-list-width + $gutter-2x;
 }
 
 .switch {
@@ -522,11 +530,11 @@ header {
 }
 
 #range_switch {
-  top: 13px; right: $order-book-width + $gutter-2x + 25;
+  top: 63px; right: 55px;
   li { padding-left: 10px; padding-right: 0; }
 }
 #indicator_switch_wrapper {
-  top: 33px; right: $order-book-width + $gutter-2x + 25;
+  top: 83px; right: 55px;
   li { padding-left: 10px; padding-right: 0; }
 }
 
@@ -588,18 +596,20 @@ header {
 
 #market_list_wrapper {
   .dropdown-wrapper {
-    position: absolute;
+    // position: absolute;
     width: 200px;
-    height: 100px;
-    top: $gutter; left: $market-list-width + $gutter;
+    // height: 100px;
+    top: $gutter; 
+    // left: $market-list-width + $gutter;
     z-index: 998;
   }
 }
 
 #market_list {
-  position: absolute;
+  // position: absolute;
   top: $gutter; left: $gutter;
-  width: $market-list-width; height: $market-list-height;
+  width: 80%;; 
+  height: $market-list-height;
   z-index: 999;
 
   .panel-body-content {
@@ -637,11 +647,11 @@ header {
 }
 
 #my_orders {
-  width: $my-orders-width; height: $my-orders-height;
-  bottom: $gutter-2x + $entry-height; right: $gutter;
+  // width: $my-orders-width; height: $my-orders-height;
+  // bottom: $gutter-2x + $entry-height; right: $gutter;
 
   .panel-body-content {
-    height: $my-orders-height - $gutter-2x;
+    // height: $my-orders-height - $gutter-2x;
 
     .time, .price, .volume, .amount {
       & > span { display: block; height: 16px; padding: 2px 0; }
@@ -748,9 +758,15 @@ header {
   }
 
   .label { font-size: inherit; }
-  .label.label-info { color: $brand-info }
-  .label.label-success { color: $brand-success }
-  .label.label-danger { color: $brand-danger }
+  .label.label-info { 
+    // color: $brand-info
+   }
+  .label.label-success { 
+    // color: $brand-success 
+  }
+  .label.label-danger { 
+    // color: $brand-danger 
+  }
 
   span.status-info, .status-success, .status-danger {
     top: -3px;
@@ -851,7 +867,7 @@ input#fee[disabled] {
   background-color: black;
 }
 input#order_bid_fee, input#order_ask_fee {
-  background: black;
+  background: lightgray;
 }
 
 @import 'custom/market';

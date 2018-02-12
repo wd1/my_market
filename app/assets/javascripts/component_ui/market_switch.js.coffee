@@ -12,7 +12,7 @@ window.MarketSwitchUI = flight.component ->
     @select('marketGroupItem').removeClass('active')
     item.addClass('active')
 
-    @select('marketGroupName').text item.find('span').text()
+    @select('marketGroupName').text "Markets"#"#{name}".toUpperCase()
     @select('marketsTable').attr("class", "table table-hover markets #{name}")
 
   @updateMarket = (select, ticker) ->

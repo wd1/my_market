@@ -1,27 +1,38 @@
 #market_list_wrapper.has-right-dropdown
   - if @market_groups.size > 1
     .dropdown-wrapper
-      ul.dropdown-menu
-        li: a.active data-name='all' href="javascript:;" = t('.all_html')
+      ul.dropdown-menu style=("padding-left:0px;")
+        li class="curr-but" style=("display:block;")
+          a style=("background:none;padding:0px;") data-name='all' href="javascript:;" = t('.all')
         - @market_groups.each do |name|
-          li: a data-name=name href="javascript:;" = t(".#{name}_html")
+          li class="curr-but" style=("display:block;")
+            a style=("background:none;padding:0px;") data-name=name href="javascript:;" = t(".#{name}")
   #market_list
-    .panel.panel-default
-      .panel-body.panel-body-head
-        table.table
-          thead: tr
-            th.col-xs-7
-              span.name = t('.all')
-            th.col-xs-4.text-right.price = t('.price')
-            th.col-xs-5.text-right.change = t('.change')
-      .panel-body.panel-body-content
-        table.table.table-hover.markets.all
+    .panel.panel-default style=("width:90%;margin-top:34px;border: none;position: absolute;")
+      .panel-body.panel-body-head style=("border:none; padding: 0px 15px;")
+        table.table.tb-data
+          thead: tr.title
+            th.col-xs-6 style=("padding:9px 0px;")
+              span.name ALL
+            th.col-xs-4.price style=("padding:9px 0px;") = t('.price') 
+            th.col-xs-6.text-right.change style=("padding:9px 0px;") = t('.change')
+      .panel-body.panel-body-content style=("padding-top:0px;height:330px;")
+        table.table.table-hover.markets.all.tb-data
           tbody
-            - @markets.each do |market|
-              tr.market id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
-                td.col-xs-4.name
-                  = link_to market.name, market_path(market)
-                td.col-xs-15.price
-                  = Global[market.id].ticker[:last]
-                td.col-xs-5.change
-                  | +0.00%
+            - @markets.each_with_index do |market,index|
+              - if index % 2 == 0
+                tr.market.data id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
+                  td.col-xs-4.name.fw700 style=("padding:9px 0px;")
+                    = link_to market.name, market_path(market)
+                  td.col-xs-15.price  style=("padding:9px 0px;")
+                    = Global[market.id].ticker[:last]
+                  td.col-xs-5.change.g-color style=("padding:9px 0px;")
+                    | +0.00%
+              - else
+                tr.market.data.even id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
+                  td.col-xs-4.name.fw700 style=("padding:9px 0px;")
+                    = link_to market.name, market_path(market)
+                  td.col-xs-15.price  style=("padding:9px 0px;")
+                    = Global[market.id].ticker[:last]
+                  td.col-xs-5.change.g-color style=("padding:9px 0px;")
+                    | +0.00%
