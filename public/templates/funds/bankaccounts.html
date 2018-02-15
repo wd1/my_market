@@ -1,0 +1,108 @@
+
+<div class="rb7 w-bg p20" bind="accounts">
+    <div class="row cp-20" data-currency="{{account[0].currency}}" >
+        <div class="col-xs-2 sbr">
+            <div class="fs16 b-color fw700 mb15">INR (Indian Ruppies)</div>
+            <div class="inr-balance g">
+                <div class="fs30 lh30">
+                    {{(accounts[0].balance | round_down).split('.')[0] }}<span class="fs24">.{{(accounts[0].balance | round_down).split('.')[1] }}<span class="opacity5"></span></span>
+                </div>
+                available balance
+            </div>
+            <div class="inr-balance">
+                <div class="fs30 lh30">
+                        {{(accounts[0].locked).split('.')[0] }}<span class="fs24">.{{(accounts[0].locked).split('.')[1]!='0' ? (accounts[0].locked).split('.')[1]:'0000'}}<span class="opacity5"></span></span>
+                </div>
+                on orders
+            </div>
+            <div class="inr-balance b">
+                <div class="fs30 lh30">
+                    {{((parseFloat(accounts[0].balance)+parseFloat(accounts[0].locked))+'').split('.')[0]}}<span class="fs24">.{{((parseFloat(accounts[0].balance)+parseFloat(accounts[0].locked))+'').split('.')[1]?((parseFloat(accounts[0].balance)+parseFloat(accounts[0].locked))+'').split('.')[1]:'0000' }}<span class="opacity5"></span></span>
+                </div>
+                total balance
+            </div>
+
+            <a href="#" class="inr-red-but mt10" >{{ 'funds.withdraw' | t }}</a>
+        </div>
+        <div class="col-xs-4 sbr">
+            <div class="fs16 b-color fw700 mb15 t-up">deposit from payment gateway</div>
+            <div class="info-box">
+                Minimal deposit amount 10 USD<br>
+                Maximum deposit amount is 100000 USD<br>
+                Commission 3.00%
+            </div>
+            <div class="mt15 mb10">Please choose payment method:</div>
+            <div class="ps-box">
+                <div class="item ps1">
+                    <div class="icon"></div>
+                    <div class="name">Perfect Money</div>
+                </div>
+                <div class="item ps2 act">
+                    <div class="icon"></div>
+                    <div class="name">Payeer</div>
+                </div>
+                <div class="item ps3">
+                    <div class="icon"></div>
+                    <div class="name">AdvCash</div>
+                </div>
+                <div class="item ps4">
+                    <div class="icon"></div>
+                    <div class="name">PayPal</div>
+                </div>
+            </div>
+
+            <div class="rel mt15">
+                <input type="text" class="acc-input" placeholder="Amount">
+                <div class="w-curr-placeholder">INR</div>
+            </div>
+            <div class="mt15">
+                <div class="green-but w s-deposit-but">
+                    <div class="icon"></div>
+                    <div class="name">make deposit</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-6 sbr">
+            <div class="fs16 b-color fw700 mb15 t-up">deposit from wire transfer</div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="opacity7">Account No:</div>
+                    <div class="fs14 mb10">893469856365927203-472</div>
+                    <div class="opacity7">Account holder name:</div>
+                    <div class="fs14 mb10">Martin Keeemd</div>
+                    <div class="opacity7">Bank:</div>
+                    <div class="fs14 mb10">Industrial &amp; Commercial Bank of China Limited, China</div>
+                    <div class="opacity7">Branch:</div>
+                    <div class="fs14 mb10">Industrial &amp; Commercial Bank of China Limited, China</div>
+                    <div class="opacity7">IFSC Code:</div>
+                    <div class="fs14 mb10">ICBKNL2A</div>
+                    <div class="opacity7">Account type:</div>
+                    <div class="fs14 mb10">Business</div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="silver-info-box">
+                        <p>Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Nulla aliquet id enim a ultrices.
+                            Ut dictum auctor dignissim. Nulla diam leo,
+                            facilisis nec ullamcorper commodo, pulvinar a
+                            eros. Maecenas risus dolor, rhoncus ut rhoncus
+                            et, luctus ut felis. Vestibulum sed velit pharetra,
+                            suscipit lacus quis, efficitur libero. Nullam
+                            rhoncus, tellus et vulputate vulputate, lorem
+                            elit tempor neque, at vehicula tortor.</p>
+                        <p>
+                        Vestibulum sed velit pharetra,
+                        suscipit lacus quis, efficitur libero. Nullam
+                        rhoncus, tellus et vulputate vulputate, lorem
+                        elit tempor neque, at vehicula tortor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

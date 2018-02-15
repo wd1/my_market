@@ -1,4 +1,4 @@
-<table class="table table-currencies" ng-repeat="account in accounts" bind="accounts">
+<!-- <table class="table table-currencies" ng-repeat="account in accounts" bind="accounts" ng-if="!$first">
   <tr class="currency-item" ng-class="{selected: accountsCtrl.isSelected(account.currency),
     'deposit-now': accountsCtrl.isDeposit(),
     'withdraw-now': accountsCtrl.isWithdraw() }"
@@ -14,4 +14,25 @@
       <p class="currency-withdraw"><a href="#" ng-click="accountsCtrl.withdraw(account); $event.preventDefault()" >{{ 'funds.withdraw' | t }}</a></p>
     </td>
   </tr>
-</table>
+</table> -->
+<div class="wallet-ps-list-box">
+    <div class="title">
+        <div class="item">Coin</div>
+        <div class="item w40">Total balance</div>
+        <div class="item">On orders</div>
+    </div>
+    <div ng-repeat="account in accounts" bind="accounts" 
+      data-currency="{{account.currency}}" ng-if="!$first">
+      <div class="line" ng-class="{act: accountsCtrl.isSelected(account.currency),
+        'deposit-now': accountsCtrl.isDeposit(),
+        'withdraw-now': accountsCtrl.isWithdraw()}" ng-click="accountsCtrl.selectrow(account); $event.preventDefault()"  style="display:flex;">
+        <div class="item" style="display:flex;">
+            <div class="name w-ps-5" style="display: flex;align-self:center;">
+              <img ng-src="/icon-{{account.currency}}.png" style="width:16px;height:16px;" alt=""><span>&nbsp;&nbsp;{{ account.currency | uppercase }}</span>               
+            </div>
+        </div>
+        <div class="item w40">{{getTotal(account.balance,account.locked)}}</div>
+        <div class="item">{{account.locked}}</div>
+      </div>
+    </div>
+</div>

@@ -1,22 +1,29 @@
-<br />
-<h2 class="panel-title">{{ "funds.deposit_history.title" | t }}</h2>
-<table class="table" ng-controller="DepositHistoryController as dhCtrl">
-  <tr>
-    <th>{{ "funds.deposit_history.time" | t }}</th>
-    <th>{{ "funds.deposit_history.txid" | t }}</th>
-    <th>{{ "funds.deposit_history.amount" | t }}</th>
-    <th>{{ "funds.deposit_history.confirmations" | t }}</th>
-    <th>{{ "funds.deposit_history.state_and_action" | t }}</th>
-  </tr>
-  <tr ng-class="{ 'new-row':dhCtrl.newRecord(deposit) }" ng-repeat="deposit in dhCtrl.deposits | orderBy:predicate">
-    <td>{{deposit.created_at | date:'yyyy-MM-dd HH:mm'}}</td>
-    <td>
-      <a href="{{deposit.blockchain_url}}" target='_blank'>{{deposit.txid}}</a>
-    </td>
-    <td>{{deposit.amount}}</td>
-    <td>{{deposit.confirmations}}</td>
-    <td>{{"funds.deposit_history." + deposit.aasm_state | t}}</td>
-  </tr>
-  <tr ng-show="dhCtrl.noDeposit()"><td colspan="6"><span class="help-block text-center">{{ "funds.deposit_history.no_data" | t }}</span></td></tr>
-</table>
+<div class="fs16 fw700 b-color mt35 mb20 t-up">History</div>
 
+<div class="pr20">
+  <table class="tb-data">
+      <tr class="title nb">
+          <td class="w20">date/time</td>
+          <td class="w15">Opertaion</td>
+          <td class="w15">Amount</td>
+          <td class="w20">STATUS</td>
+          <td class="w30">memo</td>
+      </tr>
+  </table>
+</div>
+<div class="rel pr20 tl">
+      <table class="tb-data" ng-controller="DepositHistoryController as dhCtrl">
+        <tbody>
+          <tr class="data" ng-class="{ 'even':$index%2==1,'new-row':dhCtrl.newRecord(deposit) }" ng-repeat="deposit in dhCtrl.deposits | orderBy:predicate">
+              <td class="w20">{{deposit.created_at | date:'yyyy-MM-dd HH:mm'}}</td>
+              <td class="w15"><div class="dib fs12 rb5 g-border t-up pl10 pr10 g-color mr10">Deposit</div></td>
+              <td class="w15">{{deposit.amount}}</td>
+              <td class="w20">
+                  <span class="g-color">{{"funds.deposit_history." + deposit.aasm_state | t}}</span>
+              </td>
+              <td class="w30">{{deposit.txid}}</td>
+          </tr>
+          <tr ng-show="dhCtrl.noDeposit()"><td colspan="6"><span class="help-block text-center">{{ "funds.deposit_history.no_data" | t }}</span></td></tr>
+      </tbody>
+    </table>
+</div>

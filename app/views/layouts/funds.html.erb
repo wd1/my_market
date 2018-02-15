@@ -6,6 +6,9 @@
     <link href="/favicon.ico" rel="shortcut icon"></link>
     <%= include_gon %>
     <%= stylesheet_link_tag stylesheet, media: "all" %>
+    <%= stylesheet_link_tag "bootstrap1" %>
+    <%= stylesheet_link_tag "basic" %>
+    <%= stylesheet_link_tag "style" %>
     <%= javascript_include_tag "locales/#{I18n.locale}" %>
     <%= javascript_include_tag "funds" %>
     <%= yield(:scripts) if content_for?(:scripts) %>
@@ -16,14 +19,18 @@
 
   <body id="<%= body_id %>" data-lang="<%= "#{locale_name}" %>">
 
-    <div id="wrap">
+    <div id="wrap" style="background: url(../img/stars.png) 0 0, url(../img/lb_light.png) 0 100% no-repeat, url(../img/rt_light.png) 100% 0 no-repeat, #1e234d;">
       <%- if content_for?(:header) %>
         <%= yield(:header) %>
       <%- else %>
         <%= render 'shared/header' %>
       <%- end %>
 
-      <div class='container'>
+      <div style="
+          font-size: 13px;
+          font-weight: 400;
+          color: #444444;
+          background: #ffffff;">
         <%= yield %>
       </div>
       <div id="push"></div>

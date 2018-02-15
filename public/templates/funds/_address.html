@@ -1,4 +1,4 @@
-<div class="input-group col-sm-16">
+<!-- <div class="input-group col-sm-16">
   <div class="input-group-addon">
     <span>{{'funds.deposit_coin.address' | t}}</span></div><div class="form-control form-control-static" id="deposit_address">{{account.deposit_address}}</div><div class="input-group-addon" id="deposit_address_data">
       <i class="fa fa-copy" data-clipboard-text="{{account.deposit_address}}"></i>
@@ -6,4 +6,15 @@
    <div class="input-group-addon"><span class="countdown hint" style="display:none;">...</span>
      <a id="new_address" ng-click="genAddress(deposit_channel.resource_name); $event.preventDefault()" href="#"> {{"funds.deposit_coin.new_address" | t}}</a>
    </div>
+</div> -->
+<div class="box">
+    <div class="ml10 mb3">The purse address for replenishment of your balance:</div>
+    <div class="input-address-box rel ovh">
+        <div class="button" id="new_address" ng-click="genAddress(deposit_channel.resource_name); $event.preventDefault()">Generate new address</div>
+        <div class="address" id="deposit_address">{{account.deposit_address}}</div>
+        <div class="copy" data-clipboard-text="{{account.deposit_address}}">
+            <div class="icon"></div>
+        </div>
+    </div>
+    <div class="ml10 mt3 t-italic opacity5">Enrollment occurs automatically after 1 network confirmation</div>
 </div>
