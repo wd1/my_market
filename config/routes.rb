@@ -94,7 +94,10 @@ Peatio::Application.routes.draw do
     get '/history/trades' => 'history#trades', as: :trade_history
     get '/history/account' => 'history#account', as: :account_history
     get '/history/access' => 'history#access', as: :access_history
-    
+    get '/history/affiliate' => 'history#affiliate', as: :affiliate_history
+    get '/history/commission' => 'history#commission', as: :commission_history
+    get '/support/center' => 'support#center', as: :center_support
+
     resources :markets, :only => :show, :constraints => MarketConstraint do
       resources :orders, :only => [:index, :destroy] do
         collection do

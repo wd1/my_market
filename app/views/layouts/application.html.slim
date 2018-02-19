@@ -21,13 +21,13 @@ html lang="en"
 
   body id='#{body_id}' data-lang="#{locale_name}"
     = render 'shared/alert'
-    - if !current_page?(signup_path)
-      #wrap style=("background: url(../img/stars.png) 0 0, url(../img/lb_light.png) 0 100% no-repeat, url(../img/rt_light.png) 100% 0 no-repeat, #1e234d;")
+    - if !current_page?(signup_path) and !current_page?(center_support_path)
+      #wrap style=("background: url(../img/stars.png) 0 0, url(../img/lb_light.png) 0 100% no-repeat, url(../img/rt_light.png) 100% 0 no-repeat, #1e234d;margin-bottom:0px;")
         - if content_for?(:header)
           = yield(:header)
           .header-sep style='height:109px'
         - else
-          - if !current_page?(signup_path)
+          - if !current_page?(signup_path) 
             = render 'shared/header'
         
         - if content_for?(:frame)
@@ -40,10 +40,19 @@ html lang="en"
       - if content_for?(:footer)
         = yield(:footer)
       - else
-        - if !current_page?(signup_path)
+        - if !current_page?(signup_path) and !current_page?(center_support_path)
           = render 'shared/footer'
 
-    - if current_page?(signup_path)
+    - if current_page?(center_support_path)
+      #wrap style=("background: url(../img/stars.png) 0 0, url(../img/lb_light.png) 0 100% no-repeat, url(../img/rt_light.png) 100% 0 no-repeat, #1e234d;margin-bottom:0px;height:100% !important;")
+
+        - if content_for?(:frame)
+          = yield(:frame)
+        - else
+          = render 'shared/frame'
+
+
+    - if current_page?(signup_path) 
       #wrap style=("background: url(../img/stars.png) 0 0, url(../img/lb_light.png) 0 100% no-repeat, url(../img/rt_light.png) 100% 0 no-repeat, #1e234d;min-height:100%;")
         - if content_for?(:header)
           = yield(:header)
