@@ -57,9 +57,9 @@
               .signup-box.mt50
                 .fs30.fw400.mb40.tac.t-w-color Create an account
                 .row.form-line
-                  /.col-xs-6
+                  .col-xs-6
                     input.signup-input placeholder=("First name") type="text" /
-                  /.col-xs-6
+                  .col-xs-6
                     input.signup-input placeholder=("Second name") type="text" /
                   .col-xs-12.mt15
                     input.signup-input.required.email id="identity_email" name="email" autofocus="autofocus" placeholder="E-mail" type="email" /
@@ -67,11 +67,11 @@
                     input.signup-input.required.password id="identity_password" name="password" placeholder="Password" type="password" /
                   .col-xs-12.mt15.mb15
                     input.signup-input.password.required id="identity_password_confirmation" name="password_confirmation" placeholder=("Retype password") type="password" /
-                  /.col-xs-8.rel
-                    .sp-get-code.dn Get code
-                    input.signup-input.signup-phone placeholder=("Enter phone") type="text" /
-                  /.col-xs-4
-                    input.signup-input.sp-code-input.dn placeholder=("Enter code") type="text" /
+                  .col-xs-8.rel
+                    .sp-get-code.dn onclick="send_code()" Get code 
+                    input#phone_number.signup-input.signup-phone placeholder=("Enter phone") type="text" /
+                  .col-xs-4
+                    input.signup-input.sp-code-input.dn onkeyup="check_code(this.value)" placeholder=("Enter code") type="text" /
                 .row.form-line.mt15
                   input#accept type="hidden" value="" /
                   .custom-checkbox.act data-input="accept" data-val="1" 
@@ -81,8 +81,28 @@
                   .green-but
                     .icon
                     .name
-                      input cancel="/" data-loading-text="Creating..." name="commit" style=("width: 170px; margin-left: -20px;    background:  none;    border:  none;\n") type="submit" value=("SIGNUP") /
-          .col-xs-1
+                      input#signup_btn cancel="/" data-loading-text="Creating..." name="commit" style=("width: 170px; margin-left: -20px;background:none;border:  none;\n") type="submit" value=("SIGNUP") /
   .footer-sp
     |   © 2013 - 2017 BitCharge LLP. 160 Piccadilly, St. James's, London W1J 9EB, United Kingdom
+javascript:
+  var code_value = 0;
+  document.getElementById("signup_btn").disabled = true;
+  function send_code() {
+    code_value = Math.floor(Math.random() * (9999 - 0 + 1)) + 0;
+    phone_number =$("#phone_number").val();
+    //console.log(phone_number);
+    $.ajax({
+      url: "/sendcode",
+      type: 'post',
+      data: { code_value: code_value, phone_number: phone_number }
+    });
+  }
+  function check_code(code){
+    console.log(code);
+    if(code == code_value){
+      document.getElementById("signup_btn").disabled = false;
+      return 1;
+    } else
+      return 0;
+  }
     

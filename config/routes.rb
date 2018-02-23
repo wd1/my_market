@@ -22,6 +22,9 @@ Peatio::Application.routes.draw do
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure', :as => :failure
   match '/auth/:provider/callback' => 'sessions#create', via: [:get, :post]
+  post '/sendcode' => 'identities#sendcode', :as => :sendcode
+  
+
 
   resource :member, :only => [:edit, :update]
   resource :identity, :only => [:edit, :update]
