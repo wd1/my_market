@@ -1537,6 +1537,21 @@ body {
     font-size: 13px;
     line-height: 13px;
 }
+
+.un-green-but{
+    display: inline-block;
+    border: 1px solid #2dcbc8;
+    color: #2dcbc8;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    background: url(../img/ps_choosen.png) 3px center no-repeat;
+}
+
 .row.form-line{
     margin-left: -6px;
     margin-right: -6px;
@@ -2325,4 +2340,57 @@ body {
 
 .fly {
     animation-name: fly;
+}
+
+.d-upload-box{
+    border: 1px dashed #cccccc;
+    padding: 15px 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.d-upload-box .green-but{
+    padding: 0 15px;
+    margin-top: 6px;
+}
+
+.acc-status{
+    display: inline-block;
+    margin-top: 10px;
+    width: 112px;
+    padding-top: 120px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.acc-status.sts1{
+    background: url('../img/user_status.png') 0 0 no-repeat;
+}
+.acc-status.sts2{
+    background: url('../img/user_status.png') -112px 0 no-repeat;
+}
+.acc-status.sts3{
+    background: url('../img/user_status.png') -224px 0 no-repeat;
+}
+
+.small-ver-sts{
+    display: inline-block;
+    height: 22px;
+    line-height: 18px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    padding: 0 15px 0 25px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.small-ver-sts.verified{
+    border: 1px solid #2dcbc8;
+    color: #2dcbc8;
+    background: url('../img/ps_choosen.png') 3px center no-repeat;
+}
+.small-ver-sts.unverified{
+    border: 1px solid #d52c2c;
+    color: #d52c2c;
+    background: url('../img/unverified_field.png') 3px center no-repeat;
 }
