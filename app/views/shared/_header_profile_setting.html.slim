@@ -52,7 +52,7 @@
         a.logout href="" 
       .notify
         /.count 12
-        .list
+        .list style=("overflow: scroll;height: 400px;top:40px;")
           - @current_user.signup_histories.each do |signup_history|
             .item
               .opacity4 = signup_history.created_at
