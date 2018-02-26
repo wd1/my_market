@@ -48,10 +48,10 @@
               span = t('header.signout')
         /.name = current_user.email || current_user.nickname
         .sts.verified
-        .wallet 74356.22 USD
+        .wallet = @current_user.accounts[0].balance
         a.logout href="" 
       .notify
-        .count 12
+        /.count 12
         .list
           - @current_user.signup_histories.each do |signup_history|
             .item
