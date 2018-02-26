@@ -1,9 +1,9 @@
 #market_list_wrapper.has-right-dropdown
   - if @market_groups.size > 1
-    .dropdown-wrapper
+    .dropdown-wrapper style=("width:100%;")
       ul.dropdown-menu style=("padding-left:0px;z-index:1;")
         li class="curr-but" style=("display:block;")
-          a style=("background:none;padding:0px;") data-name='all' href="javascript:;" = t('.all')
+          a style=("background:none;padding:0px;") data-name='all' href="javascript:;" All
         - @market_groups.each do |name|
           li class="curr-but" style=("display:block;")
             a style=("background:none;padding:0px;") data-name=name href="javascript:;" = t(".#{name}")

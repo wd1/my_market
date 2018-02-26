@@ -66,13 +66,13 @@
   code: 11
   base_unit: ltc
   quote_unit: btc
-  bid: {fee: 0, currency: inr, fixed: 8}
+  bid: {fee: 0, currency: btc, fixed: 8}
   ask: {fee: 0, currency: ltc, fixed: 8}
 - id: dshbtc
   code: 12
   base_unit: dsh
   quote_unit: btc
-  bid: {fee: 0, currency: inr, fixed: 8}
+  bid: {fee: 0, currency: btc, fixed: 8}
   ask: {fee: 0, currency: dsh, fixed: 8}
 # - id: bccbtc
 #   code: 13
@@ -84,13 +84,13 @@
   code: 14
   base_unit: eth
   quote_unit: btc
-  bid: {fee: 0, currency: inr, fixed: 8}
+  bid: {fee: 0, currency: btc, fixed: 8}
   ask: {fee: 0, currency: eth, fixed: 8}
 - id: zecbtc
   code: 15
   base_unit: zec
   quote_unit: btc
-  bid: {fee: 0, currency: inr, fixed: 8}
+  bid: {fee: 0, currency: btc, fixed: 8}
   ask: {fee: 0, currency: zec, fixed: 8}
 # - id: btsbtc
 #   code: 16
@@ -160,7 +160,7 @@
   ask: {fee: 0, currency: btc, fixed: 4}
   sort_order: 1
   #visible: false     # default to true
-- id: ltcinr
+- id: ltcbch
   code: 25
   base_unit: ltc
   quote_unit: bch
@@ -172,7 +172,7 @@
 #   quote_unit: btc
 #   bid: {fee: 0, currency: btc, fixed: 8}
 #   ask: {fee: 0, currency: ltc, fixed: 8}
-- id: dshinr
+- id: dshbch
   code: 26
   base_unit: dsh
   quote_unit: bch
@@ -190,13 +190,13 @@
 #   quote_unit: inr
 #   bid: {fee: 0, currency: inr, fixed: 8}
 #   ask: {fee: 0, currency: bcc, fixed: 8}
-- id: ethinr
+- id: ethbch
   code: 27
   base_unit: eth
   quote_unit: bch
   bid: {fee: 0, currency: bch, fixed: 8}
   ask: {fee: 0, currency: eth, fixed: 8}
-- id: zecinr
+- id: zecbch
   code: 28
   base_unit: zec
   quote_unit: bch
