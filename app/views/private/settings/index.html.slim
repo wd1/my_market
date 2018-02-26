@@ -1,4 +1,4 @@
-table#setting_list.table style=("margin-top:150px;")
+/table#setting_list.table style=("margin-top:150px;")
   tr
     td.col-xs-2.text-center.vertical-center: i.fa.fa-envelope-o.fa-2x
     td.col-xs-15
@@ -125,3 +125,207 @@ table#setting_list.table style=("margin-top:150px;")
     /javascript:
       document.write("<" + "script src='https://widget.coindesk.com/bpiticker/coindesk-widget.min.js'>" + "<" + "/script>");
     /p = 'test message here version 2'
+.page-title.w style=('margin:0px;')
+  .s-content
+    .container-fluid
+      .fl
+        span.fs24.fw700.b-color.t-up User profile
+      .fr
+        span.un-red-but UNVERIFIED
+.vlb-bg.pt25.pb25
+  .s-content
+    .container-fluid
+      .settings-switcher.cf
+        .item.act Edit profile/Settings
+        .item Verification
+        .item Security
+      .row
+        .col-xs-6
+          .rb7.w-bg
+            .settings-title
+              | account data
+            .pl20.pr20.pt15.pb25
+              .row
+                .col-xs-7
+                  .row
+                    .col-xs-4.opacity5
+                      | Name:
+                    .col-xs-8.fw700
+                      | Alexandro777
+                  .row.mt12
+                    .col-xs-4.opacity5
+                      | E-mail:
+                    .col-xs-8.fw700
+                      | alexandro777@gmail.com
+                      .small-ver-sts.verified Verified
+                  .row.mt12
+                    .col-xs-4.opacity5
+                      | Phone:
+                    .col-xs-8.fw700
+                      | +1018721634782354
+                      .small-ver-sts.unverified Unverified
+                  .row.mt12
+                    .col-xs-4.opacity5
+                      | User ID:
+                    .col-xs-8.fw700
+                      | 63245
+                  .row.mt12
+                    .col-xs-4.opacity5
+                      | Bank account:
+                    .col-xs-8.fw700
+                      | 4586094567540964564342
+                .col-xs-5.tac
+                  .opacity5 Account status:
+                  .acc-status.sts1
+                    | Trader
+          .rb7.w-bg.mt25
+            .settings-title
+              | Personal data
+            .pl20.pr20.pt15.pb25
+              .row.form-line
+                .col-xs-12.fs13.t-up.mb12 Legal name:
+                .col-xs-5
+                  input.acc-input placeholder=("First name") type="text" /
+                .col-xs-5
+                  input.acc-input placeholder=("Second name") type="text" /
+              .row.form-line.mt20
+                .col-xs-12.fs13.t-up.mb12 Date of birth:
+                .col-xs-2
+                  .custom-select
+                    select name="" placeholder="Year" 
+                      option value=""  --
+                      option value="1980"  1980
+                      option value="1982"  1982
+                      option value="1982"  1982
+                      option value="1983"  1983
+                      option value="1984"  1984
+                      option value="1985"  1985
+                    .val.placeholder Year
+                .col-xs-2
+                  .custom-select
+                    select name="" placeholder="Month" 
+                      option value=""  --
+                      option value="1980"  1980
+                      option value="1982"  1982
+                      option value="1982"  1982
+                      option value="1983"  1983
+                      option value="1984"  1984
+                      option value="1985"  1985
+                    .val.placeholder Month
+                .col-xs-2
+                  .custom-select
+                    select name="" placeholder="Day" 
+                      option value=""  --
+                      option value="1980"  1980
+                      option value="1982"  1982
+                      option value="1982"  1982
+                      option value="1983"  1983
+                      option value="1984"  1984
+                      option value="1985"  1985
+                    .val.placeholder Day
+              .row.form-line.mt20
+                .col-xs-12.fs13.t-up.mb12 Gender:
+                input#gender type="hidden" value="" /
+                .col-xs-2
+                  .custom-radio.act data-group="gender" data-input="gender" data-val="1" 
+                    .icon
+                    .txt Male
+                .col-xs-2
+                  .custom-radio data-group="gender" data-input="gender" data-val="2" 
+                    .icon
+                    .txt Female
+              .row.form-line.mt20
+                .col-xs-12.fs13.t-up.mb12 address:
+              .row.form-line
+                .col-xs-4.mb12
+                  .custom-select
+                    select name="" placeholder="Country" 
+                      option value=""  --
+                      option value="1980"  1980
+                      option value="1982"  1982
+                      option value="1982"  1982
+                      option value="1983"  1983
+                      option value="1984"  1984
+                      option value="1985"  1985
+                    .val.placeholder Country
+              .row.form-line.mb12
+                .col-xs-3
+                  input.acc-input placeholder="City" type="text" /
+                .col-xs-3
+                  input.acc-input placeholder="State" type="text" /
+                .col-xs-3
+                  input.acc-input placeholder=("Post code") type="text" /
+              .row.form-line.mb12
+                .col-xs-10
+                  input.acc-input placeholder=("Address line 1") type="text" /
+              .row.form-line
+                .col-xs-10
+                  input.acc-input placeholder=("Address line 2") type="text" /
+              .green-but.w.mt25.w230
+                .icon
+                .name Save
+        .col-xs-6
+          .rb7.w-bg
+            .settings-title
+              | document Upload
+            .pl20.pr20.pt15.pb25
+              .d-upload-box
+                .row
+                  .col-xs-6
+                    .fs13.t-up Pancard
+                    .fs12.opacity6
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      | Suspendisse commodo purus ut urna aliquet pellentesque.
+                  .col-xs-6
+                    .green-but.mr15 front upload
+                    .green-but back upload
+              .d-upload-box.mt10
+                .row
+                  .col-xs-6
+                    .fs13.t-up Pancard
+                    .fs12.opacity6
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      | Suspendisse commodo purus ut urna aliquet pellentesque.
+                  .col-xs-6
+                    .green-but.mr15 front upload
+                    .green-but back upload
+              .d-upload-box.mt10
+                .row
+                  .col-xs-6
+                    .fs13.t-up Pancard
+                    .fs12.opacity6
+                      | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      | Suspendisse commodo purus ut urna aliquet pellentesque.
+                  .col-xs-6
+                    .green-but.mr15 front upload
+                    .green-but back upload
+          .rb7.w-bg.mt25
+            .settings-title
+              | Bank information
+            .pl20.pr20.pt15.pb25
+              .row.form-line
+                .col-xs-12.fs13.t-up.mb12 bank account data:
+              .row.form-line.mb12
+                .col-xs-10
+                  input.acc-input placeholder=("Account No") type="text" /
+              .row.form-line
+                .col-xs-10
+                  input.acc-input placeholder=("Account holder name") type="text" /
+              .row.form-line.mt20
+                .col-xs-12.fs13.t-up.mb12 bank:
+              .row.form-line.mb12
+                .col-xs-10
+                  input.acc-input placeholder=("Bank name") type="text" /
+              .row.form-line
+                .col-xs-10
+                  input.acc-input placeholder="Branch" type="text" /
+              .row.form-line.mb12.mt20
+                .col-xs-6
+                  .col-xs-12.fs13.t-up.mb12 IFSC Code:
+                  input.acc-input placeholder=("IFSC Code") type="text" /
+                .col-xs-6
+                  .col-xs-12.fs13.t-up.mb12 Account type:
+                  input.acc-input placeholder=("Account type") type="text" /
+              .green-but.w.mt25.w230
+                .icon
+                .name Save
