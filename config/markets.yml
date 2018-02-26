@@ -14,45 +14,191 @@
   quote_unit: inr
   bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: ltc, fixed: 8}
-- id: ltcbtc
-  code: 4
-  base_unit: ltc
-  quote_unit: btc
-  bid: {fee: 0, currency: btc, fixed: 8}
-  ask: {fee: 0, currency: ltc, fixed: 8}
+# - id: ltcbtc
+#   code: 4
+#   base_unit: ltc
+#   quote_unit: btc
+#   bid: {fee: 0, currency: btc, fixed: 8}
+#   ask: {fee: 0, currency: ltc, fixed: 8}
 - id: dshinr
-  code: 4
+  code: 5
   base_unit: dsh
   quote_unit: inr
   bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: dsh, fixed: 8}
-- id: bccinr
-  code: 5
-  base_unit: bcc
-  quote_unit: inr
-  bid: {fee: 0, currency: inr, fixed: 8}
-  ask: {fee: 0, currency: bcc, fixed: 8}
+# - id: dshbtc
+#   code: 5
+#   base_unit: dsh
+#   quote_unit: btc
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: dsh, fixed: 8}
+# - id: bccinr
+#   code: 6
+#   base_unit: bcc
+#   quote_unit: inr
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: bcc, fixed: 8}
 - id: ethinr
-  code: 6
+  code: 7
   base_unit: eth
   quote_unit: inr
   bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: eth, fixed: 8}
 - id: zecinr
-  code: 7
+  code: 8
   base_unit: zec
   quote_unit: inr
   bid: {fee: 0, currency: inr, fixed: 8}
   ask: {fee: 0, currency: zec, fixed: 8}
-- id: btsinr
-  code: 8
-  base_unit: bts
-  quote_unit: inr
+# - id: btsinr
+#   code: 9
+#   base_unit: bts
+#   quote_unit: inr
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: bts, fixed: 8}
+# - id: etcinr
+#   code: 10
+#   base_unit: etc
+#   quote_unit: inr
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: etc, fixed: 8}
+- id: ltcbtc
+  code: 11
+  base_unit: ltc
+  quote_unit: btc
   bid: {fee: 0, currency: inr, fixed: 8}
-  ask: {fee: 0, currency: bts, fixed: 8}
-- id: etcinr
-  code: 9
-  base_unit: etc
-  quote_unit: inr
+  ask: {fee: 0, currency: ltc, fixed: 8}
+- id: dshbtc
+  code: 12
+  base_unit: dsh
+  quote_unit: btc
   bid: {fee: 0, currency: inr, fixed: 8}
-  ask: {fee: 0, currency: etc, fixed: 8}
+  ask: {fee: 0, currency: dsh, fixed: 8}
+# - id: bccbtc
+#   code: 13
+#   base_unit: bcc
+#   quote_unit: btc
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: bcc, fixed: 8}
+- id: ethbtc
+  code: 14
+  base_unit: eth
+  quote_unit: btc
+  bid: {fee: 0, currency: inr, fixed: 8}
+  ask: {fee: 0, currency: eth, fixed: 8}
+- id: zecbtc
+  code: 15
+  base_unit: zec
+  quote_unit: btc
+  bid: {fee: 0, currency: inr, fixed: 8}
+  ask: {fee: 0, currency: zec, fixed: 8}
+# - id: btsbtc
+#   code: 16
+#   base_unit: bts
+#   quote_unit: btc
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: bts, fixed: 8}
+# - id: etcbtc
+#   code: 17
+#   base_unit: etc
+#   quote_unit: btc
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: etc, fixed: 8}
+- id: btceth
+  code: 18
+  #name: BTC/EUR      # default name
+  base_unit: btc
+  quote_unit: eth
+  #price_group_fixed: 1 # aggregate price levels in orderbook
+  bid: {fee: 0, currency: eth, fixed: 2}
+  ask: {fee: 0, currency: btc, fixed: 4}
+  sort_order: 1
+  #visible: false     # default to true
+- id: ltceth
+  code: 19
+  base_unit: ltc
+  quote_unit: inr
+  bid: {fee: 0, currency: eth, fixed: 8}
+  ask: {fee: 0, currency: ltc, fixed: 8}
+# - id: ltcbtc
+#   code: 4
+#   base_unit: ltc
+#   quote_unit: btc
+#   bid: {fee: 0, currency: btc, fixed: 8}
+#   ask: {fee: 0, currency: ltc, fixed: 8}
+- id: dsheth
+  code: 20
+  base_unit: dsh
+  quote_unit: eth
+  bid: {fee: 0, currency: eth, fixed: 8}
+  ask: {fee: 0, currency: dsh, fixed: 8}
+# - id: dshbtc
+#   code: 21
+#   base_unit: dsh
+#   quote_unit: btc
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: dsh, fixed: 8}
+# - id: bccinr
+#   code: 22
+#   base_unit: bcc
+#   quote_unit: inr
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: bcc, fixed: 8}
+- id: zeceth
+  code: 23
+  base_unit: zec
+  quote_unit: eth
+  bid: {fee: 0, currency: eth, fixed: 8}
+  ask: {fee: 0, currency: zec, fixed: 8}
+- id: btcbch
+  code: 24
+  #name: BTC/EUR      # default name
+  base_unit: btc
+  quote_unit: bch
+  #price_group_fixed: 1 # aggregate price levels in orderbook
+  bid: {fee: 0, currency: bch, fixed: 2}
+  ask: {fee: 0, currency: btc, fixed: 4}
+  sort_order: 1
+  #visible: false     # default to true
+- id: ltcinr
+  code: 25
+  base_unit: ltc
+  quote_unit: bch
+  bid: {fee: 0, currency: bch, fixed: 8}
+  ask: {fee: 0, currency: ltc, fixed: 8}
+# - id: ltcbtc
+#   code: 4
+#   base_unit: ltc
+#   quote_unit: btc
+#   bid: {fee: 0, currency: btc, fixed: 8}
+#   ask: {fee: 0, currency: ltc, fixed: 8}
+- id: dshinr
+  code: 26
+  base_unit: dsh
+  quote_unit: bch
+  bid: {fee: 0, currency: bch, fixed: 8}
+  ask: {fee: 0, currency: dsh, fixed: 8}
+# - id: dshbtc
+#   code: 5
+#   base_unit: dsh
+#   quote_unit: btc
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: dsh, fixed: 8}
+# - id: bccinr
+#   code: 6
+#   base_unit: bcc
+#   quote_unit: inr
+#   bid: {fee: 0, currency: inr, fixed: 8}
+#   ask: {fee: 0, currency: bcc, fixed: 8}
+- id: ethinr
+  code: 27
+  base_unit: eth
+  quote_unit: bch
+  bid: {fee: 0, currency: bch, fixed: 8}
+  ask: {fee: 0, currency: eth, fixed: 8}
+- id: zecinr
+  code: 28
+  base_unit: zec
+  quote_unit: bch
+  bid: {fee: 0, currency: bch, fixed: 8}
+  ask: {fee: 0, currency: zec, fixed: 8}
