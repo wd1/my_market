@@ -4,7 +4,7 @@
   .fr
     .top-user-box
       .history
-        .count 12
+        /.count 12
         .menu
           ul.nav.nav-pills role='tablist'
             a.item href="/history/orders"  Order History
@@ -53,25 +53,12 @@
       .notify
         .count 12
         .list
-          .item
-            .opacity4 4 Feb, 2017 12:34
-            .mt1
-              | Your account has been logged in with
-              | Safari (243.987.46.65)
-          .item
-            .opacity4 4 Feb, 2017 12:34
-            .mt1
-              | Your account has been logged in with
-              | Safari (243.987.46.65)
-          .item
-            .opacity4 4 Feb, 2017 12:34
-            .mt1
-              | Your account has been logged in with
-              | Safari (243.987.46.65)
-          .item
-            .opacity4 4 Feb, 2017 12:34
-            .mt1
-              | Your account has been logged in with
-              | Safari (243.987.46.65)
+          - @current_user.signup_histories.each do |signup_history|
+            .item
+              .opacity4 = signup_history.created_at
+              .mt1
+                | Your account has been logged in with 
+                = signup_history.ua + " on " + signup_history.ip
+
     /! <a href="" class="tm-but wcolor mr15">Create an account</a
     /! <a href="" class="tm-but">sign in</a
