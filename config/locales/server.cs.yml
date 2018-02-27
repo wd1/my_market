@@ -1666,9 +1666,9 @@ cs:
     application:
       close: Zavřít
     meta:
-      page_title: Cryex24 - The Opensource Cryptocurrency Exchange
-      page_description: Cryex24 - The Opensource Cryptocurrency Exchange
-      page_keywords: Cryex24,Opensource,Exchange,Cryptocurrency
+      page_title: Bitcharge
+      page_description: Bitcharge
+      page_keywords: Bitcharge,Opensource,Exchange,Cryptocurrency
   members:
     edit:
       name: Vyplňte prosím aplikaci.

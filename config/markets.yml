@@ -262,12 +262,6 @@
   quote_unit: bch
   bid: {fee: 0, currency: bch, fixed: 8}
   ask: {fee: 0, currency: xmr, fixed: 8}
-- id: bchbch
-  code: 42
-  base_unit: bch
-  quote_unit: bch
-  bid: {fee: 0, currency: bch, fixed: 8}
-  ask: {fee: 0, currency: bch, fixed: 8}
 - id: repbch
   code: 43
   base_unit: rep
