@@ -1,7 +1,7 @@
 - id: 1
   key: rupee
   code: inr
-  symbol: "₹₹"
+  symbol: "₹#"
   coin: false
   precision: 2
   assets:
