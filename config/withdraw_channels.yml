@@ -34,7 +34,7 @@
   type: WithdrawChannelLitecoin
 - id: 800
   key: dashcoin 
-  currency: dsh
+  currency: dash
   fixed: 12
   fee: 0.0005
   inuse: true

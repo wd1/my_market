@@ -26,7 +26,7 @@
   max_confirm: 6
 - id: 800
   key: dashcoin
-  currency: dsh
+  currency: dash
   min_confirm: 1
   max_confirm: 6
 - id: 1000

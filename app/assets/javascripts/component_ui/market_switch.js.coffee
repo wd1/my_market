@@ -28,7 +28,7 @@ window.MarketSwitchUI = flight.component ->
   runwithdelay = (ms, func)  -> setTimeout func, ms
   run = (select, data, index) ->
     market_list = ['INR','BCH','ETH','BTC']
-    currency_list = ['INR','BTC','ETH','LTC','DSH','ZEC','XRP','PPC','NMC','XMR','BCH','REP']
+    currency_list = ['INR','BTC','ETH','LTC','DASH','ZEC','XRP','PPC','NMC','XMR','BCH','REP']
     if (index == market_list.length) 
       index = 0
       

@@ -47,7 +47,7 @@ en:
         inr: INR
         ppc: PPC
         ltc: LTC
-        dsh: DSH
+        dash: DASH
         nmc: NMC
         xmr: XMR
         zec: ZEC
@@ -139,8 +139,8 @@ en:
         title: BTC Deposit
       deposit_ltc:
         title: LTC Deposit
-      deposit_dsh:
-        title: DSH Deposit
+      deposit_dash:
+        title: DASH Deposit
       deposit_nmc:
         title: NMC Deposit
       deposit_xmr:
@@ -206,8 +206,8 @@ en:
         title: BTC Withdraw
       withdraw_ltc:
         title: LTC Withdraw
-      withdraw_dsh:
-        title: DSH Withdraw
+      withdraw_dash:
+        title: DASH Withdraw
       withdraw_nmc:
         title: NMC Withdraw
       withdraw_xmr:
@@ -281,7 +281,7 @@ en:
         eur: EUR Market
         inr: INR Market
         ltc: LTC Market
-        dsh: DSH Market
+        dash: DASH Market
         nmc: NMC Market
         xmr: XMR Market
         zec: ZEC Market

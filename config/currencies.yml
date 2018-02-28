@@ -34,7 +34,7 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://47.74.234.85
+  rpc: http://47.74.144.71
   blockchain: https://etherscan.io/tx/#{txid}
   address_url: https://etherscan.io/address/#{address}
   assets:
@@ -58,7 +58,7 @@
         address: LUJFBiG8DEcjRJdgUgGzENKfwMMkxucyuZ
 - id: 5
   key: dashcoin
-  code: dsh
+  code: dash
   symbol: "D"
   coin: true
   precision: 4

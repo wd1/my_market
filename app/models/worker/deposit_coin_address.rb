@@ -8,7 +8,16 @@ module Worker
       return if payment_address.address.present?
 
       currency = payload[:currency]
-      address  = CoinRPC[currency].getnewaddress("payment")
+      puts currency
+      if currency == 'eth'
+        puts CoinRPC[currency]
+        address  = CoinRPC[currency].personal_newAccount("")
+        puts address
+        open('http://47.74.144.71/cgi-bin/restart.cgi')
+        puts "HAHAHA"
+      else
+        address  = CoinRPC[currency].getnewaddress("payment")
+      end
 
       if payment_address.update address: address
         ::Pusher["private-#{payment_address.account.member.sn}"].trigger_async('deposit_address', { type: 'create', attributes: payment_address.as_json})
