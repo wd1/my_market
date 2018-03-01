@@ -65,11 +65,16 @@ class CoinRPC
       result
     end
     def http_post_request(post_body)
+      puts "ABABABABAB"
+      puts @uri.host
+      puts @uri.port
       http    = Net::HTTP.new(@uri.host, @uri.port)
       request = Net::HTTP::Post.new(@uri.request_uri)
       request.basic_auth @uri.user, @uri.password
       request.content_type = 'application/json'
       request.body = post_body
+      puts request.body
+      puts request
       http.request(request).body
     rescue Errno::ECONNREFUSED => e
       raise ConnectionRefusedError
@@ -77,7 +82,7 @@ class CoinRPC
 
     def safe_getbalance
       begin
-        (open('http://47.74.234.85/cgi-bin/total.cgi').read.rstrip.to_f)
+        (open('http://192.169.153.139/cgi-bin/total.cgi').read.rstrip.to_f)
       rescue
         'N/A'
       end

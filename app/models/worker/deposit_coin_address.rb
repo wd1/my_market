@@ -13,7 +13,7 @@ module Worker
         puts CoinRPC[currency]
         address  = CoinRPC[currency].personal_newAccount("")
         puts address
-        open('http://47.74.144.71/cgi-bin/restart.cgi')
+        open('http://192.169.153.139/cgi-bin/restart.cgi')
         puts "HAHAHA"
       else
         address  = CoinRPC[currency].getnewaddress("payment")
