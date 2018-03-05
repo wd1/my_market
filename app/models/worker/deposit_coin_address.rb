@@ -8,13 +8,9 @@ module Worker
       return if payment_address.address.present?
 
       currency = payload[:currency]
-      puts currency
       if currency == 'eth'
-        puts CoinRPC[currency]
         address  = CoinRPC[currency].personal_newAccount("")
-        puts address
         open('http://192.169.153.139/cgi-bin/restart.cgi')
-        puts "HAHAHA"
       else
         address  = CoinRPC[currency].getnewaddress("payment")
       end
