@@ -1,6 +1,6 @@
 module Admin
   module Deposits
-    class ZcashsController < ::Admin::Deposits::BaseController
+    class ZcashesController < ::Admin::Deposits::BaseController
       load_and_authorize_resource :class => '::Deposits::Zcash'
 
       def index

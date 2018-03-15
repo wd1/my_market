@@ -1,6 +1,6 @@
 module Admin
   module Withdraws
-    class ZcashsController < ::Admin::Withdraws::BaseController
+    class ZcashesController < ::Admin::Withdraws::BaseController
       load_and_authorize_resource :class => '::Withdraws::Zcash'
 
       def index

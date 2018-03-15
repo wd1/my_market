@@ -1,6 +1,6 @@
 module Private
   module Deposits
-    class ZcashsController < ::Private::Deposits::BaseController
+    class ZcashesController < ::Private::Deposits::BaseController
       include ::Deposits::CtrlCoinable
     end
   end

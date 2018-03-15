@@ -1,5 +1,5 @@
 module Private::Withdraws
-  class ZcashsController < ::Private::Withdraws::BaseController
+  class ZcashesController < ::Private::Withdraws::BaseController
     include ::Withdraws::Withdrawable
   end
 end
