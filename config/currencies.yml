@@ -77,8 +77,8 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
+  rpc: http://zcash:zcashpassword12345@127.0.0.1:8232
+  blockchain: http://explorer.zcha.in/transactions/#{txid}
   address_url: https://etherscan.io/address/#{address}
   assets:
     accounts:
