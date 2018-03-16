@@ -16,6 +16,7 @@ module Worker
           address  = CoinRPC[currency].getnewaddress("")
         else 
           address  = CoinRPC[currency].getnewaddress("payment")
+        end
       end
 
       if payment_address.update address: address
