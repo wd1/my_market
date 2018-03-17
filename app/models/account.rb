@@ -87,6 +87,7 @@ class Account < ActiveRecord::Base
                      reason: reason,
                      amount: account.amount,
                      currency: account.currency.to_sym,
+                     currency1: account.currency,
                      member_id: account.member_id,
                      account_id: account.id }
 

@@ -70,6 +70,8 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha2', require: 'simple_captcha'
 gem 'rest-client', '~> 1.6.8'
 gem 'excon'
+gem 'memoist', '~> 0.16'
+gem 'passgen', '~> 1.0'
 
 group :development, :test do
   gem 'factory_girl_rails'
