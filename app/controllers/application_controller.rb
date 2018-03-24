@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   after_action :allow_iframe
   after_action :set_csrf_cookie_for_ng
   rescue_from CoinRPC::ConnectionRefusedError, with: :coin_rpc_connection_refused
-  rescue_from CoinAPI::ConnectionRefusedError, with: :coin_rpc_connection_refused
+  # rescue_from CoinAPI::ConnectionRefusedError, with: :coin_rpc_connection_refused
   
   private
 
