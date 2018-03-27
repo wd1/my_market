@@ -14,6 +14,7 @@ class CoinRPC
   def self.[](currency)
     c = Currency.find_by_code(currency.to_s)
     if c && c.rpc
+      puts c[:handler]
       name = c[:handler] || 'BTC'
       "::CoinRPC::#{name}".constantize.new(c.rpc)
     end
