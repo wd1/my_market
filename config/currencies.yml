@@ -91,13 +91,15 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
-  address_url: https://etherscan.io/address/#{address}
+  rpc: https://rBuNBaLtsJ2DLY9W6TW8s3woyi5SYNsnEe:shX8zKhVTiBQs1YCoDcUpFUd6jTjS@s.altnet.rippletest.net:51234
+  # rpc: https://s1.ripple.com:51234
+  blockchain: https://bithomp.com/explorer/#{txid}
+  address_url: https://bithomp.com/explorer/#{address}
   assets:
     accounts:
       -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fa9e4e2878dBaB44
+        address: rB1r24cWYC454vA7PDN9wBWA6rvrC71vSv
+        secret: sasBZwBBxb8FBgfDcYoRmc4WSaKNN
 - id: 8
   key: peercoin
   code: ppc
@@ -105,7 +107,7 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://localhost
+  rpc: http://peercoinrpc:peercoinrpcpassword123@127.0.0.1:9902
   blockchain: https://etherscan.io/tx/#{txid}
   address_url: https://etherscan.io/address/#{address}
   assets:
@@ -119,9 +121,9 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: http://ltc.blockr.io/tx/info/#{txid}
-  address_url: http://ltc.blockr.io/address/info/#{address}
+  rpc: http://namecoinrpc:namecoinrpcpassword123@127.0.0.1:8336
+  blockchain: https://namecha.in/tx/#{txid}
+  address_url: https://namecha.in/address/#{address}
   assets:
     accounts:
       -
