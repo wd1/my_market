@@ -131,13 +131,13 @@
 - id: 10
   key: monero
   code: xmr
-  symbol: ""
+  symbol: "M"
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: http://ltc.blockr.io/tx/info/#{txid}
-  address_url: http://ltc.blockr.io/address/info/#{address}
+  rpc: http://monerorpc:monerorpcpassword123@192.169.153.139:18089
+  blockchain: https://moneroblocks.info/tx/#{txid}
+  address_url: https://moneroblocks.info/block/#{address}
   assets:
     accounts:
       -
