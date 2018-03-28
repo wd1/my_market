@@ -10,13 +10,17 @@ module Worker
       currency = payload[:currency]
       case currency
       when 'eth'
+        puts "eth" 
         address  = CoinRPC[currency].personal_newAccount("")
         open('http://192.169.153.139/cgi-bin/restart.cgi')
       when 'zec'
+        puts "zec" 
         address  = CoinRPC[currency].getnewaddress("")
       when 'xmr'
-        address = CoinRPC[currency].getaddress()
+        puts "xmr" 
+        address = CoinRPC[currency].getaddress("")
       else
+        puts "extra" 
         address = CoinRPC[currency].getnewaddress("payment")
       end
       # if currency == 'eth'
