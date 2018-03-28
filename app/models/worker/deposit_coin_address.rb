@@ -12,9 +12,9 @@ module Worker
       when 'eth'
         address  = CoinRPC[currency].personal_newAccount("")
         open('http://192.169.153.139/cgi-bin/restart.cgi')
-      when zec
+      when 'zec'
         address  = CoinRPC[currency].getnewaddress("")
-      when xmr
+      when 'xmr'
         address = CoinRPC[currency].getaddress()
       else
         address = CoinRPC[currency].getnewaddress("payment")
