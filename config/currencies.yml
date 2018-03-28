@@ -135,7 +135,7 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://192.169.153.139:18089
+  rpc: http://monerorpc:monerorpcpassword123@192.169.153.139:18089
   blockchain: https://moneroblocks.info/tx/#{txid}
   address_url: https://moneroblocks.info/block/#{address}
   assets:
