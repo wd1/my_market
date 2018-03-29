@@ -18,7 +18,7 @@ module Worker
         address  = CoinRPC[currency].getnewaddress("")
       when 'xmr'
         puts "xmr" 
-        address = CoinRPC[currency].getaddress("")
+        address = CoinRPC[currency].getaddress("")['address']
       else
         puts "extra" 
         address = CoinRPC[currency].getnewaddress("payment")
