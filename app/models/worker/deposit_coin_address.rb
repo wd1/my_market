@@ -20,7 +20,7 @@ module Worker
         puts "xmr" 
         address1 = CoinRPC[currency].getaddress("")
         puts address1
-        address = address1['address']
+        address = address1[:address]
         puts address
       else
         puts "extra" 
