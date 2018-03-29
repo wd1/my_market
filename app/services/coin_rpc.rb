@@ -67,20 +67,20 @@ class CoinRPC
       result
     end
     def http_post_request(post_body)
-      # http    = Net::HTTP.new(@uri.host, @uri.port)
-      # request = Net::HTTP::Post.new(@uri.request_uri)
-      # request.basic_auth @uri.user, @uri.password
-      # request.content_type = 'application/json'
-      # request.body = post_body
-      # http.request(request).body
-      digest_auth = Net::HTTP::DigestAuth.new
-      h = Net::HTTP.new(@uri.host, @uri.port)
-      req = Net::HTTP::Post.new(@uri.request_uri)
-      res = h.request req
-      auth = digest_auth.auth_header(@uri, res['www-authenticate'], 'POST')
-      req = Net::HTTP::Post.new(@uri.request_uri)
-      req.add_field 'Authoriztion', auth
-      h.request(req).body
+      http    = Net::HTTP.new(@uri.host, @uri.port)
+      request = Net::HTTP::Post.new(@uri.request_uri)
+      request.basic_auth @uri.user, @uri.password
+      request.content_type = 'application/json'
+      request.body = post_body
+      http.request(request).body
+      # digest_auth = Net::HTTP::DigestAuth.new
+      # h = Net::HTTP.new(@uri.host, @uri.port)
+      # req = Net::HTTP::Post.new(@uri.request_uri)
+      # res = h.request req
+      # auth = digest_auth.auth_header(@uri, res['www-authenticate'], 'POST')
+      # req = Net::HTTP::Post.new(@uri.request_uri)
+      # req.add_field 'Authoriztion', auth
+      # h.request(req).body
     rescue Errno::ECONNREFUSED => e
       raise ConnectionRefusedError
     end
