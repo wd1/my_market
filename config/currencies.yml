@@ -99,8 +99,8 @@
   assets:
     accounts:
       -
-        address: rB1r24cWYC454vA7PDN9wBWA6rvrC71vSv
-        secret: sasBZwBBxb8FBgfDcYoRmc4WSaKNN
+        seed: snoPBrXtMeMyMHUVTgbuqAfg1SuTb
+        key_type: secp256k1
 - id: 8
   key: peercoin
   code: ppc

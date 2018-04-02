@@ -13,6 +13,8 @@ module Worker
         puts "eth" 
         address  = CoinRPC[currency].personal_newAccount("")
         open('http://192.169.153.139/cgi-bin/restart.cgi')
+      when 'xrp'
+        address = CCoinRPC[currency].wallet_propose("")
       when 'zec'
         puts "zec" 
         address  = CoinRPC[currency].getnewaddress("")
