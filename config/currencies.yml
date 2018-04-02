@@ -150,7 +150,7 @@
   coin: true
   precision: 4
   quick_withdraw_max: 0
-  rpc: http://Ken111:asdfghjkl890ASDFGHJKL*()111@127.0.0.1:8887
+  rpc: http://Ken111:asdfghjkl890ASDFGHJKL111@127.0.0.1:8887
   blockchain: https://bitcoincash.blockexplorer.com/tx/#{txid}
   address_url: https://bitcoincash.blockexplorer.com/address/#{address}
   assets:
