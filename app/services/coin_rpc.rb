@@ -15,7 +15,7 @@ class CoinRPC
   def self.[](currency)
     c = Currency.find_by_code(currency.to_s)
     if c && c.rpc
-      puts c[:handler]
+      # puts c[:handler]
       name = c[:handler] || 'BTC'
       "::CoinRPC::#{name}".constantize.new(c.rpc)
     end
@@ -33,7 +33,7 @@ class CoinRPC
     def handle(name, *args)
       post_body = { 'method' => name, 'params' => args, 'id' => 'jsonrpc' }.to_json
       if(name == 'wallet_propose')
-        post_body = { 'method' => name, 'params' => [{"passphrase": "rBK32aK3ffMExgp12KXk3XVoVtHKLtSbgM"}], 'id' => 'jsonrpc' }.to_json
+        post_body = { 'method' => name, 'params' => {"passphrase": "rBK32aK3ffMExgp12KXk3XVoVtHKLtSbgM"}, 'id' => 'jsonrpc' }.to_json
       end
       resp = JSON.parse( http_post_request(post_body) )
       raise JSONRPCError, resp['error'] if resp['error']
