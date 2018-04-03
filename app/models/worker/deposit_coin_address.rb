@@ -15,7 +15,9 @@ module Worker
         open('http://192.169.153.139/cgi-bin/restart.cgi')
       when 'xrp'
         puts 'xrp'
-        address = CoinRPC[currency].wallet_propose("")
+        address1 = CoinRPC[currency].wallet_propose("")
+        puts address1
+        address = address1[:result][:account_id]
       when 'zec'
         puts "zec" 
         address  = CoinRPC[currency].getnewaddress("")
