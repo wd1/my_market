@@ -18,6 +18,8 @@ module Worker
         address1 = CoinRPC[currency].wallet_propose("")
         puts address1
         address = address1[:result][:account_id]
+        puts address
+        puts address1[:result][:master_seed]
       when 'zec'
         puts "zec" 
         address  = CoinRPC[currency].getnewaddress("")
