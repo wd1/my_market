@@ -33,18 +33,14 @@ class CoinRPC
     def handle(name, *args)
       post_body = { 'method' => name, 'params' => args, 'id' => 'jsonrpc' }.to_json
       name1 = "#{name}"
-      if(name.eql? "wallet_propose")
+      if(name1.eql? "wallet_propose")
         post_body = { 'method' => name }.to_json
-        aaa = "wallet_propose"
-      else
-        aaa = "else_propose"
       end
-      # resp = JSON.parse( http_post_request(post_body) )
-      # raise JSONRPCError, resp['error'] if resp['error']
-      # result = resp['result']
-      # result.symbolize_keys! if result.is_a? Hash
-      # result
-      name1
+      resp = JSON.parse( http_post_request(post_body) )
+      raise JSONRPCError, resp['error'] if resp['error']
+      result = resp['result']
+      result.symbolize_keys! if result.is_a? Hash
+      result
     end
     def http_post_request(post_body)
       http    = Net::HTTP.new(@uri.host, @uri.port)
