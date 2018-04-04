@@ -18,7 +18,7 @@ module Worker
         address1 = CoinRPC[currency].wallet_propose("")
         puts address1
         puts address.eql? "wallet_propose"
-        puts address.eql? 'wallet_propose'
+        puts "wallet_propose".eql? 'wallet_propose'
         address = address1[:account_id]
         puts address
         puts address1[:master_seed]
