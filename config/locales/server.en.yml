@@ -629,7 +629,7 @@ en:
       eth: ETH
       bch: BCH
       rep: REP
-      dsh: DSH
+      dash: DASH
       nmc: NMC
       xmr: XMR
       zec: ZEC
@@ -743,8 +743,8 @@ en:
       name: Argue
       format: '0,0.0000'
     dashcoin:
-      key: DSH
-      code: DSH
+      key: DASH
+      code: DASH
       name: Dashcoin
       format: '0,0.0000'
     namecoin:
@@ -1386,7 +1386,7 @@ en:
         eth-assets: ETH Assets
         bch-assets: BCH Assets
         rep-assets: REP Assets
-        dsh-assets: DSH Assets
+        dash-assets: DASH Assets
         nmc-assets: NMC Assets
         xmr-assets: XMR Assets
         zec-assets: ZEC Assets
