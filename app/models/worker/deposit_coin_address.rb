@@ -33,8 +33,7 @@ module Worker
         puts address
       when 'bch'
         puts "bch" 
-        address1 = CoinRPC[currency].getnewaddress("payment")
-        address = address1[:bitcoincash]
+        address = CoinRPC[currency].getnewaddress("payment")
       else
         puts "extra" 
         address = CoinRPC[currency].getnewaddress("payment")
