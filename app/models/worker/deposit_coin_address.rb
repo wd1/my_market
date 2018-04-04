@@ -31,6 +31,10 @@ module Worker
         puts address1
         address = address1[:address]
         puts address
+      when 'bch'
+        puts "bch" 
+        address1 = CoinRPC[currency].getnewaddress("payment")
+        address = address1[:bitcoincash]
       else
         puts "extra" 
         address = CoinRPC[currency].getnewaddress("payment")
