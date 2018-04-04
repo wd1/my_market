@@ -34,7 +34,7 @@ module Worker
       when 'bch'
         puts "bch" 
         address = CoinRPC[currency].getnewaddress("payment")
-        address = address[12..]
+        address = address[12..-1]
       else
         puts "extra" 
         address = CoinRPC[currency].getnewaddress("payment")
