@@ -32,8 +32,11 @@ class CoinRPC
   class BTC < self
     def handle(name, *args)
       post_body = { 'method' => name, 'params' => args, 'id' => 'jsonrpc' }.to_json
-      if(name == 'wallet_propose')
+      if(name.eql? "wallet_propose")
         post_body = { 'method' => name }.to_json
+        aaa = "wallet_propose"
+      else
+        aaa = "else_propose"
       end
       # resp = JSON.parse( http_post_request(post_body) )
       # raise JSONRPCError, resp['error'] if resp['error']
