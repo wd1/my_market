@@ -44,7 +44,7 @@ class CoinRPC
       # result = resp['result']
       # result.symbolize_keys! if result.is_a? Hash
       # result
-      aaa
+      currency
     end
     def http_post_request(post_body)
       http    = Net::HTTP.new(@uri.host, @uri.port)

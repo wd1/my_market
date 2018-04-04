@@ -157,20 +157,20 @@
     accounts:
       -
         address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
-- id: 12
-  key: rep
-  code: rep
-  symbol: "฿"
-  coin: true
-  precision: 4
-  quick_withdraw_max: 0
-  rpc: http://localhost
-  blockchain: https://etherscan.io/tx/#{txid}
-  address_url: https://etherscan.io/address/#{address}
-  assets:
-    accounts:
-      -
-        address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
+# - id: 12
+#   key: rep
+#   code: rep
+#   symbol: "฿"
+#   coin: true
+#   precision: 4
+#   quick_withdraw_max: 0
+#   rpc: http://localhost
+#   blockchain: https://etherscan.io/tx/#{txid}
+#   address_url: https://etherscan.io/address/#{address}
+#   assets:
+#     accounts:
+#       -
+#         address: 0x4bA2474e063Aec44e23F2Bf7Fb9e4e2878dBaB44
 # - id: 10
 #   key: bcc
 #   code: bcc
