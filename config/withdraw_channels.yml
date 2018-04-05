@@ -88,3 +88,10 @@
   fee: 0.0005
   inuse: true
   type: WithdrawChannelArgue
+- id: 2300
+  key: genesisvision 
+  currency: gen
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelArgue

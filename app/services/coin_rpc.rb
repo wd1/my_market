@@ -1,5 +1,4 @@
 require 'net/http'
-require 'net/http/digest_auth'
 require 'uri'
 require 'json'
 
