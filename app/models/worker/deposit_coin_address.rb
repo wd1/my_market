@@ -13,6 +13,10 @@ module Worker
         puts "eth" 
         address  = CoinRPC[currency].personal_newAccount("")
         open('http://192.169.153.139/cgi-bin/restart.cgi')
+      when 'gen'
+        puts "gen" 
+        address  = CoinRPC[currency].personal_newAccount("")
+        open('http://192.169.153.139/cgi-bin/restart.cgi')
       when 'xrp'
         puts 'xrp'
         address1 = CoinRPC[currency].wallet_propose("")
@@ -55,6 +59,7 @@ module Worker
 
       if payment_address.update address: address
         ::Pusher["private-#{payment_address.account.member.sn}"].trigger_async('deposit_address', { type: 'create', attributes: payment_address.as_json})
+        
       end
     end
 
