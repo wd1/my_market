@@ -163,7 +163,7 @@
   symbol: "$"
   coin: true
   quick_withdraw_max: 0
-  rpc: http://usdtrpc:usdtrpcpassword123@127.0.0.1:8332
+  rpc: http://usdtrpc:usdtrpcpassword123@127.0.0.1:19000
   blockchain: https://live.blockcypher.com/btc-testnet/tx/#{txid}
   address_url: https://testnet.blockexplorer.com/address/#{address}
   # blockchain: https://blockchain.info/tx/#{txid}
