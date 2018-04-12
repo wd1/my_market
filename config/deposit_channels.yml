@@ -64,3 +64,8 @@
   currency: rep
   min_confirm: 1
   max_confirm: 6
+- id: 2300
+  key: usdt
+  currency: usdt
+  min_confirm: 1
+  max_confirm: 6
