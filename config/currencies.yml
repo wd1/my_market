@@ -163,7 +163,7 @@
   symbol: "$"
   coin: true
   quick_withdraw_max: 0
-  rpc: http://Ken111:asdfghjkl890ASDFGHJKL*()111@127.0.0.1:19001
+  rpc: http://Ken111:asdfghjkl890ASDFGHJKL*()111@127.0.0.1:18332
   blockchain: https://live.blockcypher.com/btc-testnet/tx/#{txid}
   address_url: https://testnet.blockexplorer.com/address/#{address}
   # blockchain: https://blockchain.info/tx/#{txid}
