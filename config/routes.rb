@@ -99,6 +99,7 @@ Peatio::Application.routes.draw do
     get '/history/access' => 'history#access', as: :access_history
     get '/history/affiliate' => 'history#affiliate', as: :affiliate_history
     get '/history/commission' => 'history#commission', as: :commission_history
+    get '/history/offer' => 'history#offer', as: :offer_special
     get '/support/center' => 'support#center', as: :center_support
 
     resources :markets, :only => :show, :constraints => MarketConstraint do

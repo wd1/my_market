@@ -139,8 +139,9 @@
   .s-content
     .container-fluid
       .settings-switcher.cf
-        .item.act style=("width:50%;") Edit profile/Settings
-        .item style=("width:50%;") Security
+        .item.act Edit profile/Settings
+        = link_to "Verification", verify_google_auth_path, {:class => "item", :style =>'color:black;border-radius:0px;'}
+        .item Security
       .row
         .col-xs-6
           .rb7.w-bg

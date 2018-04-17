@@ -1,21 +1,12 @@
 $(function(){
 
-    height_fixed();
+    var el_1 = new elipse($('.small-fly-round'), 826, 240, -6, 112, 1);
+    el_1.animate();
 
-    // if($('.v-line-sp-but').length){
-    //     var follower = $('.v-line-sp-but');
-    //     var mouseX = 0;
-    //     var ww = window.innerWidth || document.documentElement.clientWidth;
-    //     var scale = ww/40;
-    //     $(window).mousemove(function(e){
-    //         mouseX = e.pageX;
-    //         if (mouseX < 0) mouseX = 0;
-    //
-    //         follower.css({
-    //             'margin-left': -46 + (mouseX/scale) - 20
-    //         });
-    //     });
-    // }
+    var el_2 = new elipse($('.small-fly-round-2'), 593, 113, 110, 110, -1);
+    el_2.animate();
+
+    height_fixed();
 
     if($('.v-line-sp-but').length){
         var follower = $('.v-line-sp-but .arr');
@@ -48,9 +39,104 @@ $(function(){
         });
     }
 
+    init_rate_carousel();
 
+    if($('.offer-slider').length){
+        $('.offer-slider .wrap .item').width($('.offer-slider').width());
+        $('.offer-slider').jcarousel({
+            wrap: 'circular'
+        }).jcarouselAutoscroll({
+            interval: 3000,
+            target: '+=1',
+            autostart: true
+        });
+
+        $('.offer-slider-pag')
+            .on('jcarouselpagination:active', 'a', function () {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function () {
+                $(this).removeClass('active');
+            })
+            .on('click', function (e) {
+                e.preventDefault();
+            })
+            .jcarouselPagination({
+                perPage: 1,
+                item: function (page) {
+                    return '<a href="#' + page + '"></a>';
+                }
+            });
+    }
 
 });
+
+function init_rate_carousel() {
+    var carousel = $('.mp-carousel');
+    var jc_item = carousel.find('.item');
+    var jc_wrap = carousel.find('.bline');
+    var min_el_width = 140; //+10 margin right
+    var w = carousel.width();
+    var view_els = Math.floor(w / min_el_width);
+    var w_el = w / view_els;
+    jc_item.width(w_el-10);
+    var wrap_w = jc_item.length*w_el;
+
+    var max_translate_x = wrap_w-w;
+    var cur_translate_x = 0;
+    setInterval(function(){
+        if(cur_translate_x<max_translate_x){
+            cur_translate_x = cur_translate_x+1;
+        }else{
+            cur_translate_x = 0;
+        }
+        jc_wrap.css({
+            'transform': 'translateX(-'+cur_translate_x+'px)'
+        });
+    }, 20);
+}
+
+var elipse = function(el, x, y, cor_x, cor_y, start){
+    this.b_x_axes = x;
+    this.b_y_axes = y;
+    this.p_x_axes = this.b_x_axes/2;
+    this.p_y_axes = this.b_y_axes/2;
+    this.x_axes_step = 15;
+    this.x = (start>0) ? -this.p_x_axes : this.p_x_axes;
+    this.y = 0;
+    this.direction = 1;
+    this.y_direction = 1;
+
+    var self = this;
+
+    this.animate = function(){
+        setInterval(function(){
+            self.y = Math.sqrt((Math.pow(self.p_y_axes, 2)/Math.pow(self.p_x_axes, 2))*(Math.pow(self.p_x_axes, 2)-Math.pow(self.x,2)))*self.y_direction;
+
+            el.css({
+                'left': (self.x+self.p_x_axes+cor_x) + 'px',
+                'top': (-self.y+cor_y) + 'px'
+            });
+
+            if(self.direction > 0){ //вправо
+                self.x = self.x + self.x_axes_step;
+                if(self.x > self.p_x_axes){
+                    self.direction = -1;
+                    self.y_direction = -1;
+                    self.x = self.p_x_axes;
+                }
+            }else{
+                self.x = self.x - self.x_axes_step;
+                if(self.x < -self.p_x_axes){
+                    self.direction = 1;
+                    self.y_direction = 1;
+                    self.x = -self.p_x_axes;
+                }
+            }
+
+        }, 150);
+    }
+}
 
 function height_fixed(){
     var height = window.innerHeight || document.documentElement.clientHeight;
@@ -162,3 +248,67 @@ $(document).on('click', '.sc-us-data-but.sf', function(){
     $('.faq-group').hide();
     $('.support-form').show();
 });
+
+$(document).on('click', '.switcher-box .item', function(){
+
+    var group = $(this).closest('.switcher-box').data('group');
+
+    $('.switcher-box .item').removeClass('act');
+    $(this).addClass('act');
+
+    var index = $(this).index();
+
+    $('.' + group).hide();
+    $('.' + group).eq(index).show();
+});
+
+$(document).on('click', '.show-inr-withdraw-form', function(e){
+    e.preventDefault();
+    var box = $('.inr-withdraw-box');
+    var form = $('.inr-withdraw-form-box');
+
+    if(!box.hasClass('act')){
+        box.addClass('act');
+        setTimeout(function(){
+            form.addClass('act');
+        }, 300);
+        $(this).html('Hide withdraw form');
+    }else{
+        form.removeClass('act');
+        setTimeout(function(){
+            box.removeClass('act');
+        }, 300);
+        $(this).html('Withdraw');
+    }
+});
+
+$(document).on('click', '.login-control-but', function(e){
+    e.preventDefault();
+    var type = $(this).data('type');
+    if(type == 'fp'){
+        $('.login-form-box').hide();
+        $('.forgotpass-form-box').fadeIn();
+    }else{
+        $('.login-form-box').fadeIn();
+        $('.forgotpass-form-box').hide();
+    }
+});
+
+$(document).on('click', '.af-inv-switcher .item', function(e){
+    e.preventDefault();
+    var type = $(this).data('type');
+
+    $('.af-inv-switcher .item').removeClass('act');
+    $(this).addClass('act');
+
+    $('.invite-box').hide();
+    $('.invite-box.ib-'+type).fadeIn();
+});
+
+$(document).on('click', '.top-user-box .uw-box .wallet .item', function(e){
+    e.preventDefault();
+
+    $('.top-user-box .uw-box .wallet .item').removeClass('act');
+    $(this).addClass('act');
+});
+
