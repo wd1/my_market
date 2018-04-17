@@ -3048,7 +3048,7 @@ body {
 }
 
 .offer-box .h-img{
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
