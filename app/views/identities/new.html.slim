@@ -12,7 +12,7 @@
 /= content_for :guide do
   ul.list-unstyled
     li: a href='#{signin_path}'= t('.signin')
-.signup-page style=("height:100%;")
+.signup-page style=("height:100%;position:unset")
   .header
     .s-content
       .container-fluid
@@ -33,6 +33,7 @@
           .col-xs-4
             .login-box.mt90
               .fs30.fw700.mb40.tac Access to account
+              = render 'shared/flash'
               = simple_form_for @identity, :url => '/auth/identity/callback', :method => :post do |f|
                 /input.acc-input.mb15 placeholder="E-mail" type="text" /
                 input#identity_signin_email.string.email.required.form-control.acc-input.mb15 autofocus="autofocus" name="auth_key" placeholder=("E-mail Address") type="email" /

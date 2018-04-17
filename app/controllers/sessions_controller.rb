@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     if @member
       if @member.disabled?
         increase_failed_logins
-        redirect_to signin_path, alert: t('.disabled')
+        redirect_to signup_path, alert: t('.disabled')
       else
         clear_failed_logins
         reset_session rescue nil
@@ -31,13 +31,13 @@ class SessionsController < ApplicationController
       end
     else
       increase_failed_logins
-      redirect_to signin_path, alert: t('.error')
+      redirect_to signup_path, alert: t('.error')
     end
   end
 
   def failure
     increase_failed_logins
-    redirect_to signin_path, alert: t('.error')
+    redirect_to signup_path, alert: t('.error')
   end
 
   def destroy
