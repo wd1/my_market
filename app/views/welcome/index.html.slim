@@ -207,15 +207,15 @@ javascript:
       index = 0;
       setTimeout(function() {
         return run(index);
-      }, 5000);
-      return console.log(index);
+      }, 10000);
+      //return console.log(index);
     } else {
       url = "https://min-api.cryptocompare.com/data/price?fsym=" + market_list[index] + "&tsyms=";
       for (_i = 0, _len = currency_list.length; _i < _len; _i++) {
         currency = currency_list[_i];
         url = url + currency + ",";
       }
-
+      console.log(url);
       return $.ajax({
         url: url,
         async: true,
@@ -229,10 +229,19 @@ javascript:
             if (value.indexOf(".") === -1) {
               value = value + '.0';
               
+            } else {
+              value = value.slice(0, value.indexOf(".")+8);
             }
-            value = value.slice(0, value.indexOf(".")+5);
-            if(document.getElementById(currency+"/"+market_id) != null)
+            if(document.getElementById(currency+"/"+market_id) != null){
+              
+              console.log(parseFloat(document.getElementById(currency+"/"+market_id).innerHTML)+","+value);
+              if(parseFloat(value)>=parseFloat(document.getElementById(currency+"/"+market_id).innerHTML)) {
+                document.getElementById(currency+"/"+market_id).className = "dib rb5 pl10 pr10 fw700 pt1 pb1 high-price";
+              } else {
+                document.getElementById(currency+"/"+market_id).className = "dib rb5 pl10 pr10 fw700 pt1 pb1 low-price";
+              }
               document.getElementById(currency+"/"+market_id).innerHTML = value;
+            }
             
           }
           return run(index);
