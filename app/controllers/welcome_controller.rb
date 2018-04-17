@@ -4,5 +4,6 @@ class WelcomeController < ApplicationController
   def index
     @show_index_menu = true;
     @tickers = Market.all
+    @markets       = Market.all.sort
   end
 end

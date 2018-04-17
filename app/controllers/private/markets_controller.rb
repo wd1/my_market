@@ -23,7 +23,6 @@ module Private
       @order_ask = OrderAsk.new ord_type: 'limit'
 
       set_member_data if current_user
-      gon.jbuilder
     end
 
     private

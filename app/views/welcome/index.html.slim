@@ -41,11 +41,21 @@
       /.carousel-control.r
       
       .bline
-        - @tickers.each do |ticker|
+        - @markets.each do |ticker|
           .item.rb5.ovh.w-bg.tac.pb9
             .b-h-gradient.t-b-line
             .t-up.mt5.mb4 #{ticker.name}
-            .dib.g-border.rb5.pl10.pr10.g-color.fw700.pt1.pb1 #{number_with_precision(ticker.ticker[:last], precision: ticker[:bid]["fixed"]) }
+            /.dib.g-border.rb5.pl10.pr10.g-color.fw700.pt1.pb1 #{number_with_precision(ticker.ticker[:last], precision: ticker[:bid]["fixed"]) }
+            .dib.g-border.rb5.pl10.pr10.g-color.fw700.pt1.pb1 id="#{ticker.name}"
+              = Global[ticker.id].ticker[:last]
+        /- @markets.each do |market|
+          tr.market.data id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
+            td.col-xs-4.name.fw700 style=("padding:9px 0px;")
+              = link_to market.name, market_path(market)
+            td.col-xs-15.price  style=("padding:9px 0px;")
+              = Global[market.id].ticker[:last]
+            td.col-xs-5.change.g-color style=("padding:9px 0px;")
+              | +0.00%
 .s-content.pt45
   .container-fluid
     .row.tac.fs30.fw700.b-color.t-up.mb45
@@ -187,3 +197,48 @@
                 .green-but.s
                   .icon
                   .name Read more
+javascript:
+  var run;
+  run = function(index) {
+    var currency, currency_list, market_list, url, _i, _len;
+    market_list = ['INR', 'BCH', 'ETH', 'BTC'];
+    currency_list = ['INR', 'BTC', 'ETH', 'LTC', 'DASH', 'ZEC', 'XRP', 'PPC', 'NMC', 'XMR', 'BCH', 'REP'];
+    if (index === market_list.length) {
+      index = 0;
+      setTimeout(function() {
+        return run(index);
+      }, 5000);
+      return console.log(index);
+    } else {
+      url = "https://min-api.cryptocompare.com/data/price?fsym=" + market_list[index] + "&tsyms=";
+      for (_i = 0, _len = currency_list.length; _i < _len; _i++) {
+        currency = currency_list[_i];
+        url = url + currency + ",";
+      }
+
+      return $.ajax({
+        url: url,
+        async: true,
+        success: function(html) {
+          var market_id, value, _j, _len1;
+          market_id = market_list[index];
+          index++;
+          for (_j = 0, _len1 = currency_list.length; _j < _len1; _j++) {
+            currency = currency_list[_j];
+            value = 1 / html[currency.toUpperCase()] + '';
+            if (value.indexOf(".") === -1) {
+              value = value + '.0';
+              
+            }
+            value = value.slice(0, value.indexOf(".")+5);
+            if(document.getElementById(currency+"/"+market_id) != null)
+              document.getElementById(currency+"/"+market_id).innerHTML = value;
+            
+          }
+          return run(index);
+        }
+      });
+    }
+  };
+
+  run(0);
