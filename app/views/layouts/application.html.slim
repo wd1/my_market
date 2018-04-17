@@ -20,7 +20,7 @@ html lang="en"
     = render 'shared/meta'
     = csrf_meta_tags
 
-  body id='#{body_id}' data-lang="#{locale_name}"
+  body id='#{body_id}' data-lang="#{locale_name}" style="font-family: sans-serif;"
     
     - if !current_page?(signup_path) and !current_page?(center_support_path) and request.fullpath!="/auth/identity/register"
       = render 'shared/alert'
