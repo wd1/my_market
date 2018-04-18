@@ -59,7 +59,7 @@ SimpleForm.setup do |config|
 
     ## Inputs
     # b.use :label
-    b.use :input, wrap_with: { tag: :div , class: 'signup-input'}
+    b.use :input, wrap_with: { tag: :div , class: ''}
     #b.use :hint,  wrap_with: { tag: :span, class: 'hint' }
   end
 
@@ -159,7 +159,7 @@ SimpleForm.setup do |config|
   # config.cache_discovery = !Rails.env.development?
 
   # Default class for inputs
-  config.input_class = 'signup-input'
+  config.input_class = ''
 end
 
 module SimpleForm
