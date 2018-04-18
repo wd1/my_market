@@ -43,10 +43,10 @@ SimpleForm.setup do |config|
 
     ## Inputs
     #
-    b.use :label, wrap_with: { tag: :div, class: 'col-xs-8 text-right'}
-    b.use :input, wrap_with: { tag: :div, class: 'col-xs-14'}
-    b.use :error, wrap_with: { tag: :span, class: 'error text-danger col-xs-14 col-xs-offset-8' }
-    b.use :hint,  wrap_with: { tag: :span, class: 'hint col-xs-14 col-xs-offset-8' }
+    #b.use :label, wrap_with: { tag: :div, class: 'col-xs-8 text-right'}
+    b.use :input, wrap_with: { tag: :div, class: 'col-xs-12 mt15'}
+    b.use :error, wrap_with: { tag: :span, class: 'error text-danger col-xs-12 col-xs-offset-8' }
+    # b.use :hint,  wrap_with: { tag: :span, class: 'hint col-xs-12 col-xs-offset-8' }
   end
 
   config.wrappers :search, class: 'form-group',
@@ -58,9 +58,9 @@ SimpleForm.setup do |config|
     b.optional :readonly
 
     ## Inputs
-    b.use :label
-    b.use :input, wrap_with: { tag: :div }
-    b.use :hint,  wrap_with: { tag: :span, class: 'hint' }
+    # b.use :label
+    b.use :input, wrap_with: { tag: :div , class: 'signup-input'}
+    #b.use :hint,  wrap_with: { tag: :span, class: 'hint' }
   end
 
   # The default wrapper to be used by the FormBuilder.
@@ -159,7 +159,7 @@ SimpleForm.setup do |config|
   # config.cache_discovery = !Rails.env.development?
 
   # Default class for inputs
-  config.input_class = 'form-control'
+  config.input_class = 'signup-input'
 end
 
 module SimpleForm
