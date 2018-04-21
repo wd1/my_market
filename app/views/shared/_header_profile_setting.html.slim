@@ -59,6 +59,11 @@
               .mt1
                 | Your account has been logged in with 
                 = signup_history.ua + " on " + signup_history.ip
-
+      .notify style="background:url(../img/lang.png) center center no-repeat"
+        /.count 12
+        .list style=("height: 200px;top:40px;width:50px;")
+          - I18n.available_locales.each do |lang|
+            .item
+              a href="?lang=#{lang}": img src="/languages/#{lang || I18n.locale}.png"
     /! <a href="" class="tm-but wcolor mr15">Create an account</a
     /! <a href="" class="tm-but">sign in</a
