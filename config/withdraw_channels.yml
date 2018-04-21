@@ -95,3 +95,17 @@
   fee: 0.0005
   inuse: true
   type: WithdrawChannelArgue
+- id: 2400
+  key: genreward
+  currency: ger
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelGenreward
+- id: 2500
+  key: bat
+  currency: bat
+  fixed: 12
+  fee: 0.0005
+  inuse: true
+  type: WithdrawChannelBat

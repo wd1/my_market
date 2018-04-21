@@ -69,3 +69,13 @@
   currency: gen
   min_confirm: 1
   max_confirm: 6
+- id: 2400
+  key: genreward
+  currency: ger
+  min_confirm: 1
+  max_confirm: 6
+- id: 2500
+  key: bat
+  currency: bat
+  min_confirm: 1
+  max_confirm: 6
