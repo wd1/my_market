@@ -1,9 +1,4 @@
-# encoding: utf-8
-#
-# Never edit this file. It will be overwritten when translations are pulled from Transifex.
-#
-
-zh-CN:
+en:
   activerecord:
     models:
       api_tokens: API Token
@@ -25,7 +20,20 @@ zh-CN:
       admin/withdraws_grid: 提现管理
       deposits/bank: 银行转账
       withdraws/bank: 银行转账
-      withdraws/satoshi: 银行转账
+      withdraws/satoshi: 提現比特幣
+      withdraws/realpointcoin: 提現 RealPointCoin
+      withdraws/litecoin: 提現萊特幣
+      withdraws/ether: 提現以太坊
+      withdraws/bitcoincash: 提現比特幣現金
+      withdraws/argue: 提現 Argue
+      withdraws/dashcoin: 提現 Dashcoin
+      withdraws/namecoin: 提現 Namecoin
+      withdraws/monero: 提現門羅幣
+      withdraws/zcash: 提現 Zcash
+      withdraws/ripple: 提現瑞波幣
+      withdraws/blackcoin: 提現 Blackcoin
+      withdraws/peercoin: 提現 Peercoin
+      withdraws/tritiumcoin: 提現 Tritium
     attributes:
       api_token:
         access_key: Access Key
@@ -179,7 +187,247 @@ zh-CN:
         amount: 充值数量
         confirmations: 确认数
         aasm_state_text: 状态
+      deposits/realpointcoin:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/litecoin:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/ether:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/bitcoincash:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/argue:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/Dashcoin:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/Namecoin:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/Monero:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/Ripple:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/peercoin:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/blackcoin:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/tritiumcoin:
+        created_at: 創建於
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
       withdraws/satoshi:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/realpointcoin:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/litecoin:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/ether:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/bitcoincash:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/argue:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/Dashcoin:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/Namecoin:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/Monero:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/Ripple:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/peercoin:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/blackcoin:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/tritiumcoin:
         id: 提现编号
         member_name: 用户
         currency_obj_key_text: 币种
@@ -211,6 +459,14 @@ zh-CN:
           attributes:
             balance:
               less: 您的账户余额不足
+        identity:
+          attributes:
+            email:
+              invalid: 錯誤郵箱
+            password:
+              invalid: 錯誤密碼
+            password_confirmation:
+              confirmation: 與上面輸入的密碼不相同，請重新輸入
         token/reset_password:
           attributes:
             base:
@@ -240,6 +496,84 @@ zh-CN:
               poor: 热钱包金额不足
               bank_min: 小于 5000.00
         withdraws/satoshi:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/realpointcoin:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/litecoin:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/ether:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/bitcoincash:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/argue:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/dashcoin:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/namecoin:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/monero:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/zcash:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/ripple:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/peercoin:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/blackcoin:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/tritiumcoin:
           attributes:
             fund_uid:
               blank: 请输入您的提现地址。
@@ -284,39 +618,178 @@ zh-CN:
     pab: 平安银行
     gdb: 广东发展银行
     psbc: 中国邮政储蓄银行
-  market:
+  market: 
     currency:
-      btc: BTC
       eur: EUR
+      inr: INR
+      btc: BTC
       doge: DOGE
       pts: PTS
       ltc: LTC
+      eth: ETH
+      bch: BCH
+      rep: REP
+      dash: DASH
+      nmc: NMC
+      xmr: XMR
+      zec: ZEC
+      usd: USD
+      ppc: PPC
+      blk: BLK
+      rpt: RPT
+      trt: TRT
+      bcc: BCC
+      xrp: XRP
+      bts: BTS
+      etc: ETC
   currency:
     satoshi:
       key: BTC
       code: BTC
-      name: 比特币
+      name: Bitcoin
       format: '0,0.0000'
     bitsharesx:
       key: BTS
       code: BTSX
-      name: 比特股
+      name: BitsharesX
       format: '0,0.0000'
+    etc:
+      key: ETC
+      code: ETC
+      name: ETC
+      format: '0,0.0000'
+    renminbi:
+      key: CNY
+      code: CNY
+      name: Chinese Yuan
     euro:
       key: EUR
       code: EUR
-      name: 人民币
+      name: European Euro
+      format: '0,0.00'
+    rupee:
+      key: INR
+      code: INR
+      name: Indian Rupee
       format: '0,0.00'
     dogecoin:
       key: DOG
       code: DOGE
-      name: 狗狗币
+      name: Dogecoin
       format: '0,0.0000'
+    bcc:
+      key: BCC
+      code: BCC
+      name: BCC
+      format: '0,0.0000'
+    zec:
+      key: ZEC
+      code: ZEC
+      name: ZEC
+      format: '0,0.0000'
+    xrp:
+      key: XRP
+      code: XRP
+      name: XRP
+      format: '0,0.0000'
+    bts:
+      key: BTS
+      code: BTS
+      name: BTS
+      format: '0,0.0000'
+    ether:
+      key: ETH
+      code: ETH
+      name: Ethereum
+      format: '0,0.0000' 
     protoshare:
       key: PTS
       code: PTS
-      name: 原型股
+      name: Protoshare
       format: '0,0.0000'
+    dolars:
+      key: USD
+      code: USD
+      name: Dolar
+      format: '0,0.0000'
+    euros:
+      key: EUR
+      code: EUR
+      name: Euro
+      format: '0,0.0000'
+    rupees:
+      key: INR
+      code: INR
+      name: Rupee
+      format: '0,0.0000'
+    litecoin:
+      key: LTC
+      code: LTC
+      name: Litecoin
+      format: '0,0.0000'
+    ether:
+      key: eth
+      code: eth
+      name: Ether
+      format: '0,0.0000'
+    bitcoincash:
+      key: BCH
+      code: BCH
+      name: Bitcoincash
+      format: '0,0.0000'
+    argue:
+      key: REP
+      code: REP
+      name: Argue
+      format: '0,0.0000'
+    dashcoin:
+      key: DASH
+      code: DASH
+      name: Dashcoin
+      format: '0,0.0000'
+    namecoin:
+      key: NMC
+      code: NMC
+      name: Namecoin
+      format: '0,0.0000'
+    monero:
+      key: XMR
+      code: XMR
+      name: Monero
+      format: '0,0.0000'
+    zcash:
+      key: ZEC
+      code: ZEC
+      name: Zcash
+      format: '0,0.0000'
+    ripple:
+      key: XRP
+      code: XRP
+      name: Ripple
+      format: '0,0.0000'
+    peercoin:
+      key: PPC
+      code: PPC
+      name: Peercoin
+      format: '0,0.0000'
+    blackcoin:
+      key: BLK
+      code: BLK
+      name: BlackCoin
+      format: '0,0.0000'
+    realpointcoin:
+      key: RPT
+      code: RPT
+      name: RealPointCoin
+      format: '0,0.0000'
+    tritiumcoin:
+      key: TRT
+      code: TRT
+      name: Tritiumcoin
+      format: '0,0.0000'
+
+
+
   datagrid:
     empty: 没有任何数据查询结果
     filters:
@@ -462,6 +935,83 @@ zh-CN:
       latency: 10 分钟到账
       transfer: 自动
       go: 立即充值
+    ether:
+      key: ethereum
+      title: Ethereum 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 Ethereum 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: 立即充值
+    litecoin:
+      key: Litecoin Chain
+      title: Litecoin 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 litecoin 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
+    bitcoincash:
+      key: Bitcoincash Chain
+      title: Bitcoincash 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 bitcoincash 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
+    argue:
+      key: Argue Chain
+      title: Argue 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 argue 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
+    dashcoin:
+      key: Dashcoin Chain
+      title: Dashcoin 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 dashcoin 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
+    namecoin:
+      key: Namecoin Chain
+      title: Namecoin 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 namecoin 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
+    monero:
+      key: Monero Chain
+      title: Monero 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 monero 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
+    peercoin:
+      key: Peercoin Chain
+      title: Peercoin 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 peercoin 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
+    blackcoin:
+      key: Blackcoin Chain
+      title: Blackcoin 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 blackcoin 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
+    realpointcoin:
+      key: RealPointCoin Chain
+      title: RealPointCoin 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 realpointcoin 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
+    tritiumcoin:
+      key: Tritiumcoin Chain
+      title: Tritium 充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出 tritium 到我们为您提供的充值地址。
+      latency: 1個確認
+      transfer: 自動
+      go: Deposit
   deposits/bank:
     aasm_state:
       submitting: 已提交
@@ -474,6 +1024,39 @@ zh-CN:
   private:
     deposits:
       satoshis:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      realpointcoins:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      litecoins:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      ethers:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      bitcoincashs:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      argues:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      dashcoins:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      namecoins:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      moneros:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      blackcoins:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      peercoins:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      tritiumcoins:
         gen_address:
           require_transaction: 当前地址没有使用过之前不能生成新地址
       banks:
@@ -491,28 +1074,6 @@ zh-CN:
           branch: 收款开户行
           hodler: 收款账号
           account: 收款账号
-    fund_sources:
-      index:
-        manage_coin_address: 管理 %{name} 地址
-        manage_bank_account: 管理银行账号
-        guide_intro_coin: 通过增加%{name}提现地址，以便每次提现时快速选择。
-        guide_intro_bank: 通过增加提现银行账号，以便每次提现时快速选择。
-        new: 新建
-        currency: 币种
-        bank: 银行
-        label: 标签
-        account: 账号
-        address: 地址
-        action: 操作
-        delete: 移除
-        are_you_sure: 确定移除以保存的地址?
-      new:
-        selector: 银行
-        uid: 账号
-        label: 标签
-        label_placeholder: 任意填写
-        address: 地址
-        extra_hint: 若您的开户银行不再列表中，请联系客服
     history:
       transaction:
         Deposit: 充值
@@ -610,6 +1171,149 @@ zh-CN:
           manage_fund_source: 管理提现地址
         create:
           notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      realpointcoins:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      litecoins:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      ethers:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      bitcoincashs:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      argues:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      dashcoins:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      namecoins:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      moneros:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      blackcoins:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      peercoins:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      tritiumcoins:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 两步验证错误
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
     tickets:
       index:
         new_ticket: 新建服务单
@@ -628,6 +1332,9 @@ zh-CN:
       from: 来自
       view_closed_tickets: 查看已结束的服务单
       view_open_tickets: 查看未结束的服务单
+    account_versions:
+      index:
+        description: Every transaction and every penny of income in Bitcharge are well documented and exhaustive.
     account_versions:
       index:
         description: 每一笔交易、每一分钱收入都是有据可查，巨细无遗的。
@@ -652,7 +1359,7 @@ zh-CN:
         oauth_app_name: 应用名称
         oauth_app_expire: 授权自动过期时间
         oauth_app_scope: 授权范围
-      unbind:
+unbind:
         success: 绑定已成功解除。
         failed: 解除绑定失败。
       new:
@@ -673,21 +1380,67 @@ zh-CN:
       destroy:
         success: 密钥已删除。
         failed: 密钥删除失败。
+      
     assets:
       index:
         liability-proof: 资产证明
-        btc-assets: BTC资产清单
-        eur-assets: EUR资产清单
+        btc-assets: BTC 资产清单
+        ltc-assets: LTC 资产清单
+        eth-assets: ETH 资产清单
+        bch-assets: BCH 资产清单
+        rep-assets: REP 资产清单
+        dash-assets: DASH 资产清单
+        nmc-assets: NMC 资产清单
+        xmr-assets: XMR 资产清单
+        zec-assets: ZEC 资产清单
+        xrp-assets: XRP 资产清单
+        blk-assets: BLK 资产清单
+        ppc-assets: PPC 资产清单
+        rpt-assets: RPT 资产清单
+        trt-assets: TRT 资产清单
+        cny-assets: CNY 资产清单
+        eur-assets: EUR 资产清单
+        inr-assets: INR 资产清单
       liability_tabs:
-        verify-btc: 验证我的BTC资产
-        verify-eur: 验证我的EUR资产
-        btc-assets-total: '交易所BTC总资产：'
-        eur-assets-total: '交易所EUR总资产：'
+        verify-btc: 验证我的 BTC 资产
+        verify-ltc: 验证我的 LTC 资产
+        verify-eth: 验证我的 ETH 资产
+        verify-bch: 验证我的 BCH 资产
+        verify-rep: 验证我的 REP 资产
+        verify-dsh: 验证我的 DSH 资产
+        verify-nmc: 验证我的 NMC 资产
+        verify-xmr: 验证我的 XMR 资产
+        verify-zec: 验证我的 ZEC 资产
+        verify-xrp: 验证我的 XRP 资产
+        verify-blk: 验证我的 BLK 资产
+        verify-ppc: 验证我的 PPC 资产
+        verify-rpt: 验证我的 RPT 资产
+        verify-trt: 验证我的 TRT 资产
+        verify-cny: 验证我的 CNY 资产
+        verify-eur: 验证我的 EUR 资产
+        verify-inr: 验证我的 INR 资产
+        btc-assets-total: 'Total BTC assets of exchange: '
+        ltc-assets-total: 'Total LTC assets of exchange: '
+        eth-assets-total: 'Total ETH assets of exchange: '
+        bch-assets-total: 'Total BCH assets of exchange: '
+        rep-assets-total: 'Total REP assets of exchange: '
+        dsh-assets-total: 'Total DSH assets of exchange: '
+        nmc-assets-total: 'Total NMC assets of exchange: '
+        xmr-assets-total: 'Total XMR assets of exchange: '
+        zec-assets-total: 'Total ZEC assets of exchange: '
+        xrp-assets-total: 'Total XRP assets of exchange: '
+        ppc-assets-total: 'Total PPC assets of exchange: '
+        blk-assets-total: 'Total BLK assets of exchange: '
+        rpt-assets-total: 'Total RPT assets of exchange: '
+        trt-assets-total: 'Total TRT assets of exchange: '
+        cny-assets-total: 'Total CNY assets of exchange: '
+        eur-assets-total: 'Total EUR assets of exchange: '
+        inr-assets-total: 'Total INR assets of exchange: '
       liability_proof:
         title: 资产证明
         intro: 我们将银行账户，比特币钱包地址，以及用户存款总额公开以便用户时刻了解我们的资产状况；我们提供的数字证明能证明我们提供的存款总额数据是真实的。我们通过技术手段来保证您的资金处于随时能够提取的状态。
         how-to-verify: 如何验证交易所具备偿付能力？
-        how-to-verify-uri: http://Cryex24.com/documents/liability_proof
+        how-to-verify-uri: http://Bitcharge.com/documents/liability_proof
       liability_data:
         liability-proof-generating: 用户资产证明正在生成中，请30分钟后再来。
         root-json: 交易所总资产验证代码
@@ -695,23 +1448,113 @@ zh-CN:
         get-partial-tree: 获取我的资产验证代码
         timestamp: 当前操作仅针对您在%{time}的资产验证。
         go-verify: 去验证
+
       btc_assets:
-        title: BTC资产清单
-        intro: 查看交易所全部BTC资产清单
-        total: BTC总资产
-        address: 钱包地址
+        title: BTC Assets
+        intro: All of exchange's BTC assets are listed here.
+        total: Total BTC Assets
+        address: Address
+      ltc_assets:
+        title: LTC Assets
+        intro: All of exchange's LTC assets are listed here.
+        total: Total LTC Assets
+        address: Address
+      eth_assets:
+        title: ETH Assets
+        intro: All of exchange's ETH assets are listed here.
+        total: Total ETH Assets
+        address: Address
+      bch_assets:
+        title: BCH Assets
+        intro: All of exchange's BCH assets are listed here.
+        total: Total BCH Assets
+        address: Address
+      rep_assets:
+        title: REP Assets
+        intro: All of exchange's REP assets are listed here.
+        total: Total REP Assets
+        address: Address
+      dsh_assets:
+        title: DSH Assets
+        intro: All of exchange's DSH assets are listed here.
+        total: Total DSH Assets
+        address: Address
+      nmc_assets:
+        title: NMC Assets
+        intro: All of exchange's NMC assets are listed here.
+        total: Total NMC Assets
+        address: Address
+      xmr_assets:
+        title: XMR Assets
+        intro: All of exchange's XMR assets are listed here.
+        total: Total XMR Assets
+        address: Address
+      zec_assets:
+        title: ZEC Assets
+        intro: All of exchange's ZEC assets are listed here.
+        total: Total ZEC Assets
+        address: Address
+      xrp_assets:
+        title: XRP Assets
+        intro: All of exchange's XRP assets are listed here.
+        total: Total XRP Assets
+        address: Address
+      ppc_assets:
+        title: PPC Assets
+        intro: All of exchange's PPC assets are listed here.
+        total: Total PPC Assets
+        address: Address
+      blk_assets:
+        title: BLK Assets
+        intro: All of exchange's BLK assets are listed here.
+        total: Total BLK Assets
+        address: Address
+      rpt_assets:
+        title: RPT Assets
+        intro: All of exchange's RPT assets are listed here.
+        total: Total RPT Assets
+        address: Address
+      trt_assets:
+        title: TRT Assets
+        intro: All of exchange's TRT assets are listed here.
+        total: Total TRT Assets
+        address: Address
+      cny_assets:
+        title: CNY Assets
+        intro: All of exchange's CNY assets are listed here.
+        total: Total CNY Assets
       eur_assets:
-        title: EUR资产清单
-        intro: 查看交易所全部EUR资产清单
-        total: EUR总资产
-        description: " <p>每位登录貔貅的用户可通过查询貔貅唯一开户银行余额监督我们的服务。</p> <p>开户银行： %{bank}</p> <p>开户帐号： %{address}</p> <p>查询密码： %{password}</p> <p>查询电话： %{tel}</p>"
+        title: EUR Assets
+        intro: All of exchange's EUR assets are listed here.
+        total: Total EUR Assets
+        description: " <p>For supervision, you can inquiry the balance of our deposit account:</p> <p>Bank: %{bank}</p> <p>Account： %{address}</p> <p>Inquiry Password： %{password}</p> <p>Inquiry Tel.： %{tel}</p>"
+      inr_assets:
+        title: INR Assets
+        intro: All of exchange's INR assets are listed here.
+        total: Total INR Assets
+        description: " <p>For supervision, you can inquiry the balance of our deposit account:</p> <p>Bank: %{bank}</p> <p>Account： %{address}</p> <p>Inquiry Password： %{password}</p> <p>Inquiry Tel.： %{tel}</p>"
       partial_tree:
-        success: '获取成功！验证数据生成时间为：%{timestamp}'
+        success: 'Success! Verification data generated at: %{timestamp}'
     funds:
       show:
-        account_history: 账户历史记录
+        account_history: Account History
         eur_format: '0.00'
+        cny_format: '0.00'
+        inr_format: '0.00'
         btc_format: '0.00000000'
+        ltc_format: '0.00000000'
+        eth_format: '0.00000000'
+        bch_format: '0.00000000'
+        rep_format: '0.00000000'
+        dsh_format: '0.00000000'
+        nmc_format: '0.00000000'
+        xmr_format: '0.00000000'
+        zec_format: '0.00000000'
+        xrp_format: '0.00000000'
+        ppc_format: '0.00000000'
+        blk_format: '0.00000000'
+        rpt_format: '0.00000000'
+        trt_format: '0.00000000'
         reason:
           eur:
             strike_add: 成交卖出
@@ -719,9 +1562,93 @@ zh-CN:
             deposit: 充值
             withdraw: 提现
             fix: 系统修正
+          inr:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
           btc:
-            strike_add: 成交买入
-            strike_sub: 成交卖出
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          ltc:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          eth:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          bch:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          rep:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          dsh:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          nmc:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          xmr:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          zec:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          xrp:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          ppc:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          blk:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          rpt:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          trt:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
             deposit: 充值
             withdraw: 提现
             fix: 系统修正
@@ -765,11 +1692,26 @@ zh-CN:
         chat: 聊天频道
       market_list:
         all: 全部交易对
-        all_html: "<i class='fa fa-check'></i><span>全部交易对</span>"
-        eur_html: "<i class='fa fa-check'></i><span>EUR交易对</span>"
-        btc_html: "<i class='fa fa-check'></i><span>BTC交易对</span>"
+        all_html: "<i class='fa fa-check'></i><span>All Markets</span>"
+        eur_html: "<i class='fa fa-check'></i><span>EUR Markets</span>"
+        btc_html: "<i class='fa fa-check'></i><span>BTC Markets</span>"
+        usd_html: "<i class='fa fa-check'></i><span>USD Markets</span>"
+        inr_html: "<i class='fa fa-check'></i><span>INR Markets</span>"
+        ltc_html: "<i class='fa fa-check'></i><span>LTC Markets</span>"
+        eth_html: "<i class='fa fa-check'></i><span>ETH Markets</span>"
+        bch_html: "<i class='fa fa-check'></i><span>BCH Markets</span>"
+        rep_html: "<i class='fa fa-check'></i><span>REP Markets</span>"
+        dsh_html: "<i class='fa fa-check'></i><span>DSH Markets</span>"
+        nmc_html: "<i class='fa fa-check'></i><span>NMC Markets</span>"
+        xmr_html: "<i class='fa fa-check'></i><span>XMR Markets</span>"
+        zec_html: "<i class='fa fa-check'></i><span>ZEC Markets</span>"
+        xrp_html: "<i class='fa fa-check'></i><span>XRP Markets</span>"
+        ppc_html: "<i class='fa fa-check'></i><span>PPC Markets</span>"
+        blk_html: "<i class='fa fa-check'></i><span>BLK Markets</span>"
+        rpt_html: "<i class='fa fa-check'></i><span>RPT Markets</span>"
+        trt_html: "<i class='fa fa-check'></i><span>TRT Markets</span>"
         price: 最新价
-        change: "24h涨跌"
+        change: "24h %"
       range_switch:
         switch_1: 1m
         switch_5: 5m
@@ -945,8 +1887,23 @@ zh-CN:
         balance: 余额
         available: 可用
         title: "%{icon} %{c} 账户"
+        cny_format: '0.00'
         eur_format: '0.00'
+        inr_format: '0.00'
         btc_format: '0.00000000'
+        ltc_format: '0.00000000'
+        eth_format: '0.00000000'
+        bch_format: '0.00000000'
+        rep_format: '0.00000000'
+        dsh_format: '0.00000000'
+        nmc_format: '0.00000000'
+        xmr_format: '0.00000000'
+        zec_format: '0.00000000'
+        xrp_format: '0.00000000'
+        ppc_format: '0.00000000'
+        blk_format: '0.00000000'
+        rpt_format: '0.00000000'
+        trt_format: '0.00000000'
         total: 总额合计
   guides:
     private:
@@ -1036,9 +1993,6 @@ zh-CN:
       document:
         key: 文章连接URL键值
         title: 文章标题
-      fund_source:
-        label: 真实姓名
-        address: 地址
       order_bid:
         origin_volume: 买入数量
         sum: 总成交金额
@@ -1052,6 +2006,45 @@ zh-CN:
         bank:
           sum: 最低金额100元，单笔限额5万元
         satoshi:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        realpointcoin:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        litecoin:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        ether:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        argue:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        bitcoincash:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        dashcoin:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        namecoin:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        monero:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        zcash:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        ripple:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        peercoin:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        blackcoin:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        tritiumcoin:
           sum: 最低 0.001
           fund_extra: 填写常用标签（可选）
     hints:
@@ -1071,15 +2064,41 @@ zh-CN:
         name: 请填写与您证件上一致的姓名。
       withdraw:
         bank:
-          member_name: "<span class='text-danger'>提现银行账户姓名必须与您的实名认证姓名一致</span>"
+         member_name: "<span class='text-danger'>提现银行账户姓名必须与您的实名认证姓名一致</span>"
           sum: "<a target='_balance' href='#'>资费说明</a>"
           fund_extra: 若您的开户银行不再列表中，请联系客服
         satoshi:
-          sum: "<a target='_balance' href='#'>资费说明</a>"
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        realpointcoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        litecoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        ether:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        bitcoincash:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        argue:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        dashcoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        namecoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        monero:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        zcash:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        ripple:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        peercoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        blackcoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        tritiumcoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
     creating: Creating...
     updating: Updating...
     buttons:
-      or: or
+      or: Or
       cancel: 取消
     'yes': '是'
     'no': '否'
@@ -1125,118 +2144,542 @@ zh-CN:
           fund_extra: 提现标签
           account_balance: 可用金额
           member_name: 账户名
+        litecoin:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        ether:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        bitcoincash:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        argue:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        dashcoin:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        namecoin:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        monero:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        zcash:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        ripple:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        peercoin:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        blackcoin:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        tritiumcoin:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
   admin:
     deposits:
       banks:
         index:
-          oneday: 二十四小时内充值订单
-          available: 全部未完成充值订单
+          oneday: Requests in the last 24 hours
+          available: All Pending Requests
         show:
-          alert: 未发现外部充值账单，无法处理充值。
-          notice: 此账目已经充值成功，请手工记录。
-          deposit: 充值请求
-          accept: 充值
-          target_deposit: 外部充值
-          confirm: 确认给用户进行充值吗？
+          alert: Recharge cannot be located.
+          notice: The recharge have been successful.
+          deposit: Deposit Request
+          accept: Accept
+          target_deposit: Wire Transfer
+          confirm: Confirm recharge?
         update:
-          blank_txid: Txid 不能为空
+          blank_txid: TxID can't be blank
       satoshis:
         update:
-          notice: 此笔充值已经成功到账。
+          notice: The deposit was successful.
         index:
-          accept: 立即充值
-          accept_confirm: 确定立刻确认此充值？
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      realpointcoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      litecoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      ethers:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      bitcoincashs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      argues:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      dashcoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      namecoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      moneros:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      zcashs:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      ripples:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      blackcoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      peercoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      tritiumcoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
     tickets:
-      view: 查看
-      close: 关闭服务单
-      comments_count: 回复数量
-      replies: 回复
-      open_tickets: 未结束服务单
-      closed_tickets: 已结束服务单
+      view: View
+      close: Close Ticket
+      comments_count: Comments Count
+      replies: Replies
+      open_tickets: Open Tickets
+      closed_tickets: Closed Tickets
     members:
       index:
-        search: 搜索
-        members: 用户列表
-        email: 邮箱地址
-        name: 姓名
-        phone: 手机号码
-        wallet_address: 钱包地址
+        search: Search
+        members: Members
+        email: Email
+        name: Name
+        phone: Phone Number
+        wallet_address: Wallet Address
       show:
-        member_title: 用户信息
-        actions_title: 操作
-        accounts_title: 账户信息
-        account_versions_title: 账户记录
+        member_title: User Information
+        actions_title: Action
+        accounts_title: Account Information
+        account_versions_title: Records
     dashboard:
       index:
-        accounts_title: 账户汇总
-        daemons_title: 系统汇总
+        accounts_title: Account Summary
+        daemons_title: System Summary
     documents:
       index:
-        new: 新建文档
+        new: New Document
     statistic:
-      filter: 筛选
-      summary: 总结
-      click-to-expand: 点击展开
+      filter: Filter
+      summary: Summary
+      click-to-expand: Expand
       members:
         show:
-          table: 用户数据结果
+          table: Results
       orders:
         show:
-          avg: 挂单均价
-          sum: 挂单量
-          sum_strike: 被成交量
-          count: 挂单数
+          avg: Average
+          sum: Order Volume
+          sum_strike: By Volume
+          count: Count
       trades:
         show:
-          count: 成交数
-          volume: 总量成交
-          amount: 总价成交
-          min_price: 最低成交价
-          max_price: 最高成交价
-          avg_price: 平均成交价
-          amount_fee: 总价手续费
-          volume_fee: 总量手续费
+          count: Transactions
+          volume: Volume
+          amount: Total Amount
+          min_price: Minimum Price
+          max_price: Maximum Price
+          avg_price: Average Price
+          amount_fee: Transaction Fee
+          volume_fee: Total Fee
       deposits:
         show:
-          count: 总数
-          amount: 金额合计
+          count: Total
+          amount: Total Amount
       withdraws:
         show:
-          count: 总数
-          amount: 金额合计
+          count: Total
+          amount: Total Amount
           fee: 手续费
     withdraws:
       banks:
         index:
-          one: 待处理提现订单
-          all: 二十四小时内订单
-          empty: 无任何数据
+          one: Pending withdrawal Orders
+          all: Twenty-four hours Orders
+          empty: No Data
         show:
-          process: 受理
-          succeed: 提现
-          reject: 驳回
-          succeed_confirm: 确定处理提现？
-          reject_confirm: 确定驳回提现？
-          withdraw: 银行卡提现
-          empty: 无任何数据
+          process: Process
+          succeed: Succeed
+          reject: Reject
+          succeed_confirm: Confirm Process?
+          reject_confirm: Confirm Reject?
+          withdraw: 提現
+          empty: No Data
       satoshis:
         index:
-          one: 待处理提现订单
-          all: 二十四小时内订单
-          empty: 无任何数据
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
         show:
-          process: 受理
-          succeed: 提现
-          reject: 驳回
-          succeed_confirm: 确定处理提现？
-          reject_confirm: 确定驳回提现？
-          withdraw: 比特币提现
+          process: Accepted
+          succeed: 提現
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      realpointcoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      litecoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      ethers:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      bitcoincashs:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      argues:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      dashcoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      namecoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      moneros:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      zcashs:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      ripples:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      peercoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      blackcoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
+      tritiumcoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Withdraw was made
   deposits/satoshi:
     aasm_state:
-      submitted: 受理中
-      accepted: 充值成功
-      checked: 充值成功
-      warning: 异常
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/realpointcoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/litecoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/ether:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/bitcoincash:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/argue:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/dashcoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/namecoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/monero:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/zcash:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/ripple:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/blackcoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/peercoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/tritiumcoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
   doorkeeper:
     scopes:
       profile: 读取您的基本账户信息(如姓名, 邮件地址)和账户余额
@@ -1244,11 +2687,12 @@ zh-CN:
       trade: 代表您在Peatio上进行交易
     authorizations:
       new:
-        title: Cryex24 第三方应用授权
+        title: Rubbity 第三方应用授权
         authorize_html: 确定要授权 <strong class='text-info'>%{name}</strong> 使用您的账户吗？
         scopes: '该应用将获得如下权限：'
         authorize: 同意
         deny: 拒绝
+
     errors:
       messages:
         invalid_request: The request is missing a required parameter, includes an unsupported parameter value, or is otherwise malformed.
@@ -1264,7 +2708,7 @@ zh-CN:
         invalid_client: Client authentication failed due to unknown client, no client authentication included, or unsupported authentication method.
         invalid_grant: The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.
         unsupported_grant_type: The authorization grant type is not supported by the authorization server.
-        invalid_resource_owner: The provided resource owner credentials are not valid, or resource owner cannot be found
+        invalid_resource_owner: The provided resource owner credentials are not valid, r resource owner cannot be found
         invalid_token:
           revoked: The access token was revoked
           expired: The access token expired
@@ -1282,6 +2726,110 @@ zh-CN:
           notice: Application revoked.
   easy_table:
     satoshi:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    realpointcoin:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    litecoin:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    ether:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    bitcoincash:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    argue:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    dashcoin:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    namecoin:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    monero:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    zcash:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    ripple:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    blackcoin:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    peercoin:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    tritiumcoin:
       amount: 金额
       txid: TxID
       created_at: 创建时间
@@ -1318,8 +2866,24 @@ zh-CN:
       wait: 等待
       cancel: 取消
     currency:
+      usd: USD
       eur: EUR
+      cny: CNY
+      inr: INR
       btc: BTC
+      ltc: LTC
+      eth: ETH
+      bch: BCH
+      rep: REP
+      dsh: DSH
+      nmc: NMC
+      xmr: XMR
+      zec: ZEC
+      xrp: XRP
+      ppc: PPC
+      blk: BLK
+      rpt: RPT
+      trt: TRT
     order:
       state:
         done: 完全成交
@@ -1344,10 +2908,24 @@ zh-CN:
         processing: 受理中
         done: 完成
         canceled: 已撤销
+
     fund_source:
       category:
-        satoshi: 比特币 - 网络转账
-        bank: 人民币 - 银行转账
+        satoshi: Bitcoin
+        realpointcoin: RealPointCoin
+        litecoin: Litecoin
+        ether: Ether
+        bitcoincash: Bitcoincash
+        argue: Argue
+        dashcoin: Dashcoin
+        namecoin: Namecoin
+        monero: Monero
+        zcash: Zcash
+        ripple: Ripple
+        blackcoin: Blackcoin
+        peercoin: PeerCoin
+        tritiumcoin: Tritiumcoin
+        bank: Bank
     id_document:
       id_document_type:
         id_card: 身份证
@@ -1358,73 +2936,74 @@ zh-CN:
         tax_bill: 税单
   views:
     pagination:
-      first: "<<"
-      last: '>>'
-      previous: "上一页"
-      next: 下一页
+      first: "&laquo; First"
+      last: Last &raquo;
+      previous: "&lsaquo; 上一頁"
+      next: 下一頁 &rsaquo;
       truncate: "..."
+
   mailer:
-    dear_user: 您好,
-    signature: 貔貅团队
+    dear_user: 你好,
+    signature: 謝謝,<br/>Rubbity 團隊
     please_contact: 如果此次登录不是您本人操作，请马上<a href="mailto:%{contact_mail}">联系我们</a>。
-    footer: 此邮件由系统自动发出，请勿直接回复。 有问题请<a href="mailto:%{contact_mail}">联系我们</a>。
+    footer: footer: 此邮件由系统自动发出，请勿直接回复。 有问题请<a href="mailto:%{contact_mail}">联系我们</a>。
   comment_mailer:
     admin_notification:
-      subject: "[Cryex24] 用户回复了服务单"
-      notification_content: 用户 %{email} 回复了服务单，详情请查看链接：
+      subject: "[Rubbity] User reply a ticket"
+      notification_content: User %{email} reply a ticket, please follow the link below to see the detail
     user_notification:
-      subject: "[Cryex24] 您的服务单有了新的回复"
+      subject: "[Rubbity] 您的服务单有了新的回复"
       notification_content: '您的服务单有一条新的回复, 请在下方链接查看详情：'
   deposit_mailer:
     accepted:
-      subject: "[貔貅] 您的充值已经到账"
+      subject: "[Rubbity] 您的充值已经到账"
       content: 您的 %{currency} 已经到账.
   member_mailer:
     notify_signin:
-      subject: "[Cryex24] 您刚刚成功登录"
+      subject: "[Rubbity] 您刚刚成功登录"
       just_signed_in: 您刚刚成功登录了。
     google_auth_activated:
-      subject: "[Cryex24] 绑定谷歌两步验证"
+      subject: "[Rubbity] 绑定谷歌两步验证"
       google_auth_activated: 您已绑定谷歌两步验证。
     google_auth_deactivated:
-      subject: "[Cryex24] 重置谷歌两步验证"
+      subject: "[Rubbity] 重置谷歌两步验证"
       google_auth_deactivated: 您已重置谷歌两步验证。
     sms_auth_activated:
-      subject: "[Cryex24] 绑定短信两步验证"
+      subject: "[Rubbity] 绑定短信两步验证"
       sms_auth_activated: 您已绑定短信两步验证。
     sms_auth_deactivated:
-      subject: "[Cryex24] 重置短信两步验证"
+      subject: "[Rubbity] 重置短信两步验证"
       sms_auth_deactivated: 您已重置短信两步验证。
     reset_password_done:
-      subject: "[Cryex24] 密码修改成功"
+      subject: "[Rubbity] 密码修改成功"
       successful: 您已成功修改密码。请妥善保管~
     phone_number_verified:
-      subject: "[Cryex24] 您已成功绑定手机"
+      subject: "[Rubbity] 您已成功绑定手机"
       verified: '您已成功绑定手机，号码为：%{phone_number}。'
   system_mailer:
     daily_stats:
-      member_stats: 新增用户
-      signup: 注册
-      activation: 激活
-      asset_stats: 资金变动
-      trade_stats: 交易变动
-      asset_value_change_total: 数字货币变动总计
-      trades_change_total: 交易数变动总计
+      member_stats: Member Stats
+      signup: Signup
+      activation: Activation
+      asset_stats: Assets Changes
+      trade_stats: Trades Changes
+      asset_value_change_total: Digital Assets Changes Total
+      trades_change_total: Trades Changes Total
   ticket_mailer:
     admin_notification:
-      subject: "[Cryex24] 用户新建了服务单"
-      admin_notification_content: 用户 %{email} 新建了服务单，详情请查看链接：
+      subject: "[Bitcharge] User created a new ticket"
+      admin_notification_content: User %{email} created a new ticket, please follow the link below to see the detail
     author_notification:
-      subject: "[Cryex24] 您的服务单提交成功"
+      subject: "[Rubbity] 您的服务单提交成功"
       thanks_for_submit_ticket: 感谢您的反馈。我们会尽快处理，并第一时间告知您相关进展。
   token_mailer:
     activation:
-      subject: "[Cryex24] 帐号激活"
-      click_to_verify: '感谢您注册 Cryex24-mail吧：'
+      subject: "[Rubbity] 帐号激活"
+      click_to_verify: '感谢您注册 Rubbity-mail吧：'
       unable_to_click: 如果链接无法点击，请完整拷贝到浏览器地址栏里直接访问。
       link_expire: 链接30分钟之内有效。
     reset_password:
-      subject: "[Cryex24] 请重置您的密码"
+      subject: "[Rubbity] 请重置您的密码"
       hi: 您好
       follow_the_link: '请使用下面的连接，在30分钟之内尝试重置您的登录密码：'
   withdraw_mailer:
@@ -1440,8 +3019,12 @@ zh-CN:
     withdraw_state:
       subject: "[貔貅] 您的提现状态更新"
       your_state: '您的提现状态：'
-  view_on_github: 到 Github 上查看
-  slogan: 貔貅，将致力于成为世界级的交易软件。
+
+
+  'true': true
+  'false': false
+  view_on_github: View on Github
+  slogan: CRYPTO EXCHANGE WORLD
   tags:
     vip: VIP
     hero: 超级用户
@@ -1455,9 +3038,9 @@ zh-CN:
   gon:
     ask: 卖出
     bid: 买入
-    brand: Peatio交易所
+    brand: Rubbity交易所
     notification:
-      title: Peatio交易所
+      title: Rubbity交易所
       enabled: 实时更新已开启。
       new_trade: "您的%{kind}委托 #%{id} 以 %{price} %{quote_unit} 价格成交，%{kind} %{volume} %{base_unit}。"
   back: 返回
@@ -1474,10 +3057,10 @@ zh-CN:
       short: "%m-%d %H:%M"
       default: "%Y-%m-%d %H:%M"
   sms:
-    verification_code: '验证码为：%{code}，30分钟内有效。（提示：工作人员不会索要，切勿泄露！）【Cryex24】'
-    password_changed: '%{email} 您好，您已成功修改账户密码，若非本人操作，您的账户可能存在被盗风险，请立即联系客服！【Cryex24】'
-    deposit_done: '%{email} 您好，您于%{time}进行了（%{currency}）充值操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请及时联系我们！）【Cryex24】'
-    withdraw_done: '%{email} 您好，您于%{time}进行了（%{currency}）提现操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请立即联系客服！）【Cryex24】'
+    verification_code: '验证码为：%{code}，30分钟内有效。（提示：工作人员不会索要，切勿泄露！）'
+    password_changed: '%{email} 您好，您已成功修改账户密码，若非本人操作，您的账户可能存在被盗风险，请立即联系客服！'
+    deposit_done: '%{email} 您好，您于%{time}进行了（%{currency}）充值操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请及时联系我们！）'
+    withdraw_done: '%{email} 您好，您于%{time}进行了（%{currency}）提现操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请立即联系客服！）'
   header:
     home: 首页
     dashboard: 控制面板
@@ -1662,9 +3245,9 @@ zh-CN:
     application:
       close: 关闭
     meta:
-      page_title: Cryex24 - The Opensource Cryptocurrency Exchange
-      page_description: Cryex24 - The Opensource Cryptocurrency Exchange
-      page_keywords: Cryex24,Opensource,Exchange,Cryptocurrency
+      page_title: Rubbity
+      page_description: Rubbity - The Cryptocurrency Exchange
+      page_keywords: Exchange,Cryptocurrency
   members:
     edit:
       name: 为了保障资金安全，请填写您的真实姓名等信息。
@@ -1796,6 +3379,98 @@ zh-CN:
       latency: 30 分钟到账
       transfer: 人工处理
       go: 立即提现
+
+    litecoin:
+      key: Litecoin_Chain
+      title: Litecoin Blockchain
+      intro: Withdraw Litecoin to your own Litecoin wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    ether:
+      key: Ether_Chain
+      title: Ether Blockchain
+      intro: Withdraw Ether to your own Ether wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    bitcoincash:
+      key: Bitcoincash_Chain
+      title: Bitcoincash Blockchain
+      intro: Withdraw Bitcoincash to your own Bitcoincash wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    argue:
+      key: Argue_Chain
+      title: Argue Blockchain
+      intro: Withdraw Argue to your own Argue wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    dashcoin:
+      key: Dashcoin_Chain
+      title: Dashcoin Blockchain
+      intro: Withdraw Dashcoin to your own Dashcoin wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    namecoin:
+      key: Namecoin_Chain
+      title: Namecoin Blockchain
+      intro: Withdraw Namecoin to your own Namecoin wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    monero:
+      key: Monero_Chain
+      title: Monero Blockchain
+      intro: Withdraw Monero to your own Monero wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    zcash:
+      key: Zcash_Chain
+      title: Zcash Blockchain
+      intro: Withdraw Zcash to your own Zcash wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    ripple:
+      key: Ripple_Chain
+      title: Ripple Blockchain
+      intro: Withdraw Ripple to your own Ripple wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    peercoin:
+      key: Peercoin_Chain
+      title: Peercoin Blockchain
+      intro: Withdraw Peercoin to your own Peercoin wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    blackcoin:
+      key: Blackcoin_Chain
+      title: Blackcoin Blockchain
+      intro: Withdraw Blackcoin to your own Blackcoin wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: Withdraw
+    realpointcoin:
+      key: Realpointcoin_Chain
+      title: Realpointcoin Blockchain
+      intro: Withdraw Realpointcoin to your own Realpointcoin wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: 提現
+    tritiumcoin:
+      key: Tritiumcoin_Chain
+      title: Tritium Blockchain
+      intro: Withdraw Tritium to your own Tritium wallet
+      latency: 30 minutes
+      transfer: 自動
+      go: 提現
   withdraws:
     invalid_address: 不合法. 无法提现到这个地址
   withdraws/bank:
@@ -1822,3 +3497,189 @@ zh-CN:
       almost_done: 发送中
       canceled: 已撤销
       failed: 提现出错
+  withdraws/realpointcoin:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/litecoin:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/ether:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/bitcoincash:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/argue:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/dashcoin:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/namecoin:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/monero:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/zcash:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/ripple:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/blackcoin:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/peercoin:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/tritiumcoin:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  mainpage:
+    message1: 你的交易夥伴
+    message2: 新一代全天候交易所
+    message3: 使用我們提供的交易工具，方便容易的交易各種數字貨幣。
+    message3с: 開動！
+    message4a: 幣幣交易
+    message4b: 世界級的數字貨幣交易所，由我們先進的交易平台帶動
+    message5a: 愉快的經驗
+    message5b: 免費的數字幣充值，幾乎即刻的提現
+    message6a: 簡單易用
+    message6b: 只需要掛買和賣單，平台自動幫你對盤
+    message7a: 最好的交易平台
+    message7b: 極快的交易速度，安全的平台
+    message8a: 全天候客戶服務
+    message8b: 無論你是新手還是老手，我們都一貫送上我們最親切的服務
+    message9a: 新一代全天候交易所
+    message9b: 新一代全天候交易所
+    message10a: 安全第一 
+    message10b: 我們確保你的錢包不會被黑客入侵。
+    message11a: 低價交易
+    message11b: 智能的做市/受價者模型，讓你享受低交易費。
+
+    message12: 免費啟動帳戶
+    message13: 獨特的優惠
+    message14: 重要的用戶體驗
+    message15: 持續的更新
+    message16: 頂級的保安
+    message17: 使用兩步驗證來保證用戶資金安全
+    message18: 信心的交易
+    message19: 絕對保證隱私保密
