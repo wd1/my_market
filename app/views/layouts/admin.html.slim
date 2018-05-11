@@ -5,14 +5,17 @@ html lang="en"
     = stylesheet_link_tag :component, media: "all"
     = stylesheet_link_tag "basic"
     = stylesheet_link_tag "style"
+    = stylesheet_link_tag "admin"
+    = stylesheet_link_tag "bootstrap_admin"
     = stylesheet_link_tag :vertical_menu_modern, media: "all"
     = stylesheet_link_tag :line_awesome, media: "all"
     = javascript_include_tag :admin
+    = javascript_include_tag "admin"
     = csrf_meta_tags
 
   body.vertical-layout.2-columns.fixed-navbar.pace-done.menu-expanded.vertical-menu-modern id='#{body_id}' style=("padding-top: 0px;")
     
-    .s-content style="color: #DCDCDC; background: #2C303B;position: fixed;right: 0;left: 0;top: 0;z-index: 1000;"
+    /.s-content style="color: #DCDCDC; background: #2C303B;position: fixed;right: 0;left: 0;top: 0;z-index: 1000;"
       .container-fluid
         .row
           .col-xs-2
@@ -75,6 +78,16 @@ html lang="en"
                 - WithdrawChannel.all.each do |c|
                   - if can? :manage, c.kls
                     li = link_to c.title_text, [:admin, c.kls]
+                    
+          - if can? :menu, Withdraw
+            li class=("list-icon-item #{check_active('withdraws')}") 
+              = link_to "javascript:void(0);", class: 'has-arrow waves-effect waves-dark has-sub-menu', 'aria-expanded': "false", data: { toggle: 'popover' } do
+                i.icon.fa.fa-level-down
+                span.menu-text= t('admin_header.withdraws')
+              .sub-menu.hidden
+                ul.list-unstyled.list-menu.mb-0
+                  - Currency.order(id: :asc).pluck(:code).each do |c|
+                    li= link_to c.upcase, admin_withdraw_index_path(c)
           - if can? :manage, Ticket
             li.nav-item
               = link_to admin_tickets_path
@@ -93,6 +106,30 @@ html lang="en"
         ul.nav.navbar-nav.navbar-right
           li = link_to t('actions.back'), main_app.root_path
 
-    .app-content.content style="margin-top: 82px;"
+    /.app-content.content style="margin-top: 82px;"
       = render 'shared/flash'
       = yield
+    .admin-panel
+      .menu-col
+        a.logo href="/" 
+          img alt="" src="img/logo.png" /
+        = link_to "Dashboard", main_app.admin_dashboard_path, class: ( request.path == main_app.admin_dashboard_path ? 'item act' : 'item')
+        a.item href=""  Deposit history
+        a.item href=""  Withdrawal history
+        a.item href=""  Transaction history
+        a.item href=""  Withdrawal requests
+        a.item href=""  Bonus
+        a.item href=""  penalties
+        a.item href=""  pending deposit
+        a.item href=""  payment systems
+        a.item href=""  referral settings
+        a.item href=""  security
+        a.item href=""  promos
+        a.item href=""  trade history
+        - if can? :manage, Member
+          = link_to "Members", admin_members_path, class: ( request.path == admin_members_path ? 'item act' : 'item')
+        a.item href=""  logout
+      .panel-content
+        = render 'shared/flash'
+        = yield
+        

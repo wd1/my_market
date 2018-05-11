@@ -5,3 +5,4 @@
 //= require bootstrap-datetimepicker
 //= require ZeroClipboard
 //= require admin/app
+//= require theme/sidebar
