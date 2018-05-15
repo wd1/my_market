@@ -48,8 +48,13 @@ $(function(){
         });
     }
 
+});
 
+$(document).on('click', '.top-user-box .uw-box .wallet .item', function(e){
+    e.preventDefault();
 
+    $('.top-user-box .uw-box .wallet .item').removeClass('act');
+    $(this).addClass('act');
 });
 
 function height_fixed(){
@@ -161,4 +166,17 @@ $(document).on('click', '.sc-us-data-but.sf', function(){
     $('.faq-group-list .item').removeClass('act');
     $('.faq-group').hide();
     $('.support-form').show();
+});
+
+$(document).on('click', '.switcher-box .item', function(){
+
+    var group = $(this).closest('.switcher-box').data('group');
+
+    $('.switcher-box .item').removeClass('act');
+    $(this).addClass('act');
+
+    var index = $(this).index();
+
+    $('.' + group).hide();
+    $('.' + group).eq(index).show();
 });

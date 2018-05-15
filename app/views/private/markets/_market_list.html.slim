@@ -2,7 +2,7 @@
   - if @market_groups.size > 1
     .dropdown-wrapper
       ul.dropdown-menu style=("padding-left:0px;")
-        li class="curr-but" style=("display:block;")
+        li class="curr-but act" style=("display:block;")
           a style=("background:none;padding:0px;") data-name='all' href="javascript:;" = t('.all')
         - @market_groups.each do |name|
           li class="curr-but" style=("display:block;")

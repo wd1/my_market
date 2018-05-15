@@ -162,3 +162,17 @@ $(document).on('click', '.sc-us-data-but.sf', function(){
     $('.faq-group').hide();
     $('.support-form').show();
 });
+
+console.log('Testing Semidot');
+$(document).on('click', '.switcher-box .item', function(){
+
+    var group = $(this).closest('.switcher-box').data('group');
+
+    $('.switcher-box .item').removeClass('act');
+    $(this).addClass('act');
+
+    var index = $(this).index();
+
+    $('.' + group).hide();
+    $('.' + group).eq(index).show();
+});

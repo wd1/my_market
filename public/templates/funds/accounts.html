@@ -21,7 +21,7 @@
         <div class="item w40">Total balance</div>
         <div class="item">On orders</div>
     </div>
-    <div ng-repeat="account in accounts" bind="accounts" 
+    <div ng-repeat="account in accounts" bind="accounts"
       data-currency="{{account.currency}}" ng-if="!$first">
       <div class="line" ng-class="{act: accountsCtrl.isSelected(account.currency),
         'deposit-now': accountsCtrl.isDeposit(),
