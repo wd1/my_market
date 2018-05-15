@@ -112,23 +112,23 @@ html lang="en"
     .admin-panel
       .menu-col
         a.logo href="/" 
-          img alt="" src="img/logo.png" /
+          img alt="" src=image_url("logo.png") /
         = link_to "Dashboard", main_app.admin_dashboard_path, class: ( request.path == main_app.admin_dashboard_path ? 'item act' : 'item')
         = link_to "Deposit history", main_app.admin_deposits_alls_path, class: ( request.path == main_app.admin_deposits_alls_path ? 'item act' : 'item')
         = link_to "Withdrawal history", main_app.admin_withdraws_alls_path, class: ( request.path == main_app.admin_withdraws_alls_path ? 'item act' : 'item')
-        a.item href=""  Transaction history
-        a.item href=""  Withdrawal requests
-        a.item href=""  Bonus
-        a.item href=""  penalties
-        a.item href=""  pending deposit
-        a.item href=""  payment systems
-        a.item href=""  referral settings
-        a.item href=""  security
-        a.item href=""  promos
-        a.item href=""  trade history
+        = link_to "Transaction history", admin_transaction_path, class: ( request.path == admin_transaction_path ? 'item act' : 'item')
+        = link_to "Withdrawal requests", admin_withdrawal_request_path, class: ( request.path == admin_withdrawal_request_path ? 'item act' : 'item')
+        = link_to "Bonus", admin_bonus_path, class: ( request.path == admin_bonus_path ? 'item act' : 'item')
+        = link_to "Penalties", admin_penalty_path, class: ( request.path == admin_penalty_path ? 'item act' : 'item')
+        = link_to "pending deposit", admin_pending_deposits_path, class: ( request.path == admin_pending_deposits_path ? 'item act' : 'item')
+        = link_to "payment systems", admin_payment_system_path, class: ( request.path == admin_payment_system_path ? 'item act' : 'item')
+        = link_to "referral settings", admin_referral_setting_path, class: ( request.path == admin_referral_setting_path ? 'item act' : 'item')
+        = link_to "security", admin_security_path, class: ( request.path == admin_security_path ? 'item act' : 'item')
+        = link_to "promos", admin_promos_path, class: ( request.path == admin_promos_path ? 'item act' : 'item')
+        = link_to "trade history", admin_trade_history_path, class: ( request.path == admin_trade_history_path ? 'item act' : 'item')
         - if can? :manage, Member
-          = link_to "Members", admin_members_path, class: ( request.path == admin_members_path ? 'item act' : 'item')
-        a.item href=""  logout
+          = link_to "Members", admin_members_path, class: ( (request.path == admin_members_path) || (request.path == admin_members_settings_path )? 'item act' : 'item')
+        = link_to "logout", main_app.root_path,  class: 'item'
       .panel-content
         = render 'shared/flash'
         = yield

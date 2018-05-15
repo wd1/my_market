@@ -42,8 +42,8 @@
   .row
     .col-xs-12
       .dib.blue-switch-box.mb20
-        .item.act Members
-        .item Account settings
+        = link_to "Members", admin_members_path,  class: 'item'
+        = link_to "Account settings", admin_members_settings_path,  class: 'item'
       .a-box
         .transactions.filter-box
           form action="" 
