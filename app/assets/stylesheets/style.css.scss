@@ -1,64 +1,64 @@
 @font-face {
     font-family: "Ubuntu";
-    src: url("../fonts/UbuntuLight/ub.eot");
-    src: url("../fonts/UbuntuLight/ub.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/UbuntuLight/ub.woff") format("woff"),
-    url("../fonts/UbuntuLight/ub.ttf") format("truetype");
+    src: url("../font/UbuntuLight/ub.eot");
+    src: url("../font/UbuntuLight/ub.eot?#iefix")format("embedded-opentype"),
+    url("../font/UbuntuLight/ub.woff") format("woff"),
+    url("../font/UbuntuLight/ub.ttf") format("truetype");
     font-style: normal;
     font-weight: 300;
 }
 @font-face {
     font-family: "Ubuntu";
-    src: url("../fonts/UbuntuLightItalic/ub.eot");
-    src: url("../fonts/UbuntuLightItalic/ub.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/UbuntuLightItalic/ub.woff") format("woff"),
-    url("../fonts/UbuntuLightItalic/ub.ttf") format("truetype");
+    src: url("../font/UbuntuLightItalic/ub.eot");
+    src: url("../font/UbuntuLightItalic/ub.eot?#iefix")format("embedded-opentype"),
+    url("../font/UbuntuLightItalic/ub.woff") format("woff"),
+    url("../font/UbuntuLightItalic/ub.ttf") format("truetype");
     font-style: italic;
     font-weight: 300;
 }
 @font-face {
     font-family: "Ubuntu";
-    src: url("../fonts/UbuntuRegular/ub.eot");
-    src: url("../fonts/UbuntuRegular/ub.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/UbuntuRegular/ub.woff") format("woff"),
-    url("../fonts/UbuntuRegular/ub.ttf") format("truetype");
+    src: url("../font/UbuntuRegular/ub.eot");
+    src: url("../font/UbuntuRegular/ub.eot?#iefix")format("embedded-opentype"),
+    url("../font/UbuntuRegular/ub.woff") format("woff"),
+    url("../font/UbuntuRegular/ub.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
 }
 @font-face {
     font-family: "Ubuntu";
-    src: url("../fonts/UbuntuBold/ub.eot");
-    src: url("../fonts/UbuntuBold/ub.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/UbuntuBold/ub.woff") format("woff"),
-    url("../fonts/UbuntuBold/ub.ttf") format("truetype");
+    src: url("../font/UbuntuBold/ub.eot");
+    src: url("../font/UbuntuBold/ub.eot?#iefix")format("embedded-opentype"),
+    url("../font/UbuntuBold/ub.woff") format("woff"),
+    url("../font/UbuntuBold/ub.ttf") format("truetype");
     font-style: normal;
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Dosis';
-    src:url('../fonts/Dosis/Light/Dosis-Light.ttf.woff') format('woff'),
-    url('../fonts/Dosis/Light/Dosis-Light.ttf.svg#Dosis-Light') format('svg'),
-    url('../fonts/Dosis/Light/Dosis-Light.ttf.eot'),
-    url('../fonts/Dosis/Light/Dosis-Light.ttf.eot?#iefix') format('embedded-opentype');
+    src:url('../font/Dosis/Light/Dosis-Light.ttf.woff') format('woff'),
+    url('../font/Dosis/Light/Dosis-Light.ttf.svg#Dosis-Light') format('svg'),
+    url('../font/Dosis/Light/Dosis-Light.ttf.eot'),
+    url('../font/Dosis/Light/Dosis-Light.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Dosis';
-    src:url('../fonts/Dosis/Regular/Dosis-Regular.ttf.woff') format('woff'),
-    url('../fonts/Dosis/Regular/Dosis-Regular.ttf.svg#Dosis-Light') format('svg'),
-    url('../fonts/Dosis/Regular/Dosis-Regular.ttf.eot'),
-    url('../fonts/Dosis/Regular/Dosis-Regular.ttf.eot?#iefix') format('embedded-opentype');
+    src:url('../font/Dosis/Regular/Dosis-Regular.ttf.woff') format('woff'),
+    url('../font/Dosis/Regular/Dosis-Regular.ttf.svg#Dosis-Light') format('svg'),
+    url('../font/Dosis/Regular/Dosis-Regular.ttf.eot'),
+    url('../font/Dosis/Regular/Dosis-Regular.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Dosis';
-    src:url('../fonts/Dosis/Bold/Dosis-Bold.ttf.woff') format('woff'),
-    url('../fonts/Dosis/Bold/Dosis-Bold.ttf.svg#Dosis-Light') format('svg'),
-    url('../fonts/Dosis/Bold/Dosis-Bold.ttf.eot'),
-    url('../fonts/Dosis/Bold/Dosis-Bold.ttf.eot?#iefix') format('embedded-opentype');
+    src:url('../font/Dosis/Bold/Dosis-Bold.ttf.woff') format('woff'),
+    url('../font/Dosis/Bold/Dosis-Bold.ttf.svg#Dosis-Light') format('svg'),
+    url('../font/Dosis/Bold/Dosis-Bold.ttf.eot'),
+    url('../font/Dosis/Bold/Dosis-Bold.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: 700;
     font-style: normal;
 }
@@ -2357,7 +2357,7 @@ body {
     animation-name: fly;
 }
 
-.vlb-bg .input-group {
+.vlb-bg .input-group {width: 100%;
   margin: 0 0 20px;
 }
 .vlb-bg .input-group label {color: #444444;
