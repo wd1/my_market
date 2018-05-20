@@ -10,6 +10,7 @@ module Admin
       end
 
       def show
+        @all = Withdraw.all
       end
 
       def update

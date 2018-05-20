@@ -6,6 +6,7 @@ module Admin
       # @daemon_statuses = Global.daemon_statuses
       # @currencies_summary = Currency.all.map(&:summary)
       # @register_count = Member.count
+      @all = Deposit.all
     end
   end
 end
