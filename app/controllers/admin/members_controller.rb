@@ -27,5 +27,9 @@ module Admin
       redirect_to admin_member_path(@member)
     end
 
+    def main
+
+    end
+
   end
 end

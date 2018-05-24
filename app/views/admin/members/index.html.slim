@@ -81,7 +81,8 @@
             - @members.each do |member|
               tr.item
                 td.fs12 #{member[:id]}
-                td #{member[:email]}
+                td 
+                  a href="members/#{member[:id]}" #{member[:email]}
                 td #{member[:display_name]}
                 td
                   - if member[:activated]

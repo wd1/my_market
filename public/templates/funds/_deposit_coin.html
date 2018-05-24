@@ -37,7 +37,7 @@
   </div>
 
 </section> -->
-<div class="wallet-action-button-box">
+<div class="wallet-action-button-box switcher-box" data-group="wallet-wd-box">
     <div class="item act">
         Deposit
     </div>
@@ -46,14 +46,49 @@
     </div>
 </div>
 
-<div class="info-box">
-    Minimal deposit amount 0.01ETH<br>
-    Comission is 0.00%
-</div>
-<div class="ovh">
-  <div class="crypto-address-box">
-      <ng-include style="float:left;" src="'/templates/funds/_qrcode.html'"></ng-include>
-      <ng-include src="'/templates/funds/_address.html'"></ng-include>
-  </div>
+<div class="wallet-wd-box">
+    <div class="info-box">
+        Minimal deposit amount 0.01ETH<br>
+        Comission is 0.00%
+    </div>
+    <div class="ovh">
+        <div class="crypto-address-box">
+            <ng-include style="float:left;" src="'/templates/funds/_qrcode.html'"></ng-include>
+            <ng-include src="'/templates/funds/_address.html'"></ng-include>
+        </div>
+    </div>
 </div>
 
+<div class="wallet-wd-box dn">
+    <div class="info-box">
+        Minimal withdrawal amount 0.1ETH<br>
+        Maximal withdrawal amount 500ETH<br>
+        Commission 0.01ETH
+    </div>
+    <div class="ovh mt20">
+        <div class="col-xs-2">
+            <div class="t-up fs13 opacity5 mb15">Available balance:</div>
+            <div class="av-w-balance">
+                <span class="fs16">12.1000000</span> <span class="opacity5">ETH</span>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="t-up fs13 opacity5 mb7">withdrawal amount:</div>
+            <input class="acc-input" placeholder="0.1" type="text">
+        </div>
+        <div class="col-xs-4">
+            <div class="t-up fs13 opacity5 mb10">you will get:</div>
+            <span class="fs24">12.0900000</span> <span class="opacity5">ETH</span>
+        </div>
+    </div>
+    <div class="ovh mt15">
+        <div class="col-xs-7">
+            <div class="t-up fs13 opacity5 mb7">Ethereum address:</div>
+            <input class="acc-input" placeholder="xcb55f229d790e545ec59b721b9a7f7b3f0a8d379" type="text">
+        </div>
+    </div>
+    <div class="green-but w mt25 w230">
+        <div class="icon"></div>
+        <div class="name">Withdraw</div>
+    </div>
+</div>

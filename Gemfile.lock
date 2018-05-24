@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/peatio/mina-slack.git
+  remote: git://github.com/InfraexDev/mina-slack.git
   revision: 5b7571a34f1979784720c0bfef555591e89ca3a7
   specs:
     mina-slack (0.0.3)
@@ -7,7 +7,7 @@ GIT
       rest-client (~> 1.6.7)
 
 GIT
-  remote: git://github.com/peatio/unread.git
+  remote: git://github.com/InfraexDev/unread.git
   revision: b8fa0502e9558c93388a104bcbe20376cf43027d
   specs:
     unread (0.4.0)
@@ -139,7 +139,7 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    enumerize (0.8.0)
+    enumerize (1.1.1)
       activesupport (>= 3.2)
     equalizer (0.0.9)
     erubis (2.7.0)
@@ -455,7 +455,7 @@ DEPENDENCIES
   easy_table
   eco
   em-websocket (~> 0.5.1)
-  enumerize
+  enumerize (~> 1.1.1)
   eventmachine (~> 1.0.4)
   excon
   factory_girl_rails
@@ -481,7 +481,7 @@ DEPENDENCIES
   mina-slack!
   mocha
   momentjs-rails
-  mysql2
+  mysql2 (~> 0.3.11)
   omniauth (~> 1.2.1)
   omniauth-identity (~> 1.1.1)
   omniauth-weibo-oauth2 (~> 0.4.0)
