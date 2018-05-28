@@ -8,115 +8,89 @@
       .pl12
         .pt5.pb10.fl.b-color.fw700.t-up.fs16
           | trading history
-          /.fr
+          .fr
             a.all.active style=("color:grey;border: 1px solid grey;") href='#' = t('.all_html')
             a.my href='#' = t('.my_html')
-
+      .panel-body.panel-body-head
         .pr20
           table.tb-data
             tr.title.nb
-              td.w25 Time
-              td.w15 
+              td.w25 date/time
+              td.w15 Opertaion
               td.w20 Price
-              td.w20 Volume
-      /.panel-body.panel-body-head
-        table.table
-          thead: tr
-            th.at.col-xs-5.text-left #{t('.time')}
-            th.my.col-xs-1.text-left
-            th.price.col-xs-5.text-right #{t('.price')}
-            th.volume.col-xs-5.text-right #{t('.volume')}
-      .panel-body.panel-body-content
-        .rel.pr20.tl
-          table.table.table-hover.all-trades.tb-data
-            tbody
-          table.table.table-hover.my-trades.tb-data
-            tbody
-/.pl12
-  .pt5.pb10.fl.b-color.fw700.t-up.fs16
-    | trading history
-    /.fr
-      a.all.active style=("color:grey;border: 1px solid grey;") href='#' = t('.all_html')
-      a.my href='#' = t('.my_html')
+              td.w20 Quantity
+              td.w20 amount
 
-  .pr20
-    table.tb-data
-      tr.title.nb
-        td.w25 date/time
-        td.w15 Opertaion
-        td.w20 Price
-        td.w20 Quantity
-        td.w20 amount
-  .rel.pr20.tl
-    table.tb-data
-      tr.data
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-      tr.data.even
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-      tr.data
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-      tr.data.even
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-      tr.data
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-      tr.data.even
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-      tr.data
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-      tr.data.even
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-      tr.data
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-      tr.data.even
-        td.w25 22 Jan, 2017 12:45
-        td.w15
-          .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
-        td.w20 0.00011743
-        td.w20 1.40607488
-        td.w20 0.00016512
-    .scroll-bar
+          .rel.pr20.tl
+            table.tb-data
+              tr.data
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+              tr.data.even
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+              tr.data
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+              tr.data.even
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+              tr.data
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+              tr.data.even
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+              tr.data
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+              tr.data.even
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+              tr.data
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.g-border.t-up.pl10.pr10.g-color.mr10 buy
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+              tr.data.even
+                td.w25 22 Jan, 2017 12:45
+                td.w15
+                  .dib.fs12.rb5.r-border.t-up.pl10.pr10.r-color.mr10 sell
+                td.w20 0.00011743
+                td.w20 1.40607488
+                td.w20 0.00016512
+            .scroll-bar

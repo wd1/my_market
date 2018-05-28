@@ -4,7 +4,7 @@
       li = link_to t('.clear_bids_html'), clear_market_order_bids_path(market_id: current_market.id), remote: true, method: :post, data: {confirm: t('.confirm_clear_bids')}
       li = link_to t('.clear_asks_html'), clear_market_order_asks_path(market_id: current_market.id), remote: true, method: :post, data: {confirm: t('.confirm_clear_asks')}
       li = link_to t('.clear_all_html'),  clear_market_orders_path(market_id: current_market.id), remote: true, method: :post, data: {confirm: t('.confirm_clear_all')}
-  .rb7.ovh.w-bg.grey-box.active-orders
+  .rb7.ovh.w-bg.active-orders
     .b-h-gradient.t-b-line
     .b-t-bg.pt11.pb12.pl20.pr20.cf
       .fl.b-color.fw700.t-up.fs16 My active orders

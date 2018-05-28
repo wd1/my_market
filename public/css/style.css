@@ -474,6 +474,7 @@ body {
     z-index: 2;
 }
 
+
 .curr-but-box{
     border-bottom: 3px solid #2b3287;
     overflow: hidden;
@@ -577,7 +578,6 @@ body {
     border-bottom-right-radius: 7px;
 }
 
-
 .buy-curr-form input{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -615,6 +615,12 @@ body {
 .buy-curr-form .green-but{
     width: 180px;
 }
+.buy-curr-form.stop-limit .green-but{
+    width: 100%;
+}
+.buy-sell-stop-box{
+    min-height: 396px;
+}
 
 .red-but{
     border: 1px solid #d52c2c;
@@ -632,7 +638,6 @@ body {
     background: #d52c2c;
     color: #fff;
 }
-
 .delete-order{
     display: inline-block;
     vertical-align: middle;

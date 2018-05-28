@@ -15,6 +15,8 @@
 #= require cookies.min
 #= require flight.min
 #= require pusher.min
+#= require jcarousel
+#= require script
 
 #= require ./lib/sfx
 #= require ./lib/notifier

@@ -44,66 +44,86 @@ html lang="en"
                     span.fw700 45673 ETH/19326746 USD
               .col-xs-3
                 .curr-box
-                  .curr-but-box
-                    = render partial: 'market_list'
-                 
+                  = render partial: 'market_list'
       .pt25.pb25
         .s-content
           .container-fluid
             .row
               .col-xs-3
                 = render partial: 'bid_entry', locals: {market: @market, order: @order_bid }
-                /.rb7.ovh.w-bg.grey-box
-                  .g-h-gradient.t-b-line
-                  .b-t-bg.pt11.pb12.pl20.b-color.fw700.t-up.fs16 BuY ETH
-                  .p20
-                    form.buy-curr-form action="" 
-                      .row.mb15
-                        .col-xs-5.rel.label-box
-                          .label Amount:
-                        .col-xs-7.input-box
-                          input type="text" /
-                          .curr-placeholder ETH
-                      .row.mb15
-                        .col-xs-5.rel.label-box
-                          .label Price:
-                        .col-xs-7.input-box
-                          input type="text" /
-                          .curr-placeholder BTC
-                      .row.mb15.mt30
-                        .col-xs-5.rel.label-box
-                          .label Total:
-                        .col-xs-7.input-box
-                          input.inactive type="text" /
-                          .curr-placeholder BTC
-                      .row.mb15
-                        .col-xs-5.rel.label-box
-                          .label Commission:
-                        .col-xs-7.input-box
-                          input.inactive type="text" /
-                          .curr-placeholder BTC
-                      .row.mb15
-                        .col-xs-5.rel.label-box
-                          .label Available balance:
-                        .col-xs-7.input-box
-                          input.inactive type="text" /
-                          .curr-placeholder BTC
-                      .tac.mt25
-                        .green-but.w
-                          .icon
-                          .name BUY ETH
               .col-xs-3
                 = render partial: 'ask_entry', locals: {market: @market, order: @order_ask } 
-              .col-xs-6
-                = render partial: 'my_orders'
+              .col-xs-3
+                .rb7.ovh.w-bg.grey-box.buy-sell-stop-box
+                  .b-h-gradient.t-b-line
+                  .b-t-bg.pt11.pb12.pl20.b-color.fw700.t-up.fs16 Stop-Limit
+                  .p20
+                    form.buy-curr-form.stop-limit action=""
+                      .input-group
+                        label.input-group-addon Stop:
+                        span.label.label-danger.hint-price-disadvantage
+                        input.form-control type="text"
+                        span.input-group-addon ETH
+                      .input-group
+                        label.input-group-addon Limit:
+                        span.label.label-danger.hint-price-disadvantage
+                        input.form-control type="text"
+                        span.input-group-addon BTC
+                      .input-group
+                        label.input-group-addon Amount:
+                        span.label.label-danger.hint-price-disadvantage
+                        input.form-control type="text"
+                        span.input-group-addon BTC
+                      .input-group
+                        label.input-group-addon Total:
+                        span.label.label-danger.hint-price-disadvantage
+                        input.form-control type="text"
+                        span.input-group-addon ETH
+                      .row.mt70
+                        .col-xs-6
+                          .green-but.w
+                            .icon
+                            .name BUY ETH
+                        .col-xs-6
+                          .green-but.w
+                            .icon
+                            .name.sell SELL ETH
+              .col-xs-3
+                .offer-box.rel
+                  .offer-slider
+                    .wrap
+                      .item
+                        .h-img
+                          img src=asset_url("offer.jpg") alt=""
+                        .offer-spec.mt20
+                          .item Min 10 referrals required
+                          .item Only active referrals will be counted
+                          .item Offer available till 31st Apr
+                      .item
+                        .h-img
+                          img src=asset_url("img/offer.jpg") alt=""
+                        .offer-spec.mt20
+                          .item Min 10 referrals required
+                          .item Only active referrals will be counted
+                          .item Offer available till 31st Apr
+                      .item
+                        .h-img
+                          img src=asset_url("img/offer.jpg") alt=""
+                        .offer-spec.mt20
+                          .item Min 10 referrals required
+                          .item Only active referrals will be counted
+                          .item Offer available till 31st Apr
+                  .offer-slider-pag
       .vlb-bg.pt25.pb25
         .s-content
           .container-fluid
             .row
-              .col-xs-6
+              .col-xs-4
                 = render partial: 'order_book'
-              .col-xs-6
+              .col-xs-4
                 = render partial: 'order_ask_book'
+              .col-xs-4
+                = render partial: 'my_orders'
                 
       .pt25.pb25
         .s-content

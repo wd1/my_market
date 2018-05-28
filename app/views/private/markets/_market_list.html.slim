@@ -1,38 +1,30 @@
-#market_list_wrapper.has-right-dropdown
+#market_list_wrapper.curr-but-box.has-right-dropdown
   - if @market_groups.size > 1
-    .dropdown-wrapper
-      ul.dropdown-menu style=("padding-left:0px;")
-        li class="curr-but act" style=("display:block;")
-          a style=("background:none;padding:0px;") data-name='all' href="javascript:;" = t('.all')
-        - @market_groups.each do |name|
-          li class="curr-but" style=("display:block;")
-            a style=("background:none;padding:0px;") data-name=name href="javascript:;" = t(".#{name}")
-  #market_list
-    .panel.panel-default style=("width:90%;margin-top:34px;border: none;position: absolute;")
-      .panel-body.panel-body-head style=("border:none; padding: 0px 15px;")
-        table.table.tb-data
-          thead: tr.title
-            th.col-xs-6 style=("padding:9px 0px;")
-              span.name ALL
-            th.col-xs-4.price style=("padding:9px 0px;") = t('.price') 
-            th.col-xs-6.text-right.change style=("padding:9px 0px;") = t('.change')
-      .panel-body.panel-body-content style=("padding-top:0px;height:330px;")
-        table.table.table-hover.markets.all.tb-data
-          tbody
-            - @markets.each_with_index do |market,index|
-              - if index % 2 == 0
-                tr.market.data id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
-                  td.col-xs-4.name.fw700 style=("padding:9px 0px;")
-                    = link_to market.name, market_path(market)
-                  td.col-xs-15.price  style=("padding:9px 0px;")
-                    = Global[market.id].ticker[:last]
-                  td.col-xs-5.change.g-color style=("padding:9px 0px;")
-                    | +0.00%
-              - else
-                tr.market.data.even id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
-                  td.col-xs-4.name.fw700 style=("padding:9px 0px;")
-                    = link_to market.name, market_path(market)
-                  td.col-xs-15.price  style=("padding:9px 0px;")
-                    = Global[market.id].ticker[:last]
-                  td.col-xs-5.change.g-color style=("padding:9px 0px;")
-                    | +0.00%
+    .curr-but.act data-name='all' = t('.all')
+    - @market_groups.each do |name|
+      .curr-but data-name=name = t(".#{name}")
+#market_list.box
+  table.tb-data
+    tbody
+      tr.title
+        td ALL
+        td = t('.price')
+        td = t('.change')
+      - @markets.each_with_index do |market, index|
+        - if index % 2 == 0
+          / Use "act" class for highlighted row
+          tr.market.data id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
+            td.name.fw700
+              = link_to market.name, market_path(market)
+            td.price
+              = Global[market.id].ticker[:last]
+            td.change.r-color
+              | -4.06%
+        - else
+          tr.market.data.even id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
+            td.name.fw700
+              = link_to market.name, market_path(market)
+            td.price
+              = Global[market.id].ticker[:last]
+            td.change.g-color
+              | +0.00%

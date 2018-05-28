@@ -5,8 +5,8 @@
     span
       = t(market.ask['currency'])
   /.p20
-  #ask_entry.panel.panel-default.entry-left  style=("margin:auto;border:none;width:95%;")
-    .panel-body
+  #ask_entry.entry-left  style=("margin:auto;border:none;width:95%;")
+    .p20
       = form_for [market, order], :remote => true do |f|
         = f.hidden_field :ord_type
         .input-group.price
